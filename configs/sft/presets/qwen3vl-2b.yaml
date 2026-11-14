@@ -1,0 +1,20 @@
+# Qwen3-VL-2B-Instruct: already points well (86.2% RefCOCO in its JSON format, 80.6% in ours).
+# Goal = learn our format without losing grounding, so: LoRA on the language model only, vision
+# tower + merger frozen, low LR. Red flag: dev/eval accuracy below 86% means we are forgetting.
+# Memory (4090, bs 4, ~300-1000 image tokens, grad ckpt): bf16 weights 4.3 GB + LoRA/Adam <0.3 GB
+# + activations; expect ~10-14 GB peak.
+model:
+  model_id: Qwen/Qwen3-VL-2B-Instruct
+  vlm_adapter: hf_chat
+  use_unsloth: false
+  attn_implementation: sdpa
+  dtype: bfloat16
+  quantization: {load_in_4bit: false, load_in_8bit: false}
+  lora:
+    use_lora: true
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules_regex: '^model\.language_model\.layers\.\d+\.(self_attn\.(q|k|v|o)_proj|mlp\.(gate|up|down)_proj)$'
+training:
+  learning_rate: 5.0e-5

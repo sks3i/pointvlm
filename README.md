@@ -30,3 +30,31 @@ python -m pointeval.run --checkpoint outputs/sft-001 --bench refcoco
 
 Molmo's remote code may need an older `transformers`. If it fails, use a separate env:
 `python -m venv .venv-molmo && .venv-molmo/bin/pip install -e . "transformers==4.47.1" torch accelerate einops torchvision`.
+
+## SFT (week 2)
+
+Code in `pointtrain/`, configs in `configs/sft/`. Training runs on localtrainer's `vlm_sft` trainer (the `vlm-sft` branch; `pip install -e ../localtrainer`).
+Notes on the math and design choices: [Pointing SFT: the math and intuition](https://claude.ai/artifact/FxTMmNKLHwsnMbHyCkTDVP).
+
+```bash
+# data (images under ~/data: coco/train2014, pixmo/images, robopoint/images)
+python -m pointtrain.download_pixmo --n-images 40000
+python -m pointtrain.build --out data/sft/v1            # train.jsonl, dev.jsonl, meta.json (ID-level leak checks)
+python -m pointtrain.leakcheck data/sft/v1              # pixel near-duplicates vs all eval images
+python -m pointtrain.build --out data/sft/v1 --exclude-images data/sft/v1/flagged_images.txt   # if anything was flagged
+
+# train: one switch picks the model (configs/sft/presets/*.yaml)
+python -m pointtrain.sft --model qwen3vl-2b             # LoRA, ~14 GB
+python -m pointtrain.sft --model lfm2vl-1.6b            # full FT of LLM + projector, ~21 GB
+.venv-molmo/bin/python -m pointtrain.sft --model molmo-7b-d   # QLoRA, ~15 GB
+python -m pointtrain.sft --model qwen3vl-2b --set training.learning_rate=3e-5 --dry-run       # overrides
+
+# eval (frozen harness, canonical only); LoRA runs write <run>/merged
+python -m pointeval.run --checkpoint outputs/sft-qwen3vl-2b-v1/merged --bench refcoco --run-name sft-qwen3vl-2b-v1
+python -m pointtrain.export outputs/sft-qwen3vl-2b-v1/checkpoint-2000   # intermediate LoRA checkpoint -> merged
+```
+
+* Labels: deepest interior point of each mask (distance-transform max), checked with the eval's own `point_in_mask`.
+* Leakage: a COCO image is dropped if any of RefCOCO / RefCOCO+ / RefCOCOg holds it out or the eval manifest uses it (RefCOCOg train alone touches 729 of the 1,210 eval images).
+* Model selection uses `dev.jsonl` (held-out RefCOCO-family train images); `dev_metrics.jsonl` in each run logs greedy dev accuracy every 500 steps.
+* `pointeval/adapters.py::load_local` dispatches Molmo checkpoints to the Molmo wrapper (loading only; prompts, decoding and scoring unchanged).

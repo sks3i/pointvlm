@@ -1,0 +1,24 @@
+# LFM2-VL-1.6B: ~0% at baseline (answers (0,0) 65-78% of the time; rescaled only 3%), so it has to
+# LEARN grounding, not just a format. Full fine-tune of the language model + projector, vision
+# tower frozen at first.
+# Memory: fp32 master weights for the 1.19B trainable params (4.7 GB) + fp32 grads (4.7 GB) +
+# 8-bit AdamW states (2 bytes/param, 2.4 GB) + frozen SigLIP2 (1.6 GB fp32) + activations (bf16
+# autocast, grad ckpt). Measured: bs 4 OOMs on PixMo-size images; bs 2 peaks at ~21 GB reserved. Pure bf16 weights would be smaller but updates of
+# lr*grad ~1e-5 relative are below bf16's 2^-8 resolution and get rounded away.
+model:
+  model_id: LiquidAI/LFM2-VL-1.6B
+  vlm_adapter: hf_chat
+  use_unsloth: false
+  attn_implementation: sdpa
+  dtype: float32
+  quantization: {load_in_4bit: false, load_in_8bit: false}
+  lora: {use_lora: false}
+  freeze_patterns: [model.vision_tower.]
+training:
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8   # effective batch 16
+  learning_rate: 2.0e-5
+  weight_decay: 0.01
+  extra_training_args:
+    optim: adamw_bnb_8bit
+    dataloader_persistent_workers: true

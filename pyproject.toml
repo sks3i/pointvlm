@@ -18,8 +18,8 @@ dependencies = [
 
 [project.optional-dependencies]
 models = ["torch>=2.3.0", "transformers>=4.57.0", "accelerate", "einops", "torchvision"]
-train = ["train_utils @ git+https://github.com/sks3i/localtrainer.git@v0.1.0"]
+train = ["localtrainer @ git+https://github.com/sks3i/localtrainer.git@vlm-sft", "peft", "bitsandbytes", "requests"]
 dev = ["pytest"]
 
 [tool.setuptools.packages.find]
-include = ["pointeval*"]
+include = ["pointeval*", "pointtrain*"]

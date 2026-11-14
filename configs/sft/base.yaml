@@ -1,0 +1,43 @@
+# Pointing SFT on localtrainer (trainer_type vlm_sft). Pick the model with model_preset or --model:
+#   python -m pointtrain.sft --config configs/sft/base.yaml --model qwen3vl-2b
+# Merge order: this file <- presets/<model_preset>.yaml <- --set key.path=value overrides.
+trainer_type: vlm_sft
+model_preset: qwen3vl-2b   # qwen3vl-2b | lfm2vl-1.6b | lfm2vl-1.6b-lora | molmo-7b-d
+run_name: null             # default: sft-<preset>-<data name>
+output_dir: null           # default: outputs/<run_name>
+wandb_project: pointvlm
+wandb_entity: null
+
+vlm_sft:
+  train_file: data/sft/v1/train.jsonl
+  eval_file: null          # eval LOSS is not worth the time; dev point accuracy below is the signal
+  image_root: ~/data
+  max_num_samples: null
+  max_image_side: 1024     # caps PixMo web images (~1000 image tokens); COCO is <= 640 already
+  save_merged: true        # LoRA runs: write <output_dir>/merged for pointeval --checkpoint
+
+pointvlm:
+  dev_file: data/sft/v1/dev.jsonl
+  dev_n: 300               # greedy decode, ~1 min on Qwen-2B
+  dev_every_steps: 500
+
+training:
+  num_train_epochs: 1
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 4   # effective batch 16
+  learning_rate: 5.0e-5
+  lr_scheduler_type: cosine
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  logging_steps: 10
+  save_steps: 1000
+  save_total_limit: 3
+  seed: 42
+  bf16: true
+  fp16: false
+  gradient_checkpointing: true
+  dataloader_num_workers: 6
+  report_to: none          # set to wandb after `wandb login` (not logged in on this box yet)
+  extra_training_args:
+    dataloader_persistent_workers: true

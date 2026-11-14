@@ -113,6 +113,16 @@ MODELS = {
 }
 
 
-def load_local(path: str) -> HFChatVLM:
-	"""Our own checkpoints (SFT/RL outputs) are evaluated with mode='canonical' only."""
+def load_local(path: str):
+	"""Our own checkpoints (SFT/RL outputs) are evaluated with mode='canonical' only.
+
+	Molmo checkpoints (remote code, model_type "molmo") load through the Molmo wrapper; everything
+	else through HFChatVLM. Loading only; prompts, decoding and scoring are unchanged.
+	"""
+	import json
+	from pathlib import Path
+
+	cfg = Path(path) / "config.json"
+	if cfg.exists() and json.loads(cfg.read_text()).get("model_type") == "molmo":
+		return Molmo(path)
 	return HFChatVLM(path)

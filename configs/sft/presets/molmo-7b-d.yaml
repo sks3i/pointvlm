@@ -1,0 +1,28 @@
+# Molmo-7B-D (Qwen2-7B + CLIP ViT-L, remote code): strongest baseline (89.1%). Run from .venv-molmo
+# (its remote code needs transformers 4.47).
+# QLoRA: LLM in 4-bit NF4 (~4.5 GB), vision backbone kept bf16 (quantizing the ViT hurts localization
+# and saves little); LoRA on the LLM blocks. Measured on the 4090: bf16 LoRA (16 GB of weights) OOMs
+# at bs 1 with PixMo-size images (12 crops ~ 1.9k image tokens); QLoRA peaks at ~15 GB reserved.
+model:
+  model_id: allenai/Molmo-7B-D-0924
+  vlm_adapter: molmo
+  use_unsloth: false
+  trust_remote_code: true
+  dtype: bfloat16
+  quantization:
+    load_in_4bit: true
+    bnb_4bit_quant_type: nf4
+    bnb_4bit_compute_dtype: bfloat16
+    bnb_4bit_use_double_quant: true
+    skip_modules: [vision_backbone]
+  lora:
+    use_lora: true
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules_regex: '^model\.transformer\.blocks\.\d+\.(att_proj|attn_out|ff_proj|ff_out)$'
+training:
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16
+  learning_rate: 1.0e-4
+  dataloader_num_workers: 4

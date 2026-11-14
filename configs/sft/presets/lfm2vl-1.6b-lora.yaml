@@ -1,0 +1,19 @@
+# Cheaper LFM2 variant: high-rank LoRA on every LLM linear (attention, short-conv projections, MLP)
+# + the projector trained in full. Rank 64 because grounding is a new skill here, not a format tweak.
+model:
+  model_id: LiquidAI/LFM2-VL-1.6B
+  vlm_adapter: hf_chat
+  use_unsloth: false
+  attn_implementation: sdpa
+  dtype: bfloat16
+  quantization: {load_in_4bit: false, load_in_8bit: false}
+  lora:
+    use_lora: true
+    r: 64
+    lora_alpha: 64
+    lora_dropout: 0.0
+    use_rslora: true
+    target_modules_regex: '^model\.language_model\.layers\.\d+\.(self_attn\.(q|k|v|out)_proj|conv\.(in|out)_proj|feed_forward\.w[123])$'
+    modules_to_save: [multi_modal_projector]
+training:
+  learning_rate: 2.0e-4
