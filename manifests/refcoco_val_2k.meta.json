@@ -1,0 +1,15 @@
+{
+  "manifest_sha256": "228bc64e229bc8941df418de7d13bd72dd50678bbcb4f6df7165987f7eb15fcb",
+  "n": 2000,
+  "n_objects_total": 3811,
+  "n_rows_not_unc_val": 4605,
+  "n_rows_total": 8811,
+  "repo": "lmms-lab/RefCOCO",
+  "revision": "a5dff0b3194715fda69b2d6a0d2aaafb41eaa407",
+  "salt": "pointvlm-refcoco-val-v1",
+  "skipped": {},
+  "split": "val",
+  "unc_repo": "jxu124/refcoco",
+  "unc_revision": "9fba8200c5326e996f789191f095bd464ef1d09e",
+  "unc_split": "validation"
+}

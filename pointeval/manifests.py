@@ -39,6 +39,11 @@ REFCOCO_REPO = "lmms-lab/RefCOCO"
 REFCOCO_SPLIT = "val"
 REFCOCO_N = 2000
 REFCOCO_SALT = "pointvlm-refcoco-val-v1"
+# lmms-lab "val" mixes UNC val with train/testA/testB refs, and its `segmentation` keeps only the
+# first polygon. The raw UNC annotations (question_id == COCO ann_id) give the true split and the
+# full multi-polygon segmentation.
+UNC_REPO = "jxu124/refcoco"
+UNC_SPLIT = "validation"  # rows here all have split == "val"
 
 WHERE2PLACE_REPO = "wentao-yuan/where2place"
 POINTBENCH_REPO = "PointArena/pointarena"
@@ -92,19 +97,38 @@ def _expressions(row) -> list[str]:
 	return exprs
 
 
-def build_refcoco(revision: str | None) -> None:
+def unc_segmentation(raw_anns: str) -> list:
+	"""Full COCO segmentation (all polygons) from a jxu124/refcoco `raw_anns` JSON string."""
+	return json.loads(raw_anns)["segmentation"]
+
+
+def load_unc_val(revision: str) -> dict[int, list]:
+	from datasets import load_dataset
+
+	unc = load_dataset(UNC_REPO, split=UNC_SPLIT, revision=revision).select_columns(["ann_id", "split", "raw_anns"])
+	assert set(unc["split"]) == {"val"}
+	return {int(r["ann_id"]): unc_segmentation(r["raw_anns"]) for r in unc}
+
+
+def build_refcoco(revision: str | None, unc_revision: str | None = None) -> None:
 	from datasets import load_dataset
 
 	revision = revision or resolve_revision(REFCOCO_REPO)
+	unc_revision = unc_revision or resolve_revision(UNC_REPO)
+	unc_val = load_unc_val(unc_revision)
 	ds = load_dataset(REFCOCO_REPO, split=REFCOCO_SPLIT, revision=revision)
 	cols = [c for c in ds.column_names if c != "image"]
 	meta_ds = ds.select_columns(cols)
+	n_not_unc_val = 0
 
 	# One candidate per OBJECT, not per sentence: several sentences describe the same
 	# object, and sampling them separately would make the 2k items correlated.
 	objects: dict[str, list[int]] = defaultdict(list)
 	for i, row in enumerate(meta_ds):
 		if row.get("iscrowd"):
+			continue
+		if int(row["question_id"]) not in unc_val:
+			n_not_unc_val += 1
 			continue
 		key = f"{row['file_name']}|{','.join(f'{v:.2f}' for v in row['bbox'])}"
 		objects[key].append(i)
@@ -125,7 +149,7 @@ def build_refcoco(revision: str | None) -> None:
 		img = row["image"]
 		w, h = img.size
 		try:
-			mask = polygons_to_mask(row["segmentation"], h, w)
+			mask = polygons_to_mask(unc_val[int(row["question_id"])], h, w)
 		except ValueError:
 			skipped["bad_polygon"] += 1
 			continue
@@ -160,8 +184,12 @@ def build_refcoco(revision: str | None) -> None:
 			"split": REFCOCO_SPLIT,
 			"revision": revision,
 			"salt": REFCOCO_SALT,
+			"unc_repo": UNC_REPO,
+			"unc_split": UNC_SPLIT,
+			"unc_revision": unc_revision,
 			"n_objects_total": len(objects),
 			"n_rows_total": len(ds),
+			"n_rows_not_unc_val": n_not_unc_val,
 			"skipped": dict(skipped),
 		},
 	)
@@ -299,8 +327,12 @@ def main() -> None:
 	ap = argparse.ArgumentParser()
 	ap.add_argument("bench", choices=["refcoco", "where2place", "pointbench"])
 	ap.add_argument("--revision", default=None, help="dataset commit sha; default resolves current main and records it")
+	ap.add_argument("--unc-revision", default=None, help=f"refcoco only: {UNC_REPO} commit sha")
 	a = ap.parse_args()
-	{"refcoco": build_refcoco, "where2place": build_where2place, "pointbench": build_pointbench}[a.bench](a.revision)
+	if a.bench == "refcoco":
+		build_refcoco(a.revision, a.unc_revision)
+	else:
+		{"where2place": build_where2place, "pointbench": build_pointbench}[a.bench](a.revision)
 
 
 if __name__ == "__main__":

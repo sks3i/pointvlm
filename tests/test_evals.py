@@ -14,7 +14,7 @@ from pointeval.geometry import (
 	polygons_to_mask,
 	rle_to_mask,
 )
-from pointeval.manifests import _strip_format_suffix, hash_rank
+from pointeval.manifests import _strip_format_suffix, hash_rank, unc_segmentation
 from pointeval.metrics import mcnemar_exact, summarize, wilson_ci
 from pointeval.parse import ParsedPoint, ParseStatus, parse_canonical, parse_molmo, parse_qwen_json
 from pointeval.run import score_item
@@ -119,6 +119,13 @@ def test_polygon_mask_and_rle_roundtrip():
 
 def test_multi_polygon():
 	m = polygons_to_mask([[0, 0, 10, 0, 10, 10, 0, 10], [20, 20, 30, 20, 30, 30, 20, 30]], 40, 40)
+	assert m[5, 5] and m[25, 25] and not m[15, 15]
+
+
+def test_refcoco_mask_uses_all_polygons():
+	# lmms-lab keeps only segmentation[0]; the manifest must use every polygon from raw_anns.
+	raw = '{"segmentation": [[0, 0, 10, 0, 10, 10, 0, 10], [20, 20, 30, 20, 30, 30, 20, 30]], "id": 1}'
+	m = polygons_to_mask(unc_segmentation(raw), 40, 40)
 	assert m[5, 5] and m[25, 25] and not m[15, 15]
 
 

@@ -5,3 +5,4 @@ __pycache__/
 .venv-molmo/
 outputs/
 results/**/*-partial/
+manifests/_preview/

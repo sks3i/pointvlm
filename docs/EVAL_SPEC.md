@@ -6,7 +6,7 @@ Frozen on the day the manifests are committed. Anything below changes only by cr
 
 | Bench | Source (pinned revision in `manifests/*.meta.json`) | Items | Headline metric |
 |---|---|---|---|
-| RefCOCO val 2k | `lmms-lab/RefCOCO`, split `val` | 2000 objects | point-in-mask accuracy |
+| RefCOCO val 2k | UNC val objects (`jxu124/refcoco` split `validation`): masks from its `raw_anns`, images from `lmms-lab/RefCOCO` split `val` | 2000 objects | point-in-mask accuracy |
 | Where2Place | `wentao-yuan/where2place` | all (~100) | point-in-mask accuracy (first point) |
 | Point-Bench (optional) | `PointArena/pointarena` | all (~982) | PointArena success rule |
 
@@ -15,6 +15,8 @@ Secondary numbers (reported, never headline): RefCOCO point-in-box; Where2Place 
 ## Sampling (RefCOCO)
 
 * Unit is an object (`file_name` + `bbox`), not a sentence, so items are not near-duplicates.
+* Only true UNC val objects are eligible. lmms-lab's `val` also has UNC train/testA/testB refs, so rows are kept only if `question_id` (= COCO `ann_id`) is in `jxu124/refcoco` `validation`.
+* Masks come from the full COCO segmentation in `jxu124/refcoco` `raw_anns` (all polygons). lmms-lab's `segmentation` keeps only the first polygon. Both dataset revisions are pinned in `manifests/refcoco_val_2k.meta.json`.
 * Rank objects by `sha256("pointvlm-refcoco-val-v1:" + key)`, take the first 2000 that have an expression and a non-empty mask. One expression per object, chosen by the same hash.
 * The manifest stores query, mask RLE, image size and an image sha256. Scoring reads only the manifest; images are verified against the hash.
 
