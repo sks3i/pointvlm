@@ -98,6 +98,50 @@ def score_item(bench: str, item: dict, pr: ParseResult) -> dict:
 	return out
 
 
+SCORING_VERSION = "v1"
+PARSER_SHA256 = hashlib.sha256((ROOT / "pointeval" / "parse.py").read_bytes()).hexdigest()[:16]
+
+
+def score_predictions(bench: str, items: list[dict], preds: list[dict], parse) -> dict:
+	"""Parse each prediction's raw text, score it, write the per-item fields into ``preds`` in
+	place, and return the summary metrics. Shared by run.py and rescore.py."""
+	by_id = {it["id"]: it for it in items}
+	hits, status_counts = [], {s.value: 0 for s in ParseStatus}
+	extra: dict[str, list] = {}
+	cats: dict[str, list[bool]] = {}
+	for p in preds:
+		item = by_id[p["id"]]
+		pr = parse(p["raw"])
+		sc = score_item(bench, item, pr)
+		status_counts[pr.status.value] += 1
+		hits.append(sc["hit"])
+		for k, v in sc.items():
+			if k != "hit":
+				extra.setdefault(k, []).append(v)
+		if item.get("category"):
+			cats.setdefault(item["category"], []).append(sc["hit"])
+		p.update({"status": pr.status.value, "note": pr.note, "points": [[q.x, q.y] for q in pr.points], **sc})
+	out = {
+		"scoring_version": SCORING_VERSION,
+		"parser_sha256": PARSER_SHA256,
+		"point_in_mask": summarize(hits),
+		"parse_status": status_counts,
+	}
+	for k, vs in extra.items():
+		out[k] = summarize(vs) if isinstance(vs[0], bool) else {"mean": sum(vs) / len(vs)}
+	if cats:
+		out["by_category"] = {
+			c: {"n": len(h), "acc": sum(h) / len(h), "ci95": wilson_ci(sum(h), len(h))} for c, h in sorted(cats.items())
+		}
+	return out
+
+
+def write_predictions(out_dir: Path, preds: list[dict]) -> None:
+	with (out_dir / "predictions.jsonl").open("w") as f:
+		for p in preds:
+			f.write(json.dumps(p) + "\n")
+
+
 def hardware_info() -> dict:
 	import torch
 	import transformers
@@ -162,41 +206,24 @@ def main() -> None:
 	for _ in range(N_WARMUP):
 		model.generate(warm_img, template.format(query=items[0]["query"]))
 
-	preds, hits, lat, status_counts = [], [], [], {s.value: 0 for s in ParseStatus}
-	extra: dict[str, list] = {}
-	cats: dict[str, list[bool]] = {}
+	preds = []
 	for i, item in enumerate(items):
 		img = src.get(item)
 		gen = model.generate(img, template.format(query=item["query"]))
-		pr = parse(gen.text)
-		sc = score_item(a.bench, item, pr)
-		status_counts[pr.status.value] += 1
-		hits.append(sc["hit"])
-		lat.append(gen.latency_ms)
-		for k, v in sc.items():
-			if k != "hit":
-				extra.setdefault(k, []).append(v)
-		if item.get("category"):
-			cats.setdefault(item["category"], []).append(sc["hit"])
 		preds.append(
 			{
 				"id": item["id"],
 				"query": item["query"],
 				"raw": gen.text,
-				"status": pr.status.value,
-				"note": pr.note,
-				"points": [[p.x, p.y] for p in pr.points],
 				"n_new_tokens": gen.n_new_tokens,
 				"latency_ms": round(gen.latency_ms, 2),
-				**sc,
 			}
 		)
 		if (i + 1) % 100 == 0:
-			print(f"{i + 1}/{len(items)} acc={sum(hits) / len(hits):.3f}", flush=True)
+			print(f"{i + 1}/{len(items)}", flush=True)
 
-	with (out_dir / "predictions.jsonl").open("w") as f:
-		for p in preds:
-			f.write(json.dumps(p) + "\n")
+	scores = score_predictions(a.bench, items, preds, parse)
+	write_predictions(out_dir, preds)
 
 	summary = {
 		"bench": a.bench,
@@ -209,21 +236,11 @@ def main() -> None:
 		"prompt_sha256": hashlib.sha256(template.encode()).hexdigest()[:16],
 		"manifest_sha256": meta["manifest_sha256"],
 		"dataset_revision": meta["revision"],
-		"point_in_mask": summarize(hits),
-		"parse_status": status_counts,
-		"latency": latency_stats(lat),
+		**scores,
+		"latency": latency_stats([p["latency_ms"] for p in preds]),
 		"mean_new_tokens": sum(p["n_new_tokens"] for p in preds) / len(preds),
 		"hardware": hardware_info(),
 	}
-	for k, vs in extra.items():
-		if isinstance(vs[0], bool):
-			summary[k] = summarize(vs)
-		else:
-			summary[k] = {"mean": sum(vs) / len(vs)}
-	if cats:
-		summary["by_category"] = {
-			c: {"n": len(h), "acc": sum(h) / len(h), "ci95": wilson_ci(sum(h), len(h))} for c, h in sorted(cats.items())
-		}
 	(out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
 	print(json.dumps({k: summary[k] for k in ("point_in_mask", "parse_status", "latency")}, indent=2))
 

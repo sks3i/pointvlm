@@ -50,6 +50,21 @@ def test_canonical_out_of_range_is_invalid(text):
 	assert r.status is ParseStatus.INVALID and r.first is None
 
 
+def test_canonical_extra_attributes_after_y():
+	r = parse_canonical('<point x="593" y="405" alt="sleep shirt">sleep shirt</point>')
+	assert r.status is ParseStatus.OK and r.first == ParsedPoint(593, 405)
+
+
+def test_canonical_y_before_x_still_rejected_with_extra_attrs():
+	assert parse_canonical('<point y="405" x="593" alt="shirt">').status is ParseStatus.UNPARSEABLE
+
+
+def test_canonical_fraction_is_a_point_near_the_corner():
+	# 0-1 style answers are legal canonical numbers, so they score as (wrong) points, not parse errors.
+	r = parse_canonical('<point x="0.8" y="0.6">')
+	assert r.status is ParseStatus.OK and r.first == ParsedPoint(0.8, 0.6)
+
+
 def test_canonical_first_point_is_scored():
 	r = parse_canonical('<point x="10" y="10"> or maybe <point x="900" y="900">')
 	assert len(r.points) == 2 and r.first == ParsedPoint(10, 10)
@@ -66,6 +81,12 @@ def test_molmo_percent_to_canonical():
 def test_molmo_points_multi_in_text_order():
 	r = parse_molmo('<points x1="10" y1="20" x2="30" y2="40" alt="cups">cups</points>')
 	assert [(p.x, p.y) for p in r.points] == [(100, 200), (300, 400)]
+
+
+def test_molmo_points_truncated_keeps_complete_pairs():
+	# Generation cut off by the token cap: no closing ">", last pair incomplete.
+	r = parse_molmo(' <points x1="51.0" y1="60.5" x2="51.0" y2="69.5" x3="58.0" y3="60.')
+	assert r.status is ParseStatus.OK and [(p.x, p.y) for p in r.points] == [(510, 605), (510, 695)]
 
 
 def test_molmo_no_point():

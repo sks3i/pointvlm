@@ -22,10 +22,12 @@ Secondary numbers (reported, never headline): RefCOCO point-in-box; Where2Place 
 
 ## Output format and parsing
 
-* Canonical: `<point x="X" y="Y">` (also `/>` or `</point>`), x before y, numbers in [0, 1000], origin top-left.
+* Canonical: `<point x="X" y="Y">` (also `/>` or `</point>`), x before y, numbers in [0, 1000], origin top-left. Extra attributes after y are allowed (`<point x="593" y="405" alt="shirt">`); x must still come first and both values must be quoted numbers.
 * Unparseable or out of range scores as a miss and stays in the denominator. Rates are reported per run.
 * Only the first point is scored on single-target benchmarks.
 * Baselines may use a native adapter (Molmo percent x10; Qwen3-VL `point_2d`, 0-1000). Our checkpoints use the canonical parser only.
+* Molmo `<points x1=.. y1=..>` cut off by the token cap before its closing `>` keeps its complete xN/yN pairs; an incomplete last pair is dropped.
+* Every summary records `scoring_version` (v1) and `parser_sha256`. `python -m pointeval.rescore <run_dir>` re-scores stored raw outputs with the current rules (latency and tokens unchanged).
 
 ## Coordinates
 

@@ -57,10 +57,10 @@ class ParseResult:
 
 _NUM = r"[-+]?(?:\d+\.?\d*|\.\d+)"
 
-# <point x="512" y="340">  also accepts  <point x="512" y="340"/>  and </point> after.
-# Attribute order is fixed (x then y) because that is what we train; anything
-# else is a format error we want to see, not silently forgive.
-_CANON_RE = re.compile(r'<point\s+x="(?P<x>[^"]*)"\s+y="(?P<y>[^"]*)"\s*/?>')
+# <point x="512" y="340">  also accepts  <point x="512" y="340"/>,  </point> after, and
+# extra attributes after y (e.g. alt="mug"). Attribute order is fixed (x then y) because
+# that is what we train; anything else is a format error we want to see, not silently forgive.
+_CANON_RE = re.compile(r'<point\s+x="(?P<x>[^"]*)"\s+y="(?P<y>[^"]*)"[^>]*>')
 
 
 def _to_float(s: str) -> float | None:
@@ -97,7 +97,9 @@ def parse_canonical(text: str) -> ParseResult:
 # Molmo: <point x="61.5" y="40.4" alt="mug">mug</point>   (percent, 0-100)
 #        <points x1="10.0" y1="20.0" x2="30.0" y2="40.0" alt="...">...</points>
 _MOLMO_POINT_RE = re.compile(r'<point\s+x="(?P<x>[^"]*)"\s+y="(?P<y>[^"]*)"')
-_MOLMO_POINTS_RE = re.compile(r"<points\s+(?P<attrs>[^>]*)>")
+# The closing ">" is optional: long lists can hit the token cap mid-tag. Only complete
+# xN/yN pairs are kept, so a cut-off last pair is dropped.
+_MOLMO_POINTS_RE = re.compile(r"<points\s+(?P<attrs>[^>]*)(?:>|$)")
 _ATTR_RE = re.compile(r'(?P<k>[xy])(?P<i>\d+)="(?P<v>[^"]*)"')
 
 
