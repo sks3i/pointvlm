@@ -1,0 +1,218 @@
+{
+  "refcoco": {
+    "n": 2000,
+    "classes": {
+      "unparseable": {
+        "count": 284,
+        "pct": 14.2
+      },
+      "zero": {
+        "count": 1299,
+        "pct": 64.95
+      },
+      "fraction": {
+        "count": 386,
+        "pct": 19.3
+      },
+      "scale_1000": {
+        "count": 31,
+        "pct": 1.55
+      }
+    },
+    "rescaled_acc_all": {
+      "n": 2000,
+      "hits": 63,
+      "acc": 0.0315,
+      "ci95": [
+        0.024698042537070437,
+        0.04009823079374678
+      ]
+    },
+    "rescaled_acc_fraction_only": {
+      "n": 386,
+      "hits": 63,
+      "acc": 0.16321243523316062,
+      "ci95": [
+        0.12969631972588772,
+        0.20336589293331495
+      ]
+    },
+    "fraction_hits_under_v1_as_is": 0,
+    "v1_official_acc": {
+      "n": 2000,
+      "hits": 2,
+      "acc": 0.001,
+      "ci95": [
+        0.00027427891518738375,
+        0.0036389343016275475
+      ]
+    },
+    "n_lenient_fallback": 1,
+    "scoring_note": "first point vs mask"
+  },
+  "where2place": {
+    "n": 100,
+    "classes": {
+      "unparseable": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "zero": {
+        "count": 74,
+        "pct": 74.0
+      },
+      "fraction": {
+        "count": 2,
+        "pct": 2.0
+      },
+      "scale_1000": {
+        "count": 24,
+        "pct": 24.0
+      }
+    },
+    "rescaled_acc_all": {
+      "n": 100,
+      "hits": 0,
+      "acc": 0.0,
+      "ci95": [
+        0.0,
+        0.03699349876899627
+      ]
+    },
+    "rescaled_acc_fraction_only": {
+      "n": 2,
+      "hits": 0,
+      "acc": 0.0,
+      "ci95": [
+        0.0,
+        0.6576197760453506
+      ]
+    },
+    "fraction_hits_under_v1_as_is": 0,
+    "v1_official_acc": {
+      "n": 100,
+      "hits": 0,
+      "acc": 0.0,
+      "ci95": [
+        0.0,
+        0.03699349876899627
+      ]
+    },
+    "n_lenient_fallback": 0,
+    "scoring_note": "first point vs mask"
+  },
+  "pointbench": {
+    "n": 979,
+    "classes": {
+      "unparseable": {
+        "count": 15,
+        "pct": 1.5321756894790604
+      },
+      "zero": {
+        "count": 765,
+        "pct": 78.14096016343207
+      },
+      "fraction": {
+        "count": 113,
+        "pct": 11.542390194075587
+      },
+      "scale_1000": {
+        "count": 86,
+        "pct": 8.78447395301328
+      }
+    },
+    "rescaled_acc_all": {
+      "n": 979,
+      "hits": 6,
+      "acc": 0.006128702757916241,
+      "ci95": [
+        0.0028117769755443053,
+        0.013306243624977869
+      ]
+    },
+    "rescaled_acc_fraction_only": {
+      "n": 113,
+      "hits": 5,
+      "acc": 0.04424778761061947,
+      "ci95": [
+        0.01904586848363056,
+        0.099417723239904
+      ]
+    },
+    "fraction_hits_under_v1_as_is": 0,
+    "v1_official_acc": {
+      "n": 979,
+      "hits": 5,
+      "acc": 0.005107252298263534,
+      "ci95": [
+        0.0021834269041199374,
+        0.011899677503228552
+      ]
+    },
+    "n_lenient_fallback": 2,
+    "scoring_note": "first point vs mask; pointbench counting items use the frozen counting rule via score_item on all rescaled points"
+  },
+  "examples": {
+    "refcoco": {
+      "unparseable": [
+        "0.75.",
+        "0.12",
+        "0.0 0.0"
+      ],
+      "zero": [
+        "<point x=\"0\" y=\"0\">",
+        "<point x=\"0\" y=\"0\">",
+        "<point x=\"0\" y=\"0\">"
+      ],
+      "fraction": [
+        "<point x=\"0.8\" y=\"0.6\">",
+        "<point x=\"0\" y=\"0.5\">",
+        "<point x=\"0.9\" y=\"0.7\">"
+      ],
+      "scale_1000": [
+        "<point x=\"0\" y=\"200\" width=\"100\" height=\"600\">",
+        "<point x=\"0\" y=\"200\">",
+        "<point x=\"0\" y=\"200\">"
+      ]
+    },
+    "where2place": {
+      "unparseable": [],
+      "zero": [
+        "<point x=\"0\" y=\"0\">",
+        "<point x=\"0\" y=\"0\">",
+        "<point x=\"0\" y=\"0\">"
+      ],
+      "fraction": [
+        "<point x=\"0\" y=\"0.5\">",
+        "<point x=\"0.5\" y=\"0.5\">"
+      ],
+      "scale_1000": [
+        "<point x=\"0\" y=\"100\">",
+        "<point x=\"200\" y=\"300\">",
+        "<point x=\"250\" y=\"300\" width=\"50\" height=\"50>"
+      ]
+    },
+    "pointbench": {
+      "unparseable": [
+        "0/1287.5",
+        "The wheel of the car farthest to the right in the image is positioned at point x=0.5 and y=0.5.",
+        "Here's the list of all the cans in the image, with each position as a fraction of the image width and height:\n\n0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0."
+      ],
+      "zero": [
+        "<point x=\"0\" y=\"0\">",
+        "<point x=\"0\" y=\"0\">",
+        "<point x=\"0\" y=\"0\">\n\n<point x=\"1\" y=\"0\">\n\n<point x=\"2\" y=\"0\">\n\n<point x=\"3\" y=\"0\">\n\n<point x=\"4\" y=\"0\">\n\n<point x=\"5\" y=\"0"
+      ],
+      "fraction": [
+        "<point x=\"0.5\" y=\"0.6\">",
+        "<point x=\"0\" y=\"0.3\">",
+        "<point x=\"0\" y=\"0.2\">"
+      ],
+      "scale_1000": [
+        "<point x=\"0\" y=\"200\">",
+        "<point x=\"250\" y=\"200\" width=\"50\" height=\"50\">",
+        "<point x=\"250\" y=\"150\" width=\"50\" height=\"50\">"
+      ]
+    }
+  }
+}
