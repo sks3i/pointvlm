@@ -150,7 +150,7 @@
       ]
     },
     "n_lenient_fallback": 2,
-    "scoring_note": "first point vs mask; pointbench counting items use the frozen counting rule via score_item on all rescaled points"
+    "scoring_note": "first point vs mask; counting items scored LENIENTLY (first point in any target), not the v1 PointArena count rule"
   },
   "examples": {
     "refcoco": {

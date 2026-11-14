@@ -14,9 +14,10 @@ import json
 import re
 from pathlib import Path
 
+from pointeval.geometry import point_in_mask, rle_to_mask
 from pointeval.metrics import summarize
-from pointeval.parse import _CANON_RE, NORM, ParsedPoint, ParseResult, ParseStatus
-from pointeval.run import ROOT, load_manifest, score_item
+from pointeval.parse import _CANON_RE, NORM, ParsedPoint
+from pointeval.run import ROOT, load_manifest
 
 RUN = "lfm2vl-1.6b-canonical"
 BENCHES = ["refcoco", "where2place", "pointbench"]
@@ -54,10 +55,11 @@ def classify(pts) -> str:
 	return "scale_1000"
 
 
-def as_result(pts) -> ParseResult:
-	if not pts or not all(0 <= x <= NORM and 0 <= y <= NORM for x, y in pts):
-		return ParseResult(ParseStatus.INVALID if pts else ParseStatus.UNPARSEABLE)
-	return ParseResult(ParseStatus.OK, [ParsedPoint(x, y) for x, y in pts])
+def first_hit(item: dict, x: float, y: float) -> bool:
+	"""First point only vs the frozen manifest mask; out of [0, 1000] is a miss (as in v1)."""
+	if not (0 <= x <= NORM and 0 <= y <= NORM):
+		return False
+	return point_in_mask(ParsedPoint(x, y), rle_to_mask(item["mask_rle"]))
 
 
 def run_bench(bench: str) -> tuple[dict, dict]:
@@ -73,9 +75,11 @@ def run_bench(bench: str) -> tuple[dict, dict]:
 		counts[c] += 1
 		if len(examples[c]) < 3:
 			examples[c].append(p["raw"])
-		if c == "fraction":
-			pts = [(x * NORM, y * NORM) for x, y in pts]
-		hit = c in ("fraction", "scale_1000") and score_item(bench, items[p["id"]], as_result(pts))["hit"]
+		hit = False
+		if c in ("fraction", "scale_1000"):
+			x, y = pts[0]
+			s = NORM if c == "fraction" else 1.0
+			hit = first_hit(items[p["id"]], x * s, y * s)
 		hits.append(hit)
 		if c == "fraction":
 			frac_hits.append(hit)
@@ -89,7 +93,7 @@ def run_bench(bench: str) -> tuple[dict, dict]:
 		"fraction_hits_under_v1_as_is": frac_v1_hits,
 		"v1_official_acc": summarize([bool(p["hit"]) for p in preds]),
 		"n_lenient_fallback": n_fallback,
-		"scoring_note": "first point vs mask; pointbench counting items use the frozen counting rule via score_item on all rescaled points"
+		"scoring_note": "first point vs mask; counting items scored LENIENTLY (first point in any target), not the v1 PointArena count rule"
 		if bench == "pointbench"
 		else "first point vs mask",
 	}
