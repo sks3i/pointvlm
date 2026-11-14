@@ -1,0 +1,90 @@
+{
+  "bench": "pointbench",
+  "partial": false,
+  "model": "molmo-7b-d",
+  "model_config": {
+    "dtype": "bfloat16 weights",
+    "max_new_tokens": 128
+  },
+  "mode": "native",
+  "parser": "molmo",
+  "prompt_template": "Point to {query}.",
+  "prompt_sha256": "ed05d5f10cc8275c",
+  "manifest_sha256": "6104713c2b84d09f88306c5eafb449782bc5b5ba9bee289aa89796a522d8232e",
+  "dataset_revision": "77ec5dca697b25025e655e2ec34fd2207856924c",
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a",
+  "point_in_mask": {
+    "n": 979,
+    "hits": 554,
+    "acc": 0.5658835546475995,
+    "ci95": [
+      0.5346384421850784,
+      0.5966136522746243
+    ]
+  },
+  "parse_status": {
+    "ok": 920,
+    "unparseable": 59,
+    "invalid": 0
+  },
+  "by_category": {
+    "affordable": {
+      "n": 198,
+      "acc": 0.8181818181818182,
+      "ci95": [
+        0.758573509981177,
+        0.865678815078073
+      ]
+    },
+    "counting": {
+      "n": 195,
+      "acc": 0.26153846153846155,
+      "ci95": [
+        0.20488802935645473,
+        0.32740266835201975
+      ]
+    },
+    "reasoning": {
+      "n": 193,
+      "acc": 0.6787564766839378,
+      "ci95": [
+        0.6099422466357306,
+        0.740593663797701
+      ]
+    },
+    "spatial": {
+      "n": 195,
+      "acc": 0.6615384615384615,
+      "ci95": [
+        0.5925738197100346,
+        0.7242615141003536
+      ]
+    },
+    "steerable": {
+      "n": 198,
+      "acc": 0.4090909090909091,
+      "ci95": [
+        0.3429703856921495,
+        0.47867180714806495
+      ]
+    }
+  },
+  "latency": {
+    "n": 979,
+    "mean_ms": 1571.832757916241,
+    "p50_ms": 1430.37,
+    "p90_ms": 2420.7860000000014,
+    "p99_ms": 3511.4865999999997
+  },
+  "mean_new_tokens": 51.72420837589377,
+  "hardware": {
+    "python": "3.12.2",
+    "torch": "2.5.1+cu124",
+    "transformers": "4.47.1",
+    "cuda": "12.4",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "code_git_sha": "38197def44df46aa116147e3fbec43569e94d640"
+  }
+}
