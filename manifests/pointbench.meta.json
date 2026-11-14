@@ -1,0 +1,42 @@
+{
+  "manifest_sha256": "6104713c2b84d09f88306c5eafb449782bc5b5ba9bee289aa89796a522d8232e",
+  "n": 979,
+  "n_entries_total": 982,
+  "repo": "PointArena/pointarena",
+  "revision": "77ec5dca697b25025e655e2ec34fd2207856924c",
+  "skipped_size_mismatch": [
+    {
+      "image_filename": "image.jpg",
+      "image_wh": [
+        1280,
+        960
+      ],
+      "mask_wh": [
+        887,
+        856
+      ]
+    },
+    {
+      "image_filename": "image.png",
+      "image_wh": [
+        1444,
+        890
+      ],
+      "mask_wh": [
+        887,
+        856
+      ]
+    },
+    {
+      "image_filename": "s-l1200 (1).jpg",
+      "image_wh": [
+        1200,
+        800
+      ],
+      "mask_wh": [
+        1047,
+        960
+      ]
+    }
+  ]
+}

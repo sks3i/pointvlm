@@ -19,11 +19,11 @@ from pathlib import Path
 from pointeval.geometry import norm_to_pixel, point_in_box, point_in_mask, rle_to_mask
 from pointeval.manifests import (
 	MANIFEST_DIR,
-	POINTBENCH_REPO,
 	REFCOCO_REPO,
 	REFCOCO_SPLIT,
 	WHERE2PLACE_REPO,
 	image_bytes,
+	pointbench_root,
 	sha256_bytes,
 )
 from pointeval.metrics import latency_stats, summarize, wilson_ci
@@ -55,9 +55,11 @@ class ImageSource:
 		else:
 			from huggingface_hub import snapshot_download
 
-			repo = WHERE2PLACE_REPO if bench == "where2place" else POINTBENCH_REPO
-			root = Path(snapshot_download(repo, repo_type="dataset", revision=revision))
-			self.base = root / "images" if bench == "where2place" else next(root.rglob("data.json")).parent
+			if bench == "where2place":
+				root = Path(snapshot_download(WHERE2PLACE_REPO, repo_type="dataset", revision=revision))
+				self.base = root / "images"
+			else:
+				self.base = pointbench_root(revision)
 
 	def get(self, item: dict):
 		from PIL import Image

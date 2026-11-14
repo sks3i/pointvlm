@@ -24,6 +24,7 @@ import hashlib
 import io
 import json
 import sys
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
@@ -181,6 +182,9 @@ def _strip_format_suffix(text: str) -> str:
 
 def _find_mask(mask_dir: Path, stem: str) -> Path:
 	cands = sorted(p for p in mask_dir.iterdir() if p.stem == stem)
+	# Some stems ship both a lossless .png and a .jpg copy (same binary mask); prefer the .png.
+	if len(cands) > 1:
+		cands = [p for p in cands if p.suffix == ".png"] or cands
 	if len(cands) != 1:
 		raise FileNotFoundError(f"mask for {stem}: {cands}")
 	return cands[0]
@@ -227,24 +231,50 @@ def build_where2place(revision: str | None) -> None:
 # --- Point-Bench (optional) ---------------------------------------------------------
 
 
-def build_pointbench(revision: str | None) -> None:
+def pointbench_root(revision: str) -> Path:
+	"""Download the pinned snapshot and unpack its image/mask zips (the repo ships zips, not files)."""
+	import zipfile
+
 	from huggingface_hub import snapshot_download
+
+	snap = Path(snapshot_download(POINTBENCH_REPO, repo_type="dataset", revision=revision))
+	root = Path.home() / ".cache" / "pointvlm" / "pointbench" / revision
+	for z in sorted(snap.glob("*.zip")):
+		done = root / f".{z.stem}.done"
+		if not done.exists():
+			with zipfile.ZipFile(z) as zf:
+				for info in zf.infolist():
+					# macOS zips: UTF-8 (NFD) names without the UTF-8 flag, so zipfile decodes them
+					# as cp437. Recover the real name and NFC-normalize it to match data.json.
+					if not info.flag_bits & 0x800:
+						info.filename = info.filename.encode("cp437").decode("utf-8")
+					info.filename = unicodedata.normalize("NFC", info.filename)
+					if not info.filename.startswith("__MACOSX"):
+						zf.extract(info, root)
+			done.touch()
+	(root / "data.json").write_bytes((snap / "data.json").read_bytes())
+	return root
+
+
+def build_pointbench(revision: str | None) -> None:
 	from PIL import Image
 
 	revision = revision or resolve_revision(POINTBENCH_REPO)
-	root = Path(snapshot_download(POINTBENCH_REPO, repo_type="dataset", revision=revision))
-	data_json = next(root.rglob("data.json"))
-	base = data_json.parent
+	base = pointbench_root(revision)
+	data_json = base / "data.json"
 	entries = json.loads(data_json.read_text())
-	rows = []
+	rows, skipped = [], []
 	for e in entries:
-		img_path = next(base.rglob(e["image_filename"]))
-		mask_path = next(base.rglob(e["mask_filename"]))
+		# data.json mixes NFC and NFD spellings; extracted files are NFC.
+		img_path = next(base.rglob(unicodedata.normalize("NFC", e["image_filename"])))
+		mask_path = next(base.rglob(unicodedata.normalize("NFC", e["mask_filename"])))
 		img = Image.open(img_path)
 		w, h = img.size
 		mask_img = np.array(Image.open(mask_path).convert("L"))
 		if mask_img.shape != (h, w):
-			sys.exit(f"mask/image size mismatch for {img_path.name}")
+			# A few upstream entries pair an image with a mask of another size; drop them, recorded in meta.
+			skipped.append({"image_filename": e["image_filename"], "image_wh": [w, h], "mask_wh": list(mask_img.shape[::-1])})
+			continue
 		# Counting items can have several targets in one mask PNG; we keep connected
 		# components at scoring time (see run.py), here we just store the union.
 		m = mask_img > 127
@@ -262,7 +292,7 @@ def build_pointbench(revision: str | None) -> None:
 				"image_sha256": sha256_bytes(image_bytes(img)),
 			}
 		)
-	_write("pointbench", rows, {"repo": POINTBENCH_REPO, "revision": revision})
+	_write("pointbench", rows, {"repo": POINTBENCH_REPO, "revision": revision, "n_entries_total": len(entries), "skipped_size_mismatch": skipped})
 
 
 def main() -> None:
