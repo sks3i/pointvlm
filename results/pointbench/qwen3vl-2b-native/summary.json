@@ -1,0 +1,91 @@
+{
+  "bench": "pointbench",
+  "partial": false,
+  "model": "qwen3vl-2b",
+  "model_config": {
+    "dtype": "torch.bfloat16",
+    "attn": "sdpa",
+    "max_new_tokens": 64
+  },
+  "mode": "native",
+  "parser": "qwen_json",
+  "prompt_template": "Locate {query} in the image and output its point coordinates in JSON format like [{{\"point_2d\": [x, y], \"label\": \"...\"}}].",
+  "prompt_sha256": "8d49532482f95cdb",
+  "manifest_sha256": "6104713c2b84d09f88306c5eafb449782bc5b5ba9bee289aa89796a522d8232e",
+  "dataset_revision": "77ec5dca697b25025e655e2ec34fd2207856924c",
+  "point_in_mask": {
+    "n": 979,
+    "hits": 508,
+    "acc": 0.5188968335035751,
+    "ci95": [
+      0.4875861276410989,
+      0.5500598219326143
+    ]
+  },
+  "parse_status": {
+    "ok": 866,
+    "unparseable": 113,
+    "invalid": 0
+  },
+  "latency": {
+    "n": 979,
+    "mean_ms": 910.396782284862,
+    "p50_ms": 443.45489400438964,
+    "p90_ms": 2838.34874558961,
+    "p99_ms": 4726.374230487854
+  },
+  "mean_new_tokens": 39.51378958120531,
+  "hardware": {
+    "python": "3.11.17",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.19.0",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "code_git_sha": "643a418ed1063fc1a1e05954daac585539772bab"
+  },
+  "by_category": {
+    "affordable": {
+      "n": 198,
+      "acc": 0.7121212121212122,
+      "ci95": [
+        0.6454905142928702,
+        0.7706777024132965
+      ]
+    },
+    "counting": {
+      "n": 195,
+      "acc": 0.2153846153846154,
+      "ci95": [
+        0.1634804991123453,
+        0.27828581750744685
+      ]
+    },
+    "reasoning": {
+      "n": 193,
+      "acc": 0.5492227979274611,
+      "ci95": [
+        0.4787459103844848,
+        0.6177784707493587
+      ]
+    },
+    "spatial": {
+      "n": 195,
+      "acc": 0.6256410256410256,
+      "ci95": [
+        0.555903070240606,
+        0.690524411611918
+      ]
+    },
+    "steerable": {
+      "n": 198,
+      "acc": 0.4898989898989899,
+      "ci95": [
+        0.4211266749088136,
+        0.5590557909623214
+      ]
+    }
+  },
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a"
+}

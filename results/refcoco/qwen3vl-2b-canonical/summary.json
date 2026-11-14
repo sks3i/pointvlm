@@ -1,0 +1,58 @@
+{
+  "bench": "refcoco",
+  "partial": false,
+  "model": "qwen3vl-2b",
+  "model_config": {
+    "dtype": "torch.bfloat16",
+    "attn": "sdpa",
+    "max_new_tokens": 64
+  },
+  "mode": "canonical",
+  "parser": "canonical",
+  "prompt_template": "Point to {query}. Answer with exactly one point in the format <point x=\"X\" y=\"Y\">, where X and Y are integers from 0 to 1000 giving the position as a fraction of the image width and height (0,0 is the top-left corner).",
+  "prompt_sha256": "b829bffc420e1ec0",
+  "manifest_sha256": "228bc64e229bc8941df418de7d13bd72dd50678bbcb4f6df7165987f7eb15fcb",
+  "dataset_revision": "a5dff0b3194715fda69b2d6a0d2aaafb41eaa407",
+  "point_in_mask": {
+    "n": 2000,
+    "hits": 1612,
+    "acc": 0.806,
+    "ci95": [
+      0.7880899512791434,
+      0.8227368157662568
+    ]
+  },
+  "parse_status": {
+    "ok": 1851,
+    "unparseable": 149,
+    "invalid": 0
+  },
+  "latency": {
+    "n": 2000,
+    "mean_ms": 274.02283600631927,
+    "p50_ms": 272.14284498768393,
+    "p90_ms": 345.8024556137389,
+    "p99_ms": 444.60350383247714
+  },
+  "mean_new_tokens": 27.4075,
+  "hardware": {
+    "python": "3.11.17",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.19.0",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "code_git_sha": "643a418ed1063fc1a1e05954daac585539772bab"
+  },
+  "hit_box": {
+    "n": 2000,
+    "hits": 1736,
+    "acc": 0.868,
+    "ci95": [
+      0.8524572321767167,
+      0.8821318210020651
+    ]
+  },
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a"
+}

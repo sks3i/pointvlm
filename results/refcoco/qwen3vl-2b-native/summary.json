@@ -1,0 +1,58 @@
+{
+  "bench": "refcoco",
+  "partial": false,
+  "model": "qwen3vl-2b",
+  "model_config": {
+    "dtype": "torch.bfloat16",
+    "attn": "sdpa",
+    "max_new_tokens": 64
+  },
+  "mode": "native",
+  "parser": "qwen_json",
+  "prompt_template": "Locate {query} in the image and output its point coordinates in JSON format like [{{\"point_2d\": [x, y], \"label\": \"...\"}}].",
+  "prompt_sha256": "8d49532482f95cdb",
+  "manifest_sha256": "228bc64e229bc8941df418de7d13bd72dd50678bbcb4f6df7165987f7eb15fcb",
+  "dataset_revision": "a5dff0b3194715fda69b2d6a0d2aaafb41eaa407",
+  "point_in_mask": {
+    "n": 2000,
+    "hits": 1724,
+    "acc": 0.862,
+    "ci95": [
+      0.846188956540822,
+      0.8764231012056969
+    ]
+  },
+  "parse_status": {
+    "ok": 1979,
+    "unparseable": 21,
+    "invalid": 0
+  },
+  "latency": {
+    "n": 2000,
+    "mean_ms": 321.218553785744,
+    "p50_ms": 313.8270384952193,
+    "p90_ms": 350.2840816101525,
+    "p99_ms": 542.1076632730544
+  },
+  "mean_new_tokens": 33.479,
+  "hardware": {
+    "python": "3.11.17",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.19.0",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "code_git_sha": "643a418ed1063fc1a1e05954daac585539772bab"
+  },
+  "hit_box": {
+    "n": 2000,
+    "hits": 1863,
+    "acc": 0.9315,
+    "ci95": [
+      0.9195819534852314,
+      0.9417636346849978
+    ]
+  },
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a"
+}

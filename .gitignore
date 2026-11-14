@@ -6,3 +6,5 @@ __pycache__/
 outputs/
 results/**/*-partial/
 manifests/_preview/
+results/*.log
+results/*.done
