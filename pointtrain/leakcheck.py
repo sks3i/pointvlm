@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from multiprocessing import Pool
+import multiprocessing as mp
 from pathlib import Path
 
 import numpy as np
@@ -41,6 +41,7 @@ def _hash_path(rel: str):
 
 	try:
 		with Image.open(DATA_ROOT / rel) as im:
+			im.load()  # full decode: catches truncated files that open lazily
 			return rel, dhash(im)
 	except Exception:
 		return rel, None
@@ -77,7 +78,9 @@ def main() -> None:
 		for line in (a.sft_dir / name).read_text().splitlines():
 			paths.add(json.loads(line)["image"])
 	paths = sorted(paths)
-	with Pool(a.workers) as pool:
+	# spawn, not fork: eval_hashes() above started datasets/pyarrow threads, and a forked child can
+	# inherit one of their locks held and deadlock.
+	with mp.get_context("spawn").Pool(a.workers) as pool:
 		hashed = pool.map(_hash_path, paths, chunksize=256)
 	bad = [p for p, h in hashed if h is None]
 	ok = [(p, h) for p, h in hashed if h is not None]
@@ -100,7 +103,8 @@ def main() -> None:
 		"flagged": sorted(flagged, key=lambda f: f["hamming"])[:500],
 	}
 	(a.sft_dir / "leak_report.json").write_text(json.dumps(report, indent=2) + "\n")
-	(a.sft_dir / "flagged_images.txt").write_text("".join(sorted({f["train_image"] + "\n" for f in flagged})))
+	# Unreadable / truncated files are excluded too: one bad PNG kills a DataLoader worker mid-run.
+	(a.sft_dir / "flagged_images.txt").write_text("".join(sorted({f["train_image"] + "\n" for f in flagged} | {b + "\n" for b in bad})))
 	print(json.dumps({k: v for k, v in report.items() if k != "flagged"}, indent=2))
 
 

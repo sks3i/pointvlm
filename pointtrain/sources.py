@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import glob
 import json
+import os
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -217,6 +218,12 @@ def _strip_rp_question(text: str) -> str:
 	return (text[:cut] if cut > 0 else text).strip()
 
 
+def _robopoint_refs(items):
+	for e in items:
+		if e.get("id", "").split("/")[0] in ("region_ref", "object_ref"):
+			yield e
+
+
 def build_robopoint(data_root: Path, multi_frac: float = 0.3) -> tuple[list[dict], dict]:
 	"""Rows for RoboPoint region_ref (free space) and object_ref (objects) on extracted images.
 
@@ -225,14 +232,22 @@ def build_robopoint(data_root: Path, multi_frac: float = 0.3) -> tuple[list[dict
 	target region. Most rows take ONE of them under the single-target prompt, the form Where2Place is
 	evaluated in; ``multi_frac`` of rows keep the full set under the multi-point prompt.
 	"""
+	import ijson
+
 	img_root = data_root / "robopoint" / "images"
-	entries = json.loads((data_root / "robopoint" / "robopoint_1432k.json").read_text())
 	rows, stats = [], defaultdict(int)
+	# Streamed: json.loads of the 1.7 GB file holds ~10+ GB of Python objects at once.
+	with (data_root / "robopoint" / "robopoint_1432k.json").open("rb") as fh:
+		entries = list(_robopoint_refs(ijson.items(fh, "item")))
+	# Membership from one readdir per folder instead of a stat per entry: on this box a path lookup
+	# of certain missing names in the extracted object_ref folder kills the process (likely a damaged
+	# directory index from the truncated tar shard), and listing is faster anyway.
+	have = {f"{d.name}/{n}" for d in img_root.iterdir() if d.is_dir() for n in os.listdir(d)}
 	for e in entries:
 		kind = e.get("id", "").split("/")[0]
 		if kind not in ("region_ref", "object_ref") or "image" not in e:
 			continue
-		if not (img_root / e["image"]).exists():
+		if e["image"] not in have:
 			stats[f"{kind}/skipped_no_image"] += 1
 			continue
 		conv = e["conversations"]
