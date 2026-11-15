@@ -1,0 +1,66 @@
+# Pointing GRPO on localtrainer (trainer_type vlm_grpo), starting from the SFT checkpoint.
+#   python -m pointtrain.grpo --config configs/grpo/base.yaml [--set key.path=value ...]
+# The policy is a fresh LoRA on top of the merged SFT weights; the KL reference is those same weights
+# with the adapter switched off, i.e. exactly the SFT model.
+trainer_type: vlm_grpo
+run_name: null             # default: grpo-<data name>
+output_dir: null           # default: outputs/<run_name>
+wandb_project: pointvlm
+wandb_entity: null
+
+model:
+  model_id: outputs/sft-qwen3vl-2b-v1-e2/merged
+  vlm_adapter: hf_chat
+  use_unsloth: false
+  attn_implementation: sdpa
+  dtype: bfloat16
+  quantization: {load_in_4bit: false, load_in_8bit: false}
+  lora:
+    use_lora: true
+    r: 16
+    lora_alpha: 32
+    # Dropout must be 0 in RL: generation runs in eval mode (no dropout), training in train mode.
+    # With dropout the policy being scored is a different random network from the one that sampled,
+    # so even the first pass has ratio != 1 and the KL to the reference is never 0.
+    lora_dropout: 0.0
+    target_modules_regex: '^model\.language_model\.layers\.\d+\.(self_attn\.(q|k|v|o)_proj|mlp\.(gate|up|down)_proj)$'
+
+vlm_grpo:
+  train_file: data/rl/v1/train.jsonl
+  dev_file: data/rl/v1/dev.jsonl
+  dev_n: 400
+  dev_every_steps: 50
+  image_root: ~/data
+  max_image_side: 1024
+  reward_fn: pointtrain.rl_reward:point_reward
+  num_generations: 8
+  prompts_per_step: 16       # 128 completions per optimizer step
+  generation_batch_size: 64
+  micro_batch_size: 16
+  max_new_tokens: 24         # an answer is ~13 tokens incl. <|im_end|>
+  temperature: 1.0
+  top_p: 1.0
+  top_k: 0
+  beta: 0.02
+  epsilon_low: 0.2
+  epsilon_high: 0.28
+  num_iterations: 1
+  scale_rewards: group
+  loss_aggregation: token
+  skip_zero_std_groups: true
+  max_steps: 600
+  save_merged: true
+
+training:
+  learning_rate: 2.0e-5
+  lr_scheduler_type: constant
+  warmup_ratio: 10           # >= 1 means steps
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  logging_steps: 5
+  save_steps: 50
+  save_total_limit: 4
+  seed: 42
+  bf16: true
+  gradient_checkpointing: true
+  report_to: none

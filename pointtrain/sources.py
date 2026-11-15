@@ -76,11 +76,13 @@ def build_refcoco_family(
 	label_mode: str,
 	max_sents_per_ref: int,
 	seed: int = 0,
+	keep_masks: bool = False,
 ) -> tuple[list[dict], list[dict], dict]:
 	"""Rows for the train splits of RefCOCO/+/g, minus excluded images, plus a held-out dev split.
 
 	Dev = train-split images chosen by hash (never the eval's UNC val), used for checkpoint selection
 	and in-training monitoring so the frozen eval set is only looked at for final numbers.
+	``keep_masks`` stores the mask RLE on train rows too (RL rewards need the region, SFT does not).
 	"""
 	import pandas as pd
 
@@ -116,7 +118,7 @@ def build_refcoco_family(
 				if tgt is None:
 					stats[f"{name}/refs_dropped_no_interior"] += 1
 					continue
-				tgt["mask_rle"] = mask_to_rle(mask) if is_dev else None
+				tgt["mask_rle"] = mask_to_rle(mask) if (is_dev or keep_masks) else None
 				mask_cache[ann_id] = tgt
 			tgt = mask_cache[ann_id]
 			sents = sorted({s["sent"].strip() for s in r.sentences if s["sent"].strip()})
@@ -136,9 +138,10 @@ def build_refcoco_family(
 					"depth_px": round(tgt["depth_px"], 2),
 					"max_depth_px": round(tgt["max_depth_px"], 2),
 				}
-				if is_dev:
+				if is_dev or keep_masks:
 					row["mask_rle"] = tgt["mask_rle"]
 					row["ann_id"] = ann_id
+				if is_dev:
 					dev.append(row)
 				else:
 					train.append(row)
