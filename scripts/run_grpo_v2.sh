@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 # GRPO v2: synthetic COCO error-targeted prompts (pointtrain.synth_coco) + 4k learnable v1 prompts,
 # from the SFT checkpoint. Score -> mix -> train -> frozen evals -> paired comparisons.
-#   systemd-run --user --unit=pointvlm-grpo-v2 --same-dir scripts/run_grpo_v2.sh   (log: outputs/run_grpo_v2.log)
+#   systemd-run --user --unit=pointvlm-grpo-v2 --same-dir -p Nice=10 -p CPUQuota=1600% -p MemoryMax=40G scripts/run_grpo_v2.sh   (log: outputs/run_grpo_v2.log)
+# The unit limits keep the desktop responsive and kill the job (not the PC) on a CPU or RAM runaway.
 set -uo pipefail
 cd "$(dirname "$0")/.."
 exec > >(tee -a outputs/run_grpo_v2.log) 2>&1
 PY=.venv/bin/python
+# Cap CPU thread pools (torch/OpenMP, MKL, tokenizers) so preprocessing cannot saturate all 32 cores.
+export OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 TOKENIZERS_PARALLELISM=false
 RUN=grpo-v2
 OUT=outputs/$RUN
 
