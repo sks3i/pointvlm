@@ -63,3 +63,47 @@ def point_reward(row: dict, text: str) -> dict:
 	ok = pr.status is ParseStatus.OK and len(pr.points) == 1
 	hit = ok and region_hit(row["target"], pr.points[0].x, pr.points[0].y)
 	return {"reward": float(hit), "format_ok": float(ok), "unparseable": float(pr.status is not ParseStatus.OK), "multi_point": float(pr.status is ParseStatus.OK and len(pr.points) > 1)}
+
+
+SHAPE_TAU = 0.03  # of the image diagonal: misses farther than this get no partial credit
+SHAPE_MAX = 0.5  # best possible reward for a miss; a hit is always 1
+
+
+def miss_distance(target: dict, x: float, y: float) -> float:
+	"""Distance from a (missed) point to the target region, as a fraction of the image diagonal."""
+	from scipy import ndimage
+
+	if target["type"] == "mask":
+		m = rle_to_mask(target["mask_rle"])
+		h, w = m.shape
+		col, row = min(int(x / 1000 * w), w - 1), min(int(y / 1000 * h), h - 1)
+		d = ndimage.distance_transform_edt(~m)[row, col]
+		return float(d / np.hypot(w, h))
+	w, h = target["width"], target["height"]
+	pts = np.asarray(target["points"], dtype=float) * [w / 1000.0, h / 1000.0]
+	diag = float(np.hypot(w, h))
+	d = float(np.linalg.norm(pts - [x * w / 1000.0, y * h / 1000.0], axis=1).min()) - MARGIN_FRAC * diag
+	return max(d, 0.0) / diag
+
+
+def point_reward_shaped(row: dict, text: str) -> dict:
+	"""point_reward plus partial credit for near misses: SHAPE_MAX * (1 - d / SHAPE_TAU) for a miss at
+	distance d (fraction of the diagonal), 0 beyond SHAPE_TAU.
+
+	Why: 19% of the SFT model's Point-Bench misses land within 2% of the diagonal of the mask, mostly
+	on small targets. With a 0/1 reward a group of 8 near misses is unanimous (advantage 0), so GRPO
+	gets no signal about which near miss was nearer. A dense term inside a small radius ranks them,
+	while a hit (1) always beats any miss (< 0.5), so the optimum is unchanged. The radius is kept
+	small so that pointing at a neighbouring wrong object (median miss: 10% of the diagonal) earns
+	nothing. ``hit`` is returned separately; dev accuracy uses it, not the shaped reward.
+	"""
+	pr = parse_canonical(text)
+	ok = pr.status is ParseStatus.OK and len(pr.points) == 1
+	out = {"format_ok": float(ok), "unparseable": float(pr.status is not ParseStatus.OK), "multi_point": float(pr.status is ParseStatus.OK and len(pr.points) > 1), "hit": 0.0}
+	if not ok:
+		return {"reward": 0.0, **out}
+	p = pr.points[0]
+	if region_hit(row["target"], p.x, p.y):
+		return {"reward": 1.0, **out, "hit": 1.0}
+	d = miss_distance(row["target"], p.x, p.y)
+	return {"reward": SHAPE_MAX * max(0.0, 1.0 - d / SHAPE_TAU), **out}
