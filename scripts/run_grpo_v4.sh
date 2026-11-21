@@ -29,7 +29,7 @@ last=$(ls -d "$OUT"/checkpoint-* 2>/dev/null | sort -t- -k2 -n | tail -1)
 if [ ! -d "$OUT/merged" ]; then
 	echo "=== train $RUN $(date) $extra"
 	$PY -m pointtrain.grpo --set run_name=$RUN model.model_id=$BASE vlm_grpo.train_file=data/rl/v4/train.jsonl vlm_grpo.dev_file=data/rl/v4/dev.jsonl vlm_grpo.dev_n=1200 \
-		vlm_grpo.reward_fn=$REWARD vlm_grpo.max_new_tokens=64 vlm_grpo.micro_batch_size=8 $extra "$@" || { echo "TRAIN FAILED"; exit 1; }
+		vlm_grpo.reward_fn=$REWARD vlm_grpo.max_new_tokens=64 vlm_grpo.micro_batch_size=8 vlm_grpo.generation_batch_size=24 $extra "$@" || { echo "TRAIN FAILED"; exit 1; }
 fi
 $PY -m pointtrain.count_check --out data/rl/count_dev --model $OUT/merged --tag v4 || true
 for bench in pointbench where2place refcoco; do
