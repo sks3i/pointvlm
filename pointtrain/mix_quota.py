@@ -38,7 +38,12 @@ def main() -> None:
 	train, report = [], {}
 	for spec in a.source:
 		path, _, q = spec.rpartition(":")
-		rows = [r for r in _rows(Path(path)) if 0 < r.get("sft_pass", 0.5) < 1]
+		# PixMo has a few repeated (image, label) annotations, which give repeated keys: keep the first.
+		seen, rows = set(), []
+		for r in _rows(Path(path)):
+			if 0 < r.get("sft_pass", 0.5) < 1 and r["key"] not in seen:
+				seen.add(r["key"])
+				rows.append(r)
 		for item in q.split(","):
 			g, n = item.split("=")
 			pick = sorted((r for r in rows if r["group"] == g), key=lambda r: _h("mix3:" + r["key"]))
