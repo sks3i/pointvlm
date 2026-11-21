@@ -17,7 +17,7 @@ Sources (none touch any eval item):
 	  instance >= 0.2% of the image and >= 0.1x the largest (COCO often leaves tiny background
 	  instances unlabeled, which would make the count wrong). Target: every instance mask.
 	* PixMo-Points rows whose image is on disk but NOT in the SFT training set, minus flagged images,
-	  1-10 points. Target: the labeled points; a predicted point matches a labeled one within
+	  1-10 points. Target (type "count_points"): the labeled points; a predicted point matches a labeled one within
 	  ``radius_frac`` of the image diagonal (one-to-one, Hungarian).
 """
 
@@ -149,7 +149,7 @@ def build(a) -> list[dict]:
 		label = label[:1].lower() + label[1:]
 		label = plural_label(label)
 		pts = [list(frac_to_canonical(p["x"] / 100, p["y"] / 100)) for p in r.points]
-		rows.append({"key": f"count:pixmo:{r.image_sha256}:{r.label}", "source": "count_pixmo", "group": "count_pixmo", "image": path, "image_id": f"pixmo:{r.image_sha256}", "query": f"all the {label}", "n": n, "prompt": count_prompt(label), "target": {"type": "points", "points": pts, "width": W, "height": H}})
+		rows.append({"key": f"count:pixmo:{r.image_sha256}:{r.label}", "source": "count_pixmo", "group": "count_pixmo", "image": path, "image_id": f"pixmo:{r.image_sha256}", "query": f"all the {label}", "n": n, "prompt": count_prompt(label), "target": {"type": "count_points", "points": pts, "width": W, "height": H}})
 		by_n[min(n, 5)] += 1
 	return rows
 
