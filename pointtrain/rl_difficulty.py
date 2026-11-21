@@ -26,11 +26,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def score(pool_dir: Path, model_id: str, k: int, batch: int, temperature: float, max_new_tokens: int, limit: int | None) -> None:
+def score(pool_dir: Path, model_id: str, k: int, batch: int, temperature: float, max_new_tokens: int, limit: int | None, reward: str = "pointtrain.rl_reward:point_reward") -> None:
 	from train_utils.configs.model_config import LoRAConfig, ModelConfig, QuantizationConfig
 	from train_utils.vlm import build_adapter
 
-	from pointtrain.rl_reward import point_reward
+	from train_utils.trainers.vlm_grpo_trainer import load_reward_fn
+
+	reward_fn = load_reward_fn(reward)
 
 	rows = [json.loads(l) for l in (pool_dir / "pool.jsonl").read_text().splitlines()][:limit]
 	out_path = pool_dir / "scored.jsonl"
@@ -56,11 +58,11 @@ def score(pool_dir: Path, model_id: str, k: int, batch: int, temperature: float,
 						cs = adapter.sample(model, [r] * k, max_new_tokens, True, temperature, 1.0, 0)
 					except OSError:
 						continue
-					_write(f, r, [adapter.decode(c) for c in cs], point_reward)
+					_write(f, r, [adapter.decode(c) for c in cs], reward_fn)
 				continue
 			texts = [adapter.decode(c) for c in comps]
 			for j, r in enumerate(chunk):
-				_write(f, r, texts[j * k : (j + 1) * k], point_reward)
+				_write(f, r, texts[j * k : (j + 1) * k], reward_fn)
 			n = i + len(chunk)
 			if (i // per) % 20 == 0:
 				el = time.time() - t0
@@ -68,7 +70,8 @@ def score(pool_dir: Path, model_id: str, k: int, batch: int, temperature: float,
 
 
 def _write(f, row, texts, reward_fn):
-	rs = [reward_fn(row, t)["reward"] for t in texts]
+	# Pass rate counts full successes ("hit" when the reward reports it), not partial credit.
+	rs = [(lambda o: o.get("hit", o["reward"]))(reward_fn(row, t)) for t in texts]
 	row = dict(row, sft_pass=sum(rs) / len(rs), sft_k=len(rs), sft_example=texts[0])
 	f.write(json.dumps(row) + "\n")
 	f.flush()
@@ -104,11 +107,12 @@ def main() -> None:
 	ap.add_argument("--max-new-tokens", type=int, default=24)
 	ap.add_argument("--limit", type=int, default=None)
 	ap.add_argument("--select-only", action="store_true")
+	ap.add_argument("--reward", default="pointtrain.rl_reward:point_reward")
 	ap.add_argument("--lo", type=float, default=0.0)
 	ap.add_argument("--hi", type=float, default=1.0)
 	a = ap.parse_args()
 	if not a.select_only:
-		score(a.pool_dir, a.model, a.k, a.batch, a.temperature, a.max_new_tokens, a.limit)
+		score(a.pool_dir, a.model, a.k, a.batch, a.temperature, a.max_new_tokens, a.limit, a.reward)
 	select(a.pool_dir, a.lo, a.hi)
 
 

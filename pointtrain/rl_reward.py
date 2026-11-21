@@ -107,3 +107,31 @@ def point_reward_shaped(row: dict, text: str) -> dict:
 		return {"reward": 1.0, **out, "hit": 1.0}
 	d = miss_distance(row["target"], p.x, p.y)
 	return {"reward": SHAPE_MAX * max(0.0, 1.0 - d / SHAPE_TAU), **out}
+
+
+def point_or_count_reward(row: dict, text: str) -> dict:
+	"""Counting rows (target "masks" / "count_points") use the PointArena counting rule; every other
+	row uses point_reward_shaped.
+
+	Counting reward: 1 if the answer has exactly one point per target and every target is hit; else
+	partial credit 0.5 x F1 between predicted points and targets (precision = matched / predicted,
+	recall = matched / targets). The F1 term ranks "3 of 4 apples" above "1 of 4" and penalizes extra
+	points, so groups of near-correct counts still carry signal, while an exact answer (1) always
+	beats any partial one (<= 0.5).
+	"""
+	if row["target"]["type"] not in ("masks", "count_points"):
+		# Same keys on every row: the trainer averages each key over the whole batch.
+		return {**point_reward_shaped(row, text), "is_count": 0.0, "count_hit": 0.0}
+	from pointtrain.count_check import count_score
+
+	s = count_score(row, text)
+	matched = s["matched_frac"] * s["n_true"]
+	if s["hit"]:
+		reward = 1.0
+	elif s["n_pred"] == 0 or matched == 0:
+		reward = 0.0
+	else:
+		p, r = matched / s["n_pred"], matched / s["n_true"]
+		reward = 0.5 * 2 * p * r / (p + r)
+	pr = parse_canonical(text)
+	return {"reward": reward, "hit": s["hit"], "format_ok": float(pr.status is ParseStatus.OK), "unparseable": float(pr.status is not ParseStatus.OK), "multi_point": 0.0, "is_count": 1.0, "count_hit": s["hit"]}

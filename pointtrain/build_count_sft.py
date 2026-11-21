@@ -25,6 +25,7 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from pointeval.geometry import mask_to_rle
 from pointeval.run import load_manifest
 from pointtrain.build import _write_jsonl
 from pointtrain.count_check import count_prompt, plural_label
@@ -41,6 +42,7 @@ def main() -> None:
 	ap.add_argument("--coco-per-n", type=int, default=800, help="rows per instance count 1..10 (capped by availability)")
 	ap.add_argument("--pixmo-max", type=int, default=5000)
 	ap.add_argument("--replay", type=int, default=8000)
+	ap.add_argument("--rl-out", type=Path, default=None, help="also write the counting rows with their targets (masks / points) for GRPO")
 	a = ap.parse_args()
 	a.out.mkdir(parents=True, exist_ok=True)
 	from pycocotools import mask as mask_utils
@@ -50,6 +52,7 @@ def main() -> None:
 	flagged = set(Path("data/sft/flagged_v1.txt").read_text().split())
 	dev_imgs = {json.loads(l)["image"] for l in open("data/rl/count_dev/dev.jsonl")}
 	rows, stats = [], Counter()
+	rl_rows = []
 
 	d = json.loads(a.ann.read_text())
 	cats = {c["id"]: c["name"] for c in d["categories"]}
@@ -77,18 +80,20 @@ def main() -> None:
 		c, xs = min(ok, key=lambda o: (by_n[len(o[1])], _h(f"csp:{iid}:{o[0]}")))
 		if by_n[len(xs)] >= a.coco_per_n:
 			continue
-		pts = []
+		pts, rles = [], []
 		for x in xs:
 			m = mask_utils.decode(mask_utils.merge(mask_utils.frPyObjects(x["segmentation"], H, W))).astype(bool)
 			t = mask_target(m)
 			if t is None:
 				break
 			pts.append((t["x"], t["y"]))
+			rles.append(mask_to_rle(m))
 		if len(pts) != len(xs):
 			stats["coco_skipped_no_interior"] += 1
 			continue
 		label = plural(name(c))
 		rows.append({"source": "count_coco", "key": f"csft:coco:{iid}:{c}", "image": path, "image_id": f"coco:{iid}", "query": f"all the {label}", "n_points": len(pts), "prompt": count_prompt(label), "answer": format_points(order_points(pts))})
+		rl_rows.append({**{k: rows[-1][k] for k in ("key", "image", "image_id", "query", "prompt")}, "source": "count_coco", "group": "count_coco", "n": len(pts), "target": {"type": "masks", "masks": rles}})
 		by_n[len(xs)] += 1
 	stats["coco_by_n"] = dict(sorted(by_n.items()))
 
@@ -113,6 +118,9 @@ def main() -> None:
 			continue
 		label = plural_label(label[:1].lower() + label[1:])
 		pts = order_points([frac_to_canonical(p["x"] / 100, p["y"] / 100) for p in r.points])
+		size = _size(path)
+		if size:
+			rl_rows.append({"key": f"csft:pixmo:{r.image_sha256}:{r.label}", "source": "count_pixmo", "group": "count_pixmo", "image": path, "image_id": f"pixmo:{r.image_sha256}", "query": f"all the {label}", "n": n, "prompt": count_prompt(label), "target": {"type": "count_points", "points": [list(p) for p in pts], "width": size[0], "height": size[1]}})
 		px.append({"source": "count_pixmo", "key": f"csft:pixmo:{r.image_sha256}:{r.label}", "image": path, "image_id": f"pixmo:{r.image_sha256}", "query": f"all the {label}", "n_points": n, "prompt": count_prompt(label), "answer": format_points(pts)})
 	px = sorted(px, key=lambda r: _h("px:" + r["key"]))[: a.pixmo_max]
 	rows += px
@@ -128,6 +136,22 @@ def main() -> None:
 	meta = {"n_train": len(rows), "by_source": dict(Counter(r["source"] for r in rows)), "stats": stats, "args": {k: str(v) for k, v in vars(a).items()}}
 	(a.out / "meta.json").write_text(json.dumps(meta, indent=2) + "\n")
 	print(json.dumps(meta, indent=2))
+	if a.rl_out:
+		keep = {r["key"] for r in rows}
+		rl = sorted((r for r in rl_rows if r["key"] in keep), key=lambda r: _h("rlorder:" + r["key"]))
+		a.rl_out.mkdir(parents=True, exist_ok=True)
+		_write_jsonl(a.rl_out / "pool.jsonl", rl)
+		print("RL counting pool:", len(rl), dict(Counter(r["group"] for r in rl)))
+
+
+def _size(path: str):
+	from PIL import Image
+
+	try:
+		with Image.open(Path.home() / "data" / path) as im:
+			return im.size
+	except Exception:
+		return None
 
 
 if __name__ == "__main__":
