@@ -9,10 +9,13 @@ export OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 TOKENIZERS_PARALLELISM=false
 RUN=sft-count-v1
 [ -f data/sft/count_v1/train.jsonl ] || $PY -m pointtrain.build_count_sft --out data/sft/count_v1 || exit 1
 if [ ! -d outputs/$RUN/merged ]; then
-	echo "=== train $RUN $(date)"
+	extra=""
+	last=$(ls -d outputs/$RUN/checkpoint-* 2>/dev/null | sort -t- -k2 -n | tail -1)
+	[ -n "$last" ] && extra="vlm_sft.resume_from_checkpoint=$PWD/$last"
+	echo "=== train $RUN $(date) $extra"
 	$PY -m pointtrain.sft --model qwen3vl-2b --set run_name=$RUN model.model_id=$PWD/outputs/grpo-v3/merged \
 		vlm_sft.train_file=data/sft/count_v1/train.jsonl training.num_train_epochs=1 pointvlm.dev_n=0 \
-		training.save_steps=500 training.extra_training_args.dataloader_persistent_workers=false training.dataloader_num_workers=4 || { echo "TRAIN FAILED"; exit 1; }
+		training.save_steps=500 training.extra_training_args.dataloader_persistent_workers=false training.extra_training_args.dataloader_pin_memory=false training.dataloader_num_workers=0 $extra || { echo "TRAIN FAILED"; exit 1; }
 fi
 echo "=== count check $(date)"
 $PY -m pointtrain.count_check --out data/rl/count_dev --model outputs/$RUN/merged --tag count_sft || echo "CHECK FAILED"
