@@ -3,7 +3,8 @@
 #   A. GRPO "v3" recipe from the LFM2 SFT checkpoint: function prompts + free space + relations, shaped reward
 #   B. counting SFT (LoRA) on top of A, then GRPO "v4" recipe with the counting reward
 # Pass rates are model-specific, so every pool is rescored with LFM2 (6k prompts each) before mixing.
-#   systemd-run --user --unit=pointvlm-lfm2 --same-dir -p Nice=10 -p CPUQuota=1600% -p MemoryMax=40G scripts/run_lfm2.sh
+#   systemd-run --user --unit=pointvlm-lfm2 --same-dir -p Nice=10 -p CPUQuota=1600% -p MemoryMax=40G -p Restart=on-failure -p RestartSec=60 -p StartLimitIntervalSec=0 scripts/run_lfm2.sh
+# Restart=on-failure + resumable stages: a native crash (seen on this CPU) costs at most one checkpoint interval.
 set -uo pipefail
 cd "$(dirname "$0")/.."
 exec > >(tee -a outputs/run_lfm2.log) 2>&1
