@@ -6,7 +6,7 @@
 # Resumable: finished items are in results/<bench>/<run>/predictions.partial.jsonl.
 set -uo pipefail
 cd "$(dirname "$0")/.."
-export OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 TOKENIZERS_PARALLELISM=false VLLM_ENABLE_V1_MULTIPROCESSING=0
+export PATH="$PWD/.venv-vllm/bin:$PATH" OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 TOKENIZERS_PARALLELISM=false VLLM_ENABLE_V1_MULTIPROCESSING=0
 LOG=${LOG:-outputs/run_vllm_eval.log}
 echo "=== $(date) $*" >> "$LOG"
 exec taskset -c 0-7,12-31 .venv-vllm/bin/python scripts/eval_vllm.py "$@" >> "$LOG" 2>&1

@@ -97,9 +97,8 @@ def _resize(img, max_pixels: int):
 	return img.resize((max(32, int(w * s)), max(32, int(h * s))), resample=3)  # PIL BICUBIC
 
 
-def generate_fit(model: VLLMQwen, img, prompt: str):
-	"""Native image first; if the prompt exceeds max_model_len, downsize to fit, then halve."""
-	budget = None
+def generate_fit(model: VLLMQwen, img, prompt: str, budget: int | None = None):
+	"""Native image first (or ``budget`` px if given); if the prompt exceeds max_model_len, downsize to fit, then halve."""
 	while True:
 		x = img if budget is None else _resize(img, budget)
 		try:
@@ -133,6 +132,7 @@ def run_bench(model: VLLMQwen, bench: str, mode: str, run_name: str, peak: list[
 		print(f"=== {bench} {run_name}: already done", flush=True)
 		return
 	log = out_dir / "predictions.partial.jsonl"
+	inflight = out_dir / "inflight.json"
 	done = {}
 	if log.exists():
 		for line in log.read_text().splitlines():
@@ -152,7 +152,18 @@ def run_bench(model: VLLMQwen, bench: str, mode: str, run_name: str, peak: list[
 		for item in items:
 			if item["id"] in done:
 				continue
-			text, n, ms, resized = generate_fit(model, src.get(item), template.format(query=item["query"]))
+			# A CUDA OOM kills the engine, so it is handled across restarts: the item in flight is
+			# recorded first, and if the process died on it, the restarted run retries it at half
+			# the pixel budget it was attempted with.
+			img = src.get(item)
+			budget = None
+			if inflight.exists():
+				st = json.loads(inflight.read_text())
+				if st["id"] == item["id"]:
+					budget = (st["budget"] or img.size[0] * img.size[1]) // 2
+					print(f"{item['id']} crashed last time; retrying at <= {budget} px", flush=True)
+			inflight.write_text(json.dumps({"id": item["id"], "budget": budget}))
+			text, n, ms, resized = generate_fit(model, img, template.format(query=item["query"]), budget)
 			p = {"id": item["id"], "query": item["query"], "raw": text, "n_new_tokens": n, "latency_ms": round(ms, 2)}
 			if resized:
 				p["resized_to"] = resized
@@ -164,6 +175,7 @@ def run_bench(model: VLLMQwen, bench: str, mode: str, run_name: str, peak: list[
 				peak[0] = max(peak[0], gpu_used_gb())
 				print(f"{bench} {len(done)}/{len(items)}  gpu {peak[0]:.1f} GB  {(time.time() - t0) / 60:.0f} min", flush=True)
 
+	inflight.unlink(missing_ok=True)
 	preds = [done[it["id"]] for it in items]
 	scores = score_predictions(bench, items, preds, PARSERS[parser_name])
 	write_predictions(out_dir, preds)
