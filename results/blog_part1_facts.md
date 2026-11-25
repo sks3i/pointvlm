@@ -270,3 +270,23 @@ Results (strict frozen parser; lenient = strict, 0 rescued / 0 lost):
 
 Paired with GRPO v4 (exact McNemar, same items): Point-Bench 60.9 vs 60.2, v4 only right 109 vs 32B only right 102, p = 0.68; counting 30.3 vs 19.5, 24 vs 3, p < 0.0001. The tuned 2B is still level with the 32B overall and still well ahead on counting.
 
+
+### 4.7 Base Qwen3-VL-2B on vLLM with the 32B settings (RefCOCO only, 2026-11-24)
+
+Run dirs: results/refcoco/qwen3vl-2b-vllm32set-{canonical,native} (scripts/eval_vllm.py, commit 0ade4d2).
+Qwen/Qwen3-VL-2B-Instruct @ 89644892; vLLM 0.34.0, fp8 KV (0.8 GiB), max_model_len 6144, max_num_batched_tokens 1024,
+profile side 2480, CUDA graphs [1], max_num_seqs 1, greedy, 64 new tokens, 5 warm-ups (same flags as grpo-v4-vllm32set).
+
+| Mode | Strict acc (95% CI) | Lenient | HF strict / lenient | p50 / p90 ms (vLLM) | HF p50 ms |
+|---|---|---|---|---|---|
+| canonical | 85.0 (83.4-86.5) | 86.8 | 80.6 / 86.9 | 146 / 181 | 272 |
+| native | 86.4 (84.8-87.8) | 87.3 | 86.2 / 87.05 | 166 / 185 | 314 |
+
+- Format slips depend on the engine: HF canonical had 149 outputs ending in `]` (strict-unparseable), vLLM 39.
+  Paired: 105 items HF-unparseable -> vLLM hit; among items both parsed, 28 vLLM-only hits vs 33 HF-only hits.
+  Under the lenient parser the engines agree, so localization is the same and only format adherence differs.
+  Only 482/2000 (canonical) and 570/2000 (native) raw outputs are byte-identical between engines (bf16 numerics, fp8 KV).
+- Molmo-7B-D on vLLM 0.34 was tried and dropped: needs --native molmo --trust-remote-code, max_model_len <= 4096
+  (max_position_embeddings) and skipping a dead `import tensorflow`; with fp8 KV the output is garbled (`y="="="36.5"`),
+  with bf16 KV the format is clean but points on the first 5 items differ widely from HF (HF hits all 5). Molmo latency
+  therefore stays HF (915 ms p50).
