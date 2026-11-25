@@ -290,3 +290,8 @@ profile side 2480, CUDA graphs [1], max_num_seqs 1, greedy, 64 new tokens, 5 war
   (max_position_embeddings) and skipping a dead `import tensorflow`; with fp8 KV the output is garbled (`y="="="36.5"`),
   with bf16 KV the format is clean but points on the first 5 items differ widely from HF (HF hits all 5). Molmo latency
   therefore stays HF (915 ms p50).
+- Post wording (site 488d18e): "149 answers closed the tag with `]`" = all 149 HF strict-unparseable canonical outputs; 126 of
+  them are lenient hits (strict 1612 -> lenient 1738), which is the ~6-point loss. The earlier "126" counted lost hits, not slips.
+- Speed split (vLLM, same settings, RefCOCO canonical): size alone ~3.7x (base 2B 146 ms vs 32B 540 ms); output length adds ~1.6x
+  (base 28.5 tokens -> GRPO v4 15.0 tokens, 146 -> 90 ms). Linear fit latency = ~18 ms + ~4.6 ms/token for every 2B run,
+  so the base-vs-trained gap is all decode length.
