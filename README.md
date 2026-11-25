@@ -1,7 +1,7 @@
 # pointvlm
 
 Teach a small VLM to point (`<point x="512" y="340">`, 0-1000 normalized): frozen evals, then SFT, GRPO and quantization.
-Training uses [localtrainer](https://github.com/sks3i/localtrainer) (`train_utils`, branch `vlm-grpo`); this repo holds everything project specific.
+Training uses [localtrainer](https://github.com/sks3i/localtrainer) (`train_utils`); this repo holds everything project specific.
 
 * Blog post: [Teaching a 2B VLM to Point, Part 1](https://sabarishks.com/posts/teaching-2b-vlm-to-point-part-1/)
 * Released model: [Sks3i/qwen3-vl-2b-pointer](https://huggingface.co/Sks3i/qwen3-vl-2b-pointer) (Qwen3-VL-2B after SFT + four GRPO runs; the blog's "run 4")
@@ -46,7 +46,7 @@ Molmo's remote code may need an older `transformers`. If it fails, use a separat
 
 ## SFT (week 2)
 
-Code in `pointtrain/`, configs in `configs/sft/`. Training runs on localtrainer's `vlm_sft` trainer (the `vlm-grpo` branch, which also contains `vlm_grpo`; `pip install -e ../localtrainer`).
+Code in `pointtrain/`, configs in `configs/sft/`. Training runs on localtrainer's `vlm_sft` trainer (`pip install -e ../localtrainer`; its `vlm_grpo` trainer runs the RL stages).
 
 ```bash
 # data (images under ~/data: coco/train2014, pixmo/images, robopoint/images)
