@@ -1,0 +1,96 @@
+{
+  "bench": "where2place",
+  "partial": false,
+  "model": "QuantTrio/Qwen3-VL-32B-Instruct-AWQ@c2d44b1376c7",
+  "model_config": {
+    "engine": "vllm 0.34.0",
+    "model": "QuantTrio/Qwen3-VL-32B-Instruct-AWQ",
+    "revision": "c2d44b1376c73fa120fdb4e216c2ef61c1945498",
+    "quantization": "auto_awq",
+    "dtype": "torch.float16",
+    "kv_cache_dtype": "fp8",
+    "max_model_len": 6144,
+    "gpu_memory_utilization": 0.93,
+    "enforce_eager": false,
+    "max_num_batched_tokens": 1024,
+    "profile_image_side": 2480,
+    "cudagraph_capture_sizes": [
+      1
+    ],
+    "kv_cache_memory_gib": 0.8,
+    "max_new_tokens": 64,
+    "temperature": 0.0,
+    "torch": "2.14.0+cu130"
+  },
+  "mode": "canonical",
+  "parser": "canonical",
+  "prompt_template": "Point to {query}. Answer with exactly one point in the format <point x=\"X\" y=\"Y\">, where X and Y are integers from 0 to 1000 giving the position as a fraction of the image width and height (0,0 is the top-left corner).",
+  "prompt_sha256": "b829bffc420e1ec0",
+  "manifest_sha256": "1283cf9e1f29eba39005e1682e2a80d486b9530e49e20dae294b2bfc79a85c62",
+  "dataset_revision": "54e4be4680a4f6c3b9348e5af3497cc36dedc08d",
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a",
+  "point_in_mask": {
+    "n": 100,
+    "hits": 64,
+    "acc": 0.64,
+    "ci95": [
+      0.5423540237328172,
+      0.7272877966118639
+    ]
+  },
+  "parse_status": {
+    "ok": 100,
+    "unparseable": 0,
+    "invalid": 0
+  },
+  "frac_points_in_mask": {
+    "mean": 0.64
+  },
+  "by_category": {
+    "seen": {
+      "n": 70,
+      "acc": 0.6142857142857143,
+      "ci95": [
+        0.49715735497037766,
+        0.7195230877294456
+      ]
+    },
+    "unseen": {
+      "n": 30,
+      "acc": 0.7,
+      "ci95": [
+        0.5212421239810444,
+        0.8333525181143747
+      ]
+    }
+  },
+  "latency": {
+    "n": 100,
+    "mean_ms": 740.0917999999998,
+    "p50_ms": 540.565,
+    "p90_ms": 1292.13,
+    "p99_ms": 1379.4630000000002,
+    "engine": "vllm 0.34.0"
+  },
+  "mean_new_tokens": 25.31,
+  "resized_to_fit_max_model_len": {
+    "n": 0,
+    "acc_without_them": 0.64
+  },
+  "gpu_memory_used_gb_peak_sampled": {
+    "value": 23.39,
+    "note": "nvidia-smi memory.used, whole GPU incl. desktop (~1 GB), sampled every 50 items; vLLM preallocates gpu_memory_utilization"
+  },
+  "hardware": {
+    "python": "3.11.5",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.22.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "driver": "595.99.02",
+    "code_git_sha": "49669c8bc6483b24911cfcb125d91d9ff103d875"
+  },
+  "runner": "scripts/eval_vllm.py"
+}

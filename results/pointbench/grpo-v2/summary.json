@@ -1,0 +1,92 @@
+{
+  "bench": "pointbench",
+  "partial": false,
+  "model": "outputs/grpo-v2/merged",
+  "model_config": {
+    "dtype": "torch.bfloat16",
+    "attn": "sdpa",
+    "max_new_tokens": 64
+  },
+  "mode": "canonical",
+  "parser": "canonical",
+  "prompt_template": "Point to {query}. Answer with exactly one point in the format <point x=\"X\" y=\"Y\">, where X and Y are integers from 0 to 1000 giving the position as a fraction of the image width and height (0,0 is the top-left corner).",
+  "prompt_sha256": "b829bffc420e1ec0",
+  "manifest_sha256": "6104713c2b84d09f88306c5eafb449782bc5b5ba9bee289aa89796a522d8232e",
+  "dataset_revision": "77ec5dca697b25025e655e2ec34fd2207856924c",
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a",
+  "point_in_mask": {
+    "n": 979,
+    "hits": 575,
+    "acc": 0.5873340143003064,
+    "ci95": [
+      0.5562122161452638,
+      0.6177731183710864
+    ]
+  },
+  "parse_status": {
+    "ok": 979,
+    "unparseable": 0,
+    "invalid": 0
+  },
+  "by_category": {
+    "affordable": {
+      "n": 198,
+      "acc": 0.8181818181818182,
+      "ci95": [
+        0.758573509981177,
+        0.865678815078073
+      ]
+    },
+    "counting": {
+      "n": 195,
+      "acc": 0.1794871794871795,
+      "ci95": [
+        0.1319809044720226,
+        0.23937756018990552
+      ]
+    },
+    "reasoning": {
+      "n": 193,
+      "acc": 0.6580310880829016,
+      "ci95": [
+        0.5886069317131297,
+        0.7212871340323679
+      ]
+    },
+    "spatial": {
+      "n": 195,
+      "acc": 0.7076923076923077,
+      "ci95": [
+        0.6403351976534583,
+        0.7670245172456124
+      ]
+    },
+    "steerable": {
+      "n": 198,
+      "acc": 0.5707070707070707,
+      "ci95": [
+        0.501062939942703,
+        0.6376597989593525
+      ]
+    }
+  },
+  "latency": {
+    "n": 979,
+    "mean_ms": 666.3776608784481,
+    "p50_ms": 200.69,
+    "p90_ms": 2559.9420000000005,
+    "p99_ms": 4329.3622000000005
+  },
+  "mean_new_tokens": 15.451481103166497,
+  "hardware": {
+    "python": "3.11.17",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.19.0",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "driver": "595.99.02",
+    "code_git_sha": "7506717e019414edd692ad4746ced9031a86f338"
+  }
+}

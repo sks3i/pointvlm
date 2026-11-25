@@ -1,0 +1,117 @@
+{
+  "bench": "pointbench",
+  "partial": false,
+  "model": "QuantTrio/Qwen3-VL-32B-Instruct-AWQ@c2d44b1376c7",
+  "model_config": {
+    "engine": "vllm 0.34.0",
+    "model": "QuantTrio/Qwen3-VL-32B-Instruct-AWQ",
+    "revision": "c2d44b1376c73fa120fdb4e216c2ef61c1945498",
+    "quantization": "auto_awq",
+    "dtype": "torch.float16",
+    "kv_cache_dtype": "fp8",
+    "max_model_len": 6144,
+    "gpu_memory_utilization": 0.93,
+    "enforce_eager": false,
+    "max_num_batched_tokens": 1024,
+    "profile_image_side": 2480,
+    "cudagraph_capture_sizes": [
+      1
+    ],
+    "kv_cache_memory_gib": 0.8,
+    "max_new_tokens": 64,
+    "temperature": 0.0,
+    "torch": "2.14.0+cu130"
+  },
+  "mode": "native",
+  "parser": "qwen_json",
+  "prompt_template": "Locate {query} in the image and output its point coordinates in JSON format like [{{\"point_2d\": [x, y], \"label\": \"...\"}}].",
+  "prompt_sha256": "8d49532482f95cdb",
+  "manifest_sha256": "6104713c2b84d09f88306c5eafb449782bc5b5ba9bee289aa89796a522d8232e",
+  "dataset_revision": "77ec5dca697b25025e655e2ec34fd2207856924c",
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a",
+  "point_in_mask": {
+    "n": 979,
+    "hits": 578,
+    "acc": 0.5903983656792645,
+    "ci95": [
+      0.5592990536099197,
+      0.6207910294859514
+    ]
+  },
+  "parse_status": {
+    "ok": 849,
+    "unparseable": 130,
+    "invalid": 0
+  },
+  "by_category": {
+    "affordable": {
+      "n": 198,
+      "acc": 0.8737373737373737,
+      "ci95": [
+        0.8202539302976566,
+        0.9129948324703512
+      ]
+    },
+    "counting": {
+      "n": 195,
+      "acc": 0.15384615384615385,
+      "ci95": [
+        0.10994061068406172,
+        0.21112653115082067
+      ]
+    },
+    "reasoning": {
+      "n": 193,
+      "acc": 0.7098445595854922,
+      "ci95": [
+        0.6422175731073961,
+        0.7692811043579367
+      ]
+    },
+    "spatial": {
+      "n": 195,
+      "acc": 0.7589743589743589,
+      "ci95": [
+        0.6943126685691752,
+        0.8136296919839867
+      ]
+    },
+    "steerable": {
+      "n": 198,
+      "acc": 0.45454545454545453,
+      "ci95": [
+        0.3867123597110598,
+        0.5241087367090475
+      ]
+    }
+  },
+  "latency": {
+    "n": 979,
+    "mean_ms": 1874.805434116445,
+    "p50_ms": 1281.36,
+    "p90_ms": 4469.386,
+    "p99_ms": 4976.233600000003,
+    "engine": "vllm 0.34.0"
+  },
+  "mean_new_tokens": 36.62104187946885,
+  "resized_to_fit_max_model_len": {
+    "n": 172,
+    "acc_without_them": 0.5861214374225526
+  },
+  "gpu_memory_used_gb_peak_sampled": {
+    "value": 23.39,
+    "note": "nvidia-smi memory.used, whole GPU incl. desktop (~1 GB), sampled every 50 items; vLLM preallocates gpu_memory_utilization"
+  },
+  "hardware": {
+    "python": "3.11.5",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.22.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "driver": "595.99.02",
+    "code_git_sha": "49669c8bc6483b24911cfcb125d91d9ff103d875"
+  },
+  "runner": "scripts/eval_vllm.py"
+}

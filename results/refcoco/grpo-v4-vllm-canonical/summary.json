@@ -1,0 +1,79 @@
+{
+  "bench": "refcoco",
+  "partial": false,
+  "model": "/home/sabarishks/Projects/pointvlm/outputs/grpo-v4/merged@local",
+  "model_config": {
+    "engine": "vllm 0.34.0",
+    "model": "/home/sabarishks/Projects/pointvlm/outputs/grpo-v4/merged",
+    "revision": "local",
+    "quantization": "None",
+    "dtype": "torch.bfloat16",
+    "kv_cache_dtype": "auto",
+    "max_model_len": 8192,
+    "gpu_memory_utilization": 0.5,
+    "enforce_eager": false,
+    "max_num_batched_tokens": null,
+    "max_new_tokens": 64,
+    "temperature": 0.0,
+    "torch": "2.14.0+cu130"
+  },
+  "mode": "canonical",
+  "parser": "canonical",
+  "prompt_template": "Point to {query}. Answer with exactly one point in the format <point x=\"X\" y=\"Y\">, where X and Y are integers from 0 to 1000 giving the position as a fraction of the image width and height (0,0 is the top-left corner).",
+  "prompt_sha256": "b829bffc420e1ec0",
+  "manifest_sha256": "228bc64e229bc8941df418de7d13bd72dd50678bbcb4f6df7165987f7eb15fcb",
+  "dataset_revision": "a5dff0b3194715fda69b2d6a0d2aaafb41eaa407",
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a",
+  "point_in_mask": {
+    "n": 2000,
+    "hits": 1848,
+    "acc": 0.924,
+    "ci95": [
+      0.9115560318473536,
+      0.9348183120325472
+    ]
+  },
+  "parse_status": {
+    "ok": 2000,
+    "unparseable": 0,
+    "invalid": 0
+  },
+  "hit_box": {
+    "n": 2000,
+    "hits": 1881,
+    "acc": 0.9405,
+    "ci95": [
+      0.9292636880879793,
+      0.950047393230644
+    ]
+  },
+  "latency": {
+    "n": 2000,
+    "mean_ms": 90.32673999999983,
+    "p50_ms": 90.84,
+    "p90_ms": 93.51100000000001,
+    "p99_ms": 97.5006,
+    "engine": "vllm 0.34.0"
+  },
+  "mean_new_tokens": 15.0225,
+  "resized_to_fit_max_model_len": {
+    "n": 0,
+    "acc_without_them": 0.924
+  },
+  "gpu_memory_used_gb_peak_sampled": {
+    "value": 11.76,
+    "note": "nvidia-smi memory.used, whole GPU incl. desktop (~1 GB), sampled every 50 items; vLLM preallocates gpu_memory_utilization"
+  },
+  "hardware": {
+    "python": "3.11.5",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.22.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "driver": "595.99.02",
+    "code_git_sha": "0a298428e27f9cdd3c262affbdc9fb98da37f115"
+  },
+  "runner": "scripts/eval_vllm.py"
+}

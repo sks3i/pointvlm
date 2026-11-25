@@ -1,0 +1,100 @@
+{"id": "w2p-000", "query": "Identify several spots within the vacant space that's between the two mugs.", "raw": "<point x=\"500\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 77.11}
+{"id": "w2p-001", "query": "Locate several points within the vacant space positioned to the left of the yellow mustard bottle.", "raw": "<point x=\"503\" y=\"827\">", "n_new_tokens": 15, "latency_ms": 95.63}
+{"id": "w2p-002", "query": "Select several points within a vacant area located within the drawer.", "raw": "<point x=\"603\" y=\"771\">", "n_new_tokens": 15, "latency_ms": 93.22}
+{"id": "w2p-003", "query": "Locate several points within the vacant area that is situated to the right of the teal plate.", "raw": "<point x=\"820\" y=\"317\">", "n_new_tokens": 15, "latency_ms": 93.29}
+{"id": "w2p-004", "query": "Locate several points within the vacant space in the plastic bowl.", "raw": "<point x=\"503\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 92.63}
+{"id": "w2p-005", "query": "Select one or more locations within the vacant area that is in front of the mug in the middle.", "raw": "<point x=\"520\" y=\"821\">", "n_new_tokens": 15, "latency_ms": 92.98}
+{"id": "w2p-006", "query": "Locate several points in the blank space situated above the apple.", "raw": "<point x=\"400\" y=\"251\">", "n_new_tokens": 15, "latency_ms": 92.11}
+{"id": "w2p-007", "query": "Locate several spots within the vacant area situated below the rightmost item.", "raw": "<point x=\"700\" y=\"956\">", "n_new_tokens": 15, "latency_ms": 92.16}
+{"id": "w2p-008", "query": "Locate several points within the vacant area that lies between the two spam cans.", "raw": "<point x=\"280\" y=\"696\">", "n_new_tokens": 15, "latency_ms": 92.49}
+{"id": "w2p-009", "query": "Locate a few places in the free space between the orange and the plastic cup.", "raw": "<point x=\"550\" y=\"494\">", "n_new_tokens": 15, "latency_ms": 91.86}
+{"id": "w2p-010", "query": "Locate several points within a vacant area on the back side of the stove.", "raw": "<point x=\"416\" y=\"167\">", "n_new_tokens": 15, "latency_ms": 92.59}
+{"id": "w2p-011", "query": "Locate several points within a vacant area on the front portion of the stove.", "raw": "<point x=\"316\" y=\"808\">", "n_new_tokens": 15, "latency_ms": 92.68}
+{"id": "w2p-012", "query": "Locate a few spots within the unoccupied space behind the mouse.", "raw": "<point x=\"591\" y=\"294\">", "n_new_tokens": 15, "latency_ms": 92.48}
+{"id": "w2p-013", "query": "Locate a few spots within the unoccupied area inside the cabinet.", "raw": "<point x=\"591\" y=\"621\">", "n_new_tokens": 15, "latency_ms": 92.03}
+{"id": "w2p-014", "query": "Locate several spots within the unoccupied area beneath the apple.", "raw": "<point x=\"352\" y=\"931\">", "n_new_tokens": 15, "latency_ms": 92.36}
+{"id": "w2p-015", "query": "Locate several spots within the vacant area that is in front of the bowl on the left.", "raw": "<point x=\"300\" y=\"831\">", "n_new_tokens": 15, "latency_ms": 92.58}
+{"id": "w2p-016", "query": "Locate several spots within the vacant area that is in front of the teal bowl.", "raw": "<point x=\"845\" y=\"701\">", "n_new_tokens": 15, "latency_ms": 92.6}
+{"id": "w2p-017", "query": "Locate several spots within the vacant area situated to the left side of the mug in the middle.", "raw": "<point x=\"291\" y=\"494\">", "n_new_tokens": 15, "latency_ms": 92.6}
+{"id": "w2p-018", "query": "Find several locations within the vacant space to the left of the spam can.", "raw": "<point x=\"491\" y=\"492\">", "n_new_tokens": 15, "latency_ms": 92.43}
+{"id": "w2p-019", "query": "Locate several points within the vacant area that lies before the plastic container.", "raw": "<point x=\"611\" y=\"731\">", "n_new_tokens": 15, "latency_ms": 92.93}
+{"id": "w2p-020", "query": "Locate several points within the vacant area that is in front of the blue cup.", "raw": "<point x=\"850\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 92.64}
+{"id": "w2p-021", "query": "Locate several spots within the vacant space situated above the leftmost item.", "raw": "<point x=\"80\" y=\"221\">", "n_new_tokens": 14, "latency_ms": 87.86}
+{"id": "w2p-022", "query": "Pinpoint several spots within the vacant area located to the right-hand side of the green container.", "raw": "<point x=\"584\" y=\"710\">", "n_new_tokens": 15, "latency_ms": 92.57}
+{"id": "w2p-023", "query": "Indicate several points within the vacant area that lies between the blue cup and the teal bowl on the table.", "raw": "<point x=\"550\" y=\"802\">", "n_new_tokens": 15, "latency_ms": 93.16}
+{"id": "w2p-024", "query": "Locate a few points within the unoccupied space that lies before the leftmost fruit on the table.", "raw": "<point x=\"270\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 92.91}
+{"id": "w2p-025", "query": "Locate a few points within the vacant space to the right of the frying pan.", "raw": "<point x=\"603\" y=\"602\">", "n_new_tokens": 15, "latency_ms": 91.77}
+{"id": "w2p-026", "query": "Locate several spots within the vacant area situated to the left side of the orange.", "raw": "<point x=\"500\" y=\"571\">", "n_new_tokens": 15, "latency_ms": 92.93}
+{"id": "w2p-027", "query": "Locate several spots in a vacant area next to the white mug.", "raw": "<point x=\"416\" y=\"471\">", "n_new_tokens": 15, "latency_ms": 91.49}
+{"id": "w2p-028", "query": "Locate several points within the vacant space situated on the left part of the cabinet shelf.", "raw": "<point x=\"428\" y=\"310\">", "n_new_tokens": 15, "latency_ms": 93.08}
+{"id": "w2p-029", "query": "Find a few spots within the vacant area on the rightmost white plate.", "raw": "<point x=\"873\" y=\"856\">", "n_new_tokens": 15, "latency_ms": 92.42}
+{"id": "w2p-030", "query": "Pinpoint a few spots within the vacant space located behind the bowl on the right.", "raw": "<point x=\"800\" y=\"294\">", "n_new_tokens": 15, "latency_ms": 92.75}
+{"id": "w2p-031", "query": "Find a few points in the vacant space behind the book.", "raw": "<point x=\"802\" y=\"305\">", "n_new_tokens": 15, "latency_ms": 92.65}
+{"id": "w2p-032", "query": "Locate several points within a vacant area on the front side of the table.", "raw": "<point x=\"500\" y=\"706\">", "n_new_tokens": 15, "latency_ms": 92.93}
+{"id": "w2p-033", "query": "Find a few points in the free space in front of the window on the left.", "raw": "<point x=\"348\" y=\"706\">", "n_new_tokens": 15, "latency_ms": 93.26}
+{"id": "w2p-034", "query": "Pinpoint several spots in the vacant area that lies to the right of the glass container.", "raw": "<point x=\"700\" y=\"556\">", "n_new_tokens": 15, "latency_ms": 93.24}
+{"id": "w2p-035", "query": "Find a few locations in the blank space to the left of the white pig sculpture.", "raw": "<point x=\"391\" y=\"204\">", "n_new_tokens": 15, "latency_ms": 93.14}
+{"id": "w2p-036", "query": "Select several spots in the vacant area to the right of the faucet.", "raw": "<point x=\"605\" y=\"304\">", "n_new_tokens": 15, "latency_ms": 92.9}
+{"id": "w2p-037", "query": "Find a few points in the vacant space in front of the glass bottle on the left.", "raw": "<point x=\"516\" y=\"681\">", "n_new_tokens": 15, "latency_ms": 95.23}
+{"id": "w2p-038", "query": "Locate some points within the free area in between the plastic cup and the toy figure.", "raw": "<point x=\"416\" y=\"327\">", "n_new_tokens": 15, "latency_ms": 95.56}
+{"id": "w2p-039", "query": "Find a few points in the vacant area behind the black zip bag.", "raw": "<point x=\"252\" y=\"290\">", "n_new_tokens": 15, "latency_ms": 93.31}
+{"id": "w2p-040", "query": "Select a few points in the free space to the left of the chair on the right.", "raw": "<point x=\"702\" y=\"798\">", "n_new_tokens": 15, "latency_ms": 92.72}
+{"id": "w2p-041", "query": "Find a few places in the vacant space behind the orange juice box.", "raw": "<point x=\"348\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 92.17}
+{"id": "w2p-042", "query": "Detect a few locations within the vacant space in front of the toilet paper.", "raw": "<point x=\"552\" y=\"735\">", "n_new_tokens": 15, "latency_ms": 92.25}
+{"id": "w2p-043", "query": "Find some points within the vacant space inside the headphones.", "raw": "<point x=\"620\" y=\"627\">", "n_new_tokens": 15, "latency_ms": 92.76}
+{"id": "w2p-044", "query": "Locate several places within the free space to the rear of the sink in the front.", "raw": "<point x=\"552\" y=\"317\">", "n_new_tokens": 15, "latency_ms": 93.07}
+{"id": "w2p-045", "query": "Identify several points within the vacant area on top of the laptop on the right.", "raw": "<point x=\"845\" y=\"444\">", "n_new_tokens": 15, "latency_ms": 92.82}
+{"id": "w2p-046", "query": "Find some spots in the free space above the drawers.", "raw": "<point x=\"711\" y=\"35\">", "n_new_tokens": 14, "latency_ms": 87.16}
+{"id": "w2p-047", "query": "Identify a few places in the free region in between the yellow cup and the cardboard box.", "raw": "<point x=\"603\" y=\"735\">", "n_new_tokens": 15, "latency_ms": 93.15}
+{"id": "w2p-048", "query": "Locate several spots in the free space to the left of the lamp.", "raw": "<point x=\"700\" y=\"511\">", "n_new_tokens": 15, "latency_ms": 92.44}
+{"id": "w2p-049", "query": "Identify a few places in the vacant region to the left of the blue trash can.", "raw": "<point x=\"270\" y=\"865\">", "n_new_tokens": 15, "latency_ms": 93.33}
+{"id": "w2p-050", "query": "Find a few spots in the vacant space to the right of the books.", "raw": "<point x=\"770\" y=\"656\">", "n_new_tokens": 15, "latency_ms": 92.99}
+{"id": "w2p-051", "query": "Identify some points in the free space on the sofa.", "raw": "<point x=\"155\" y=\"298\">", "n_new_tokens": 15, "latency_ms": 92.54}
+{"id": "w2p-052", "query": "Locate several spots within the free region under the dresser.", "raw": "<point x=\"500\" y=\"819\">", "n_new_tokens": 15, "latency_ms": 92.9}
+{"id": "w2p-053", "query": "Find some points in the free space behind the fruit snack box.", "raw": "<point x=\"212\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 92.27}
+{"id": "w2p-054", "query": "Locate some places in the free space between the green part and the white part on the left side of the table.", "raw": "<point x=\"298\" y=\"492\">", "n_new_tokens": 15, "latency_ms": 93.03}
+{"id": "w2p-055", "query": "Identify some places in the vacant space underneath the monitors.", "raw": "<point x=\"502\" y=\"429\">", "n_new_tokens": 15, "latency_ms": 93.7}
+{"id": "w2p-056", "query": "Find some spots within the unoccupied region on the tissue paper.", "raw": "<point x=\"491\" y=\"400\">", "n_new_tokens": 15, "latency_ms": 92.69}
+{"id": "w2p-057", "query": "Find several locations within the vacant space behind the laptop.", "raw": "<point x=\"403\" y=\"390\">", "n_new_tokens": 15, "latency_ms": 93.06}
+{"id": "w2p-058", "query": "Locate some places in the vacant space to the left of the water bottle.", "raw": "<point x=\"291\" y=\"611\">", "n_new_tokens": 15, "latency_ms": 92.0}
+{"id": "w2p-059", "query": "Identify a few spots in the free region on the left part of the counter.", "raw": "<point x=\"291\" y=\"414\">", "n_new_tokens": 15, "latency_ms": 92.2}
+{"id": "w2p-060", "query": "Find some points in the free space to the back side of the piano.", "raw": "<point x=\"541\" y=\"298\">", "n_new_tokens": 15, "latency_ms": 92.16}
+{"id": "w2p-061", "query": "Locate a few points in the free space on the front side of the table.", "raw": "<point x=\"416\" y=\"708\">", "n_new_tokens": 15, "latency_ms": 92.24}
+{"id": "w2p-062", "query": "Identify several places in the unoccupied space on the stair in the middle.", "raw": "<point x=\"620\" y=\"529\">", "n_new_tokens": 15, "latency_ms": 92.06}
+{"id": "w2p-063", "query": "Identify some points in the free space between the green block in the back and the white block in the back.", "raw": "<point x=\"480\" y=\"490\">", "n_new_tokens": 15, "latency_ms": 92.71}
+{"id": "w2p-064", "query": "Identify some spots in the free space between the leftmost bowl and the leftmost plate.", "raw": "<point x=\"280\" y=\"371\">", "n_new_tokens": 15, "latency_ms": 93.0}
+{"id": "w2p-065", "query": "Find some points in the vacant area inside the cabinet.", "raw": "<point x=\"370\" y=\"608\">", "n_new_tokens": 15, "latency_ms": 92.01}
+{"id": "w2p-066", "query": "Locate some spots to the right of the watering pot.", "raw": "<point x=\"800\" y=\"848\">", "n_new_tokens": 15, "latency_ms": 92.01}
+{"id": "w2p-067", "query": "Find some points within the free space in the front part of the notebook.", "raw": "<point x=\"305\" y=\"890\">", "n_new_tokens": 15, "latency_ms": 92.65}
+{"id": "w2p-068", "query": "Identify some points in the free space on the right portion of the table.", "raw": "<point x=\"856\" y=\"580\">", "n_new_tokens": 15, "latency_ms": 92.66}
+{"id": "w2p-069", "query": "Find some places in the vacant space to the right of the coffe machine.", "raw": "<point x=\"680\" y=\"706\">", "n_new_tokens": 15, "latency_ms": 92.78}
+{"id": "w2p-070", "query": "Locate some spots witihin the unoccupied area in front of the leftmost bottle.", "raw": "<point x=\"120\" y=\"821\">", "n_new_tokens": 15, "latency_ms": 92.95}
+{"id": "w2p-071", "query": "Identify several points in the vacant region in between the purple ball and the turquoise earphone.", "raw": "<point x=\"360\" y=\"542\">", "n_new_tokens": 15, "latency_ms": 92.89}
+{"id": "w2p-072", "query": "Locate some places within the free space inside the cabinet below the clothes.", "raw": "<point x=\"452\" y=\"961\">", "n_new_tokens": 15, "latency_ms": 92.59}
+{"id": "w2p-073", "query": "Find several places in the vacant space in between the airpods and the black lid.", "raw": "<point x=\"350\" y=\"608\">", "n_new_tokens": 15, "latency_ms": 92.79}
+{"id": "w2p-074", "query": "Identify some points in the unoccupied region to the right of the yellow container.", "raw": "<point x=\"670\" y=\"571\">", "n_new_tokens": 15, "latency_ms": 92.59}
+{"id": "w2p-075", "query": "Identify sevaral points within the unoccupied area inside the shelf.", "raw": "<point x=\"448\" y=\"915\">", "n_new_tokens": 15, "latency_ms": 92.72}
+{"id": "w2p-076", "query": "Locate some points within the free region in front of the red mug.", "raw": "<point x=\"370\" y=\"671\">", "n_new_tokens": 15, "latency_ms": 92.15}
+{"id": "w2p-077", "query": "Identify some points within the free space that is in front of the game controller.", "raw": "<point x=\"791\" y=\"906\">", "n_new_tokens": 15, "latency_ms": 92.08}
+{"id": "w2p-078", "query": "Find a few locations in the free space that is in front of the steamer.", "raw": "<point x=\"652\" y=\"711\">", "n_new_tokens": 15, "latency_ms": 93.24}
+{"id": "w2p-079", "query": "Find a few locations in the empty space that is to the right of the toy tower.", "raw": "<point x=\"845\" y=\"408\">", "n_new_tokens": 15, "latency_ms": 93.03}
+{"id": "w2p-080", "query": "Find a few locations in the empty space that is ontop of the scale.", "raw": "<point x=\"370\" y=\"541\">", "n_new_tokens": 15, "latency_ms": 92.65}
+{"id": "w2p-081", "query": "Find a few locations in the empty space that is in between the rtx gpu and cracker box.", "raw": "<point x=\"600\" y=\"544\">", "n_new_tokens": 15, "latency_ms": 93.32}
+{"id": "w2p-082", "query": "Locate a few points in the free space that is to the right of the bottle.", "raw": "<point x=\"611\" y=\"708\">", "n_new_tokens": 15, "latency_ms": 93.28}
+{"id": "w2p-083", "query": "Find a few points in the free space that is to the left of the bowl and on the tarp.", "raw": "<point x=\"602\" y=\"408\">", "n_new_tokens": 15, "latency_ms": 92.75}
+{"id": "w2p-084", "query": "Identify a few points in the free space that is in front of the golden shampoo bottles.", "raw": "<point x=\"580\" y=\"719\">", "n_new_tokens": 15, "latency_ms": 92.99}
+{"id": "w2p-085", "query": "Find some places in the free space that is beside the blue bottle and in front of the olive oil.", "raw": "<point x=\"341\" y=\"671\">", "n_new_tokens": 15, "latency_ms": 93.12}
+{"id": "w2p-086", "query": "Locate some places in the free space that is in the sink.", "raw": "<point x=\"870\" y=\"902\">", "n_new_tokens": 15, "latency_ms": 92.76}
+{"id": "w2p-087", "query": "Find the free space that is near the front edge of the table.", "raw": "<point x=\"502\" y=\"890\">", "n_new_tokens": 15, "latency_ms": 92.83}
+{"id": "w2p-088", "query": "Find some spots within the free surface area in the closet.", "raw": "<point x=\"550\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 92.73}
+{"id": "w2p-089", "query": "Pinpoint the vacant space that is to the left of the controllers.", "raw": "<point x=\"170\" y=\"494\">", "n_new_tokens": 15, "latency_ms": 92.24}
+{"id": "w2p-090", "query": "Locate some spots within the free space in front of the harry potter castle.", "raw": "<point x=\"500\" y=\"711\">", "n_new_tokens": 15, "latency_ms": 92.69}
+{"id": "w2p-091", "query": "Pinpoint some spots within the free space that is in between the two red cracker boxes.", "raw": "<point x=\"411\" y=\"544\">", "n_new_tokens": 15, "latency_ms": 92.84}
+{"id": "w2p-092", "query": "Find several points in the free space in front of the steamer.", "raw": "<point x=\"800\" y=\"681\">", "n_new_tokens": 15, "latency_ms": 92.09}
+{"id": "w2p-093", "query": "Find several points in the free space on the white table.", "raw": "<point x=\"500\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 91.86}
+{"id": "w2p-094", "query": "Find some spots in the space that is between the blue mug and orange bowl.", "raw": "<point x=\"416\" y=\"394\">", "n_new_tokens": 15, "latency_ms": 92.37}
+{"id": "w2p-095", "query": "Find several spots in the free space in front of the stack of books on the right.", "raw": "<point x=\"628\" y=\"652\">", "n_new_tokens": 15, "latency_ms": 93.47}
+{"id": "w2p-096", "query": "Identify some points within the free space that is beside the glass cup and to the left of the weights.", "raw": "<point x=\"400\" y=\"690\">", "n_new_tokens": 15, "latency_ms": 92.69}
+{"id": "w2p-097", "query": "Find some points within the space that is in front of the soap dispenser and ontop of the gray pencil case.", "raw": "<point x=\"702\" y=\"584\">", "n_new_tokens": 15, "latency_ms": 93.29}
+{"id": "w2p-098", "query": "Pinpoint some points within the vacant space that is in between the phone and measuring tape.", "raw": "<point x=\"650\" y=\"642\">", "n_new_tokens": 15, "latency_ms": 93.23}
+{"id": "w2p-099", "query": "Locate some points within the free space that is in front of the left sink.", "raw": "<point x=\"411\" y=\"804\">", "n_new_tokens": 15, "latency_ms": 92.69}

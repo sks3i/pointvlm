@@ -1,0 +1,71 @@
+{
+  "bench": "where2place",
+  "partial": false,
+  "model": "outputs/grpo-v4/merged",
+  "model_config": {
+    "dtype": "torch.bfloat16",
+    "attn": "sdpa",
+    "max_new_tokens": 64
+  },
+  "mode": "canonical",
+  "parser": "canonical",
+  "prompt_template": "Point to {query}. Answer with exactly one point in the format <point x=\"X\" y=\"Y\">, where X and Y are integers from 0 to 1000 giving the position as a fraction of the image width and height (0,0 is the top-left corner).",
+  "prompt_sha256": "b829bffc420e1ec0",
+  "manifest_sha256": "1283cf9e1f29eba39005e1682e2a80d486b9530e49e20dae294b2bfc79a85c62",
+  "dataset_revision": "54e4be4680a4f6c3b9348e5af3497cc36dedc08d",
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a",
+  "point_in_mask": {
+    "n": 100,
+    "hits": 57,
+    "acc": 0.57,
+    "ci95": [
+      0.4721538947286719,
+      0.6626670154436687
+    ]
+  },
+  "parse_status": {
+    "ok": 100,
+    "unparseable": 0,
+    "invalid": 0
+  },
+  "frac_points_in_mask": {
+    "mean": 0.57
+  },
+  "by_category": {
+    "seen": {
+      "n": 70,
+      "acc": 0.5857142857142857,
+      "ci95": [
+        0.4688121169368007,
+        0.6936982150880666
+      ]
+    },
+    "unseen": {
+      "n": 30,
+      "acc": 0.5333333333333333,
+      "ci95": [
+        0.3614229949695976,
+        0.6976761120463056
+      ]
+    }
+  },
+  "latency": {
+    "n": 100,
+    "mean_ms": 171.38120000000004,
+    "p50_ms": 170.73000000000002,
+    "p90_ms": 177.055,
+    "p99_ms": 181.6954
+  },
+  "mean_new_tokens": 14.98,
+  "hardware": {
+    "python": "3.11.17",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.19.0",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "driver": "595.99.02",
+    "code_git_sha": "523de608750eb3a9986873b29ced4a7e119ec3c5"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "bench": "refcoco",
+  "partial": false,
+  "model": "outputs/grpo-v3/merged",
+  "model_config": {
+    "dtype": "torch.bfloat16",
+    "attn": "sdpa",
+    "max_new_tokens": 64
+  },
+  "mode": "canonical",
+  "parser": "canonical",
+  "prompt_template": "Point to {query}. Answer with exactly one point in the format <point x=\"X\" y=\"Y\">, where X and Y are integers from 0 to 1000 giving the position as a fraction of the image width and height (0,0 is the top-left corner).",
+  "prompt_sha256": "b829bffc420e1ec0",
+  "manifest_sha256": "228bc64e229bc8941df418de7d13bd72dd50678bbcb4f6df7165987f7eb15fcb",
+  "dataset_revision": "a5dff0b3194715fda69b2d6a0d2aaafb41eaa407",
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a",
+  "point_in_mask": {
+    "n": 2000,
+    "hits": 1854,
+    "acc": 0.927,
+    "ci95": [
+      0.9147622010119612,
+      0.9376006405840711
+    ]
+  },
+  "parse_status": {
+    "ok": 2000,
+    "unparseable": 0,
+    "invalid": 0
+  },
+  "hit_box": {
+    "n": 2000,
+    "hits": 1892,
+    "acc": 0.946,
+    "ci95": [
+      0.9352121486087018,
+      0.9550778451894956
+    ]
+  },
+  "latency": {
+    "n": 2000,
+    "mean_ms": 156.76169499999995,
+    "p50_ms": 156.7,
+    "p90_ms": 162.08100000000002,
+    "p99_ms": 166.422
+  },
+  "mean_new_tokens": 14.9415,
+  "hardware": {
+    "python": "3.11.17",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.19.0",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cpu": "x86_64",
+    "driver": "595.99.02",
+    "code_git_sha": "97746844ad81ad4f1c52786616fcc09a8d81db72"
+  }
+}

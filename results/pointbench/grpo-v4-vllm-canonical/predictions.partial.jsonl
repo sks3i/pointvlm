@@ -1,0 +1,979 @@
+{"id": "pb-0000", "query": "Point to the free space between the person in a black shirt and the car.", "raw": "<point x=\"170\" y=\"597\">", "n_new_tokens": 15, "latency_ms": 77.7}
+{"id": "pb-0001", "query": "Point to the tool used for cutting wood.", "raw": "<point x=\"241\" y=\"611\">", "n_new_tokens": 15, "latency_ms": 156.39}
+{"id": "pb-0002", "query": "Point to all the heart-shaped flowers.", "raw": "<point x=\"333\" y=\"335\"> <point x=\"466\" y=\"335\"> <point x=\"617\" y=\"411\"> <point x=\"744\" y=\"435\"> <point x=\"991\"", "n_new_tokens": 64, "latency_ms": 358.7}
+{"id": "pb-0003", "query": "Point to the nearest side window of the car.", "raw": "<point x=\"560\" y=\"225\">", "n_new_tokens": 15, "latency_ms": 91.98}
+{"id": "pb-0004", "query": "Point to \"coins.\"", "raw": "<point x=\"511\" y=\"890\">", "n_new_tokens": 15, "latency_ms": 84.04}
+{"id": "pb-0005", "query": "Point to the handle to pick up the mug.", "raw": "<point x=\"570\" y=\"260\">", "n_new_tokens": 15, "latency_ms": 111.45}
+{"id": "pb-0006", "query": "Point to the direction in which the car is moving.", "raw": "<point x=\"845\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 93.04}
+{"id": "pb-0007", "query": "Point to the door handle.", "raw": "<point x=\"500\" y=\"670\">", "n_new_tokens": 15, "latency_ms": 136.09}
+{"id": "pb-0008", "query": "Point to the second car from the right.", "raw": "<point x=\"141\" y=\"484\">", "n_new_tokens": 15, "latency_ms": 94.85}
+{"id": "pb-0009", "query": "Point to the icon to the right of the existing point in the image.", "raw": "<point x=\"529\" y=\"650\">", "n_new_tokens": 15, "latency_ms": 128.86}
+{"id": "pb-0010", "query": "Point to the front wheels of the car.", "raw": "<point x=\"368\" y=\"726\"> <point x=\"550\" y=\"719\">", "n_new_tokens": 29, "latency_ms": 185.26}
+{"id": "pb-0011", "query": "Point to the nearest car on the left side of the image.", "raw": "<point x=\"161\" y=\"620\">", "n_new_tokens": 15, "latency_ms": 497.41}
+{"id": "pb-0012", "query": "Point to the middle window of the house.", "raw": "<point x=\"509\" y=\"529\">", "n_new_tokens": 15, "latency_ms": 1270.94, "resized_to": "3503x2335"}
+{"id": "pb-0013", "query": "Point to the monkey's head to the left of the point in the image.", "raw": "<point x=\"316\" y=\"398\">", "n_new_tokens": 15, "latency_ms": 83.74}
+{"id": "pb-0014", "query": "Point to the direction in which the car is moving.", "raw": "<point x=\"490\" y=\"870\">", "n_new_tokens": 15, "latency_ms": 254.5}
+{"id": "pb-0015", "query": "Point to the crystal.", "raw": "<point x=\"554\" y=\"738\">", "n_new_tokens": 15, "latency_ms": 102.11}
+{"id": "pb-0016", "query": "Point to the base of the mirror.", "raw": "<point x=\"830\" y=\"877\">", "n_new_tokens": 15, "latency_ms": 115.23}
+{"id": "pb-0017", "query": "Point to all the chickens.", "raw": "<point x=\"109\" y=\"538\"> <point x=\"184\" y=\"461\"> <point x=\"257\" y=\"461\"> <point x=\"337\" y=\"457\"> <point x=\"364\"", "n_new_tokens": 64, "latency_ms": 482.09}
+{"id": "pb-0018", "query": "Point to the item that tells time.", "raw": "<point x=\"95\" y=\"795\">", "n_new_tokens": 14, "latency_ms": 98.37}
+{"id": "pb-0019", "query": "Point to the left die.", "raw": "<point x=\"588\" y=\"457\">", "n_new_tokens": 15, "latency_ms": 152.87}
+{"id": "pb-0020", "query": "Point to the left doll in the top row.", "raw": "<point x=\"218\" y=\"305\">", "n_new_tokens": 15, "latency_ms": 1277.02, "resized_to": "2487x3289"}
+{"id": "pb-0021", "query": "Point to the chair on the right in the image.", "raw": "<point x=\"886\" y=\"520\">", "n_new_tokens": 15, "latency_ms": 112.4}
+{"id": "pb-0022", "query": "Point to a tool for cutting food.", "raw": "<point x=\"124\" y=\"853\">", "n_new_tokens": 15, "latency_ms": 96.16}
+{"id": "pb-0023", "query": "Point to the tallest building.", "raw": "<point x=\"487\" y=\"360\">", "n_new_tokens": 15, "latency_ms": 1262.59, "resized_to": "3814x2145"}
+{"id": "pb-0024", "query": "Point to the person on a motorbike.", "raw": "<point x=\"543\" y=\"554\">", "n_new_tokens": 15, "latency_ms": 197.88}
+{"id": "pb-0025", "query": "Point to the rightmost tree in the image.", "raw": "<point x=\"900\" y=\"491\">", "n_new_tokens": 15, "latency_ms": 116.07}
+{"id": "pb-0026", "query": "Point to the direction in which the nearest cyclist is moving.", "raw": "<point x=\"458\" y=\"527\">", "n_new_tokens": 15, "latency_ms": 110.14}
+{"id": "pb-0027", "query": "Point to the tree on the far right.", "raw": "<point x=\"953\" y=\"491\">", "n_new_tokens": 15, "latency_ms": 1224.52, "resized_to": "3303x2477"}
+{"id": "pb-0028", "query": "Point to the tool that people use to write.", "raw": "<point x=\"440\" y=\"420\">", "n_new_tokens": 15, "latency_ms": 1244.17, "resized_to": "3296x2482"}
+{"id": "pb-0029", "query": "Point to the base of the existing point on the image.", "raw": "<point x=\"683\" y=\"777\">", "n_new_tokens": 15, "latency_ms": 117.91}
+{"id": "pb-0030", "query": "Point to the handle to pick up the object.", "raw": "<point x=\"830\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 120.57}
+{"id": "pb-0031", "query": "Point to the text field to the left of the point on the image.", "raw": "<point x=\"261\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 93.6}
+{"id": "pb-0032", "query": "Point to the shoe of the cyclist in the image.", "raw": "<point x=\"416\" y=\"238\">", "n_new_tokens": 15, "latency_ms": 137.56}
+{"id": "pb-0033", "query": "Point to the person's hand closest to the point in the image.", "raw": "<point x=\"670\" y=\"505\">", "n_new_tokens": 15, "latency_ms": 91.92}
+{"id": "pb-0034", "query": "Point to the tool that people use to cut paper.", "raw": "<point x=\"500\" y=\"270\">", "n_new_tokens": 15, "latency_ms": 157.9}
+{"id": "pb-0035", "query": "Point to the object that people use to clean surfaces.", "raw": "<point x=\"570\" y=\"866\">", "n_new_tokens": 15, "latency_ms": 92.73}
+{"id": "pb-0036", "query": "Point to the back wheel of the green bus.", "raw": "<point x=\"551\" y=\"825\">", "n_new_tokens": 15, "latency_ms": 1250.37, "resized_to": "3198x2558"}
+{"id": "pb-0037", "query": "Point to all the apples in the image.", "raw": "<point x=\"208\" y=\"497\"> <point x=\"487\" y=\"491\"> <point x=\"845\" y=\"511\">", "n_new_tokens": 43, "latency_ms": 276.34}
+{"id": "pb-0038", "query": "Point to the tool that people use to cut bread.", "raw": "<point x=\"838\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 1244.04, "resized_to": "3503x2335"}
+{"id": "pb-0039", "query": "Point to the nearest cushion on the sofa.", "raw": "<point x=\"148\" y=\"636\">", "n_new_tokens": 15, "latency_ms": 92.62}
+{"id": "pb-0040", "query": "Point to the tool that people use to eat soup.", "raw": "<point x=\"350\" y=\"416\">", "n_new_tokens": 15, "latency_ms": 137.88}
+{"id": "pb-0041", "query": "Point to the car to the left of the green bus.", "raw": "<point x=\"191\" y=\"815\">", "n_new_tokens": 15, "latency_ms": 136.31}
+{"id": "pb-0042", "query": "Point to the window at the bottom of the existing point in the image.", "raw": "<point x=\"538\" y=\"554\">", "n_new_tokens": 15, "latency_ms": 92.48}
+{"id": "pb-0043", "query": "Point to the direction in which the white car is moving.", "raw": "<point x=\"400\" y=\"480\">", "n_new_tokens": 15, "latency_ms": 117.88}
+{"id": "pb-0044", "query": "Point to the direction in which the motorcyclist is moving.", "raw": "<point x=\"680\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 119.01}
+{"id": "pb-0045", "query": "Point to the rightmost window in the image.", "raw": "<point x=\"974\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 141.33}
+{"id": "pb-0046", "query": "Point to the tool people use to operate a TV remotely.", "raw": "<point x=\"504\" y=\"502\">", "n_new_tokens": 15, "latency_ms": 137.24}
+{"id": "pb-0047", "query": "Point to the rightmost window of the train.", "raw": "<point x=\"623\" y=\"510\">", "n_new_tokens": 15, "latency_ms": 115.41}
+{"id": "pb-0048", "query": "Point to the tool that people use for eating.", "raw": "<point x=\"258\" y=\"498\">", "n_new_tokens": 15, "latency_ms": 104.72}
+{"id": "pb-0049", "query": "Point to the number to the right of the current point on the image.", "raw": "<point x=\"791\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 175.29}
+{"id": "pb-0050", "query": "Point to the direction in which the nearest car is moving.", "raw": "<point x=\"852\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 93.88}
+{"id": "pb-0051", "query": "Point to all the pears.", "raw": "<point x=\"160\" y=\"526\"> <point x=\"483\" y=\"518\"> <point x=\"840\" y=\"526\">", "n_new_tokens": 43, "latency_ms": 274.97}
+{"id": "pb-0052", "query": "Point to the tool that joins paper together.", "raw": "<point x=\"570\" y=\"538\">", "n_new_tokens": 15, "latency_ms": 120.25}
+{"id": "pb-0053", "query": "Point to the object farthest from the person standing.", "raw": "<point x=\"480\" y=\"300\">", "n_new_tokens": 15, "latency_ms": 129.49}
+{"id": "pb-0054", "query": "Point to the tool used for cutting trees.", "raw": "<point x=\"498\" y=\"560\">", "n_new_tokens": 15, "latency_ms": 114.68}
+{"id": "pb-0055", "query": "Point to the dancer at the very front of the image.", "raw": "<point x=\"590\" y=\"490\">", "n_new_tokens": 15, "latency_ms": 138.26}
+{"id": "pb-0056", "query": "Point to the part of the train that indicates the country it might be from.", "raw": "<point x=\"780\" y=\"570\">", "n_new_tokens": 15, "latency_ms": 118.55}
+{"id": "pb-0057", "query": "Point to the green fruits.", "raw": "<point x=\"580\" y=\"607\">", "n_new_tokens": 15, "latency_ms": 1070.84}
+{"id": "pb-0058", "query": "Point to the moving vehicle.", "raw": "<point x=\"460\" y=\"630\">", "n_new_tokens": 15, "latency_ms": 119.32}
+{"id": "pb-0059", "query": "Point to moving up and left until it is on the heart.", "raw": "<point x=\"476\" y=\"131\">", "n_new_tokens": 15, "latency_ms": 90.89}
+{"id": "pb-0060", "query": "Point to moving down until touching snow.", "raw": "<point x=\"102\" y=\"890\">", "n_new_tokens": 15, "latency_ms": 96.17}
+{"id": "pb-0061", "query": "Point to moving up until touching the map.", "raw": "<point x=\"490\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 374.12}
+{"id": "pb-0062", "query": "Point to moving down until you reach the search button.", "raw": "<point x=\"100\" y=\"972\">", "n_new_tokens": 15, "latency_ms": 110.07}
+{"id": "pb-0063", "query": "Point to \"the farthest instrument.\"", "raw": "<point x=\"805\" y=\"495\">", "n_new_tokens": 15, "latency_ms": 92.07}
+{"id": "pb-0064", "query": "Point to the brightest vehicle light.", "raw": "<point x=\"520\" y=\"512\">", "n_new_tokens": 15, "latency_ms": 250.63}
+{"id": "pb-0065", "query": "Point to the object that can fly.", "raw": "<point x=\"502\" y=\"505\">", "n_new_tokens": 15, "latency_ms": 92.25}
+{"id": "pb-0066", "query": "Point to the duck whose beak touches its palmate.", "raw": "<point x=\"587\" y=\"457\">", "n_new_tokens": 15, "latency_ms": 137.39}
+{"id": "pb-0067", "query": "Point to what can be used to film things.", "raw": "<point x=\"567\" y=\"460\">", "n_new_tokens": 15, "latency_ms": 115.53}
+{"id": "pb-0068", "query": "Point to the rightmost building.", "raw": "<point x=\"980\" y=\"677\">", "n_new_tokens": 15, "latency_ms": 1259.46, "resized_to": "3503x2335"}
+{"id": "pb-0069", "query": "Point to the pig facing upward.", "raw": "<point x=\"577\" y=\"637\">", "n_new_tokens": 15, "latency_ms": 1274.42, "resized_to": "3814x2145"}
+{"id": "pb-0070", "query": "Point to moving a little to the right so that it is on dot C.", "raw": "<point x=\"100\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 85.57}
+{"id": "pb-0071", "query": "Point to the building on the far right.", "raw": "<point x=\"904\" y=\"520\">", "n_new_tokens": 15, "latency_ms": 1256.75, "resized_to": "2482x3296"}
+{"id": "pb-0072", "query": "Point to the closest forklift in the picture.", "raw": "<point x=\"495\" y=\"697\">", "n_new_tokens": 15, "latency_ms": 720.31}
+{"id": "pb-0073", "query": "Point to the other wheel, as opposed to the one the existing point indicates, in this cycle.", "raw": "<point x=\"895\" y=\"505\">", "n_new_tokens": 15, "latency_ms": 85.59}
+{"id": "pb-0074", "query": "Point to the object that can be worn.", "raw": "<point x=\"590\" y=\"490\">", "n_new_tokens": 15, "latency_ms": 90.41}
+{"id": "pb-0075", "query": "Point to the left of the right trash can.", "raw": "<point x=\"300\" y=\"617\">", "n_new_tokens": 15, "latency_ms": 1230.08, "resized_to": "3303x2477"}
+{"id": "pb-0076", "query": "Point to the tool that people use to open doors.", "raw": "<point x=\"81\" y=\"665\">", "n_new_tokens": 14, "latency_ms": 116.05}
+{"id": "pb-0077", "query": "Point to the ring.", "raw": "<point x=\"650\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 109.07}
+{"id": "pb-0078", "query": "Point to the person above the one to whom the existing point refers.", "raw": "<point x=\"460\" y=\"111\">", "n_new_tokens": 15, "latency_ms": 96.68}
+{"id": "pb-0079", "query": "Point to all the birds.", "raw": "<point x=\"40\" y=\"531\"> <point x=\"51\" y=\"719\"> <point x=\"57\" y=\"605\"> <point x=\"195\" y=\"514\"> <point x=\"305\" y=\"5", "n_new_tokens": 64, "latency_ms": 376.05}
+{"id": "pb-0080", "query": "Point to the wheel at the front concerning the bicycle's direction of movement.", "raw": "<point x=\"647\" y=\"647\">", "n_new_tokens": 15, "latency_ms": 125.33}
+{"id": "pb-0081", "query": "Point to the leftmost chair.", "raw": "<point x=\"150\" y=\"542\">", "n_new_tokens": 15, "latency_ms": 137.94}
+{"id": "pb-0082", "query": "Point to the search bar.", "raw": "<point x=\"491\" y=\"100\">", "n_new_tokens": 15, "latency_ms": 148.45}
+{"id": "pb-0083", "query": "Point to the pool people use to brush their teeth.", "raw": "<point x=\"504\" y=\"438\">", "n_new_tokens": 15, "latency_ms": 137.49}
+{"id": "pb-0084", "query": "Point to the building to the right of the building to which the existing point is directed.", "raw": "<point x=\"860\" y=\"660\">", "n_new_tokens": 15, "latency_ms": 96.59}
+{"id": "pb-0085", "query": "Point to the building across the road.", "raw": "<point x=\"627\" y=\"480\">", "n_new_tokens": 15, "latency_ms": 1256.31, "resized_to": "3503x2335"}
+{"id": "pb-0086", "query": "Point to the tool that people use to light candles.", "raw": "<point x=\"530\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 91.01}
+{"id": "pb-0087", "query": "Point to the car between the left and right cars.", "raw": "<point x=\"361\" y=\"915\">", "n_new_tokens": 15, "latency_ms": 115.18}
+{"id": "pb-0088", "query": "Point to the right black column of the left black column.", "raw": "<point x=\"275\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 1236.5, "resized_to": "3366x2431"}
+{"id": "pb-0089", "query": "Point to the nearest mattress.", "raw": "<point x=\"460\" y=\"670\">", "n_new_tokens": 15, "latency_ms": 113.96}
+{"id": "pb-0090", "query": "Point to the tool used for cutting things.", "raw": "<point x=\"450\" y=\"450\">", "n_new_tokens": 15, "latency_ms": 129.24}
+{"id": "pb-0091", "query": "Point to the tool that people can use to write.", "raw": "<point x=\"491\" y=\"536\">", "n_new_tokens": 15, "latency_ms": 115.4}
+{"id": "pb-0092", "query": "Point to all the cars.", "raw": "<point x=\"290\" y=\"508\">", "n_new_tokens": 15, "latency_ms": 129.59}
+{"id": "pb-0093", "query": "Point to the device into which people can plug chargers.", "raw": "<point x=\"899\" y=\"80\">", "n_new_tokens": 14, "latency_ms": 131.74}
+{"id": "pb-0094", "query": "Point to the tool that people use to fix things.", "raw": "<point x=\"520\" y=\"208\">", "n_new_tokens": 15, "latency_ms": 84.79}
+{"id": "pb-0095", "query": "Point to all birds.", "raw": "<point x=\"175\" y=\"582\"> <point x=\"244\" y=\"580\"> <point x=\"349\" y=\"580\"> <point x=\"458\" y=\"584\"> <point x=\"600\"", "n_new_tokens": 64, "latency_ms": 1534.57, "resized_to": "3315x2468"}
+{"id": "pb-0096", "query": "Point to the moving car.", "raw": "<point x=\"673\" y=\"529\">", "n_new_tokens": 15, "latency_ms": 1228.77, "resized_to": "3303x2477"}
+{"id": "pb-0097", "query": "Point to the car on the far left.", "raw": "<point x=\"91\" y=\"681\">", "n_new_tokens": 14, "latency_ms": 109.46}
+{"id": "pb-0098", "query": "Point to the tree to the left of the black door.", "raw": "<point x=\"370\" y=\"690\">", "n_new_tokens": 15, "latency_ms": 146.31}
+{"id": "pb-0099", "query": "Point to the middle seatbelt of the rightmost seat.", "raw": "<point x=\"800\" y=\"758\">", "n_new_tokens": 15, "latency_ms": 113.16}
+{"id": "pb-0100", "query": "Point to the car positioned between two other cars.", "raw": "<point x=\"594\" y=\"607\">", "n_new_tokens": 15, "latency_ms": 582.91}
+{"id": "pb-0101", "query": "Point to the swimmer who swims fastest.", "raw": "<point x=\"780\" y=\"598\">", "n_new_tokens": 15, "latency_ms": 99.02}
+{"id": "pb-0102", "query": "Point to the direction indicated on the road that matches the orientation of most cars.", "raw": "<point x=\"584\" y=\"728\">", "n_new_tokens": 15, "latency_ms": 1226.19, "resized_to": "3303x2477"}
+{"id": "pb-0103", "query": "Point to the person toward whom the existing point directs, specifically noting their belt.", "raw": "<point x=\"508\" y=\"948\">", "n_new_tokens": 15, "latency_ms": 98.61}
+{"id": "pb-0104", "query": "Point to the tool people can use to listen on their phones.", "raw": "<point x=\"470\" y=\"317\">", "n_new_tokens": 15, "latency_ms": 191.78}
+{"id": "pb-0105", "query": "Point to the car behind the bus.", "raw": "<point x=\"255\" y=\"634\">", "n_new_tokens": 15, "latency_ms": 118.62}
+{"id": "pb-0106", "query": "Point to the top piece of this block tower.", "raw": "<point x=\"498\" y=\"134\">", "n_new_tokens": 15, "latency_ms": 1222.56, "resized_to": "2477x3303"}
+{"id": "pb-0107", "query": "Point to the leftmost person.", "raw": "<point x=\"98\" y=\"624\">", "n_new_tokens": 14, "latency_ms": 90.39}
+{"id": "pb-0108", "query": "Point to the table closest to the sofa.", "raw": "<point x=\"650\" y=\"450\">", "n_new_tokens": 15, "latency_ms": 226.45}
+{"id": "pb-0109", "query": "Point to the object most likely to have caused the bicycle to fall.", "raw": "<point x=\"355\" y=\"191\">", "n_new_tokens": 15, "latency_ms": 272.08}
+{"id": "pb-0110", "query": "Point to the object in the picture to the left of the object that the existing point indicates.", "raw": "<point x=\"100\" y=\"771\">", "n_new_tokens": 15, "latency_ms": 93.52}
+{"id": "pb-0111", "query": "Point to a tool people use to measure length.", "raw": "<point x=\"964\" y=\"699\">", "n_new_tokens": 15, "latency_ms": 135.77}
+{"id": "pb-0112", "query": "Point to the bike rider who is faster.", "raw": "<point x=\"470\" y=\"477\">", "n_new_tokens": 15, "latency_ms": 137.29}
+{"id": "pb-0113", "query": "Point to all the light bulbs.", "raw": "<point x=\"223\" y=\"430\"> <point x=\"361\" y=\"197\">", "n_new_tokens": 29, "latency_ms": 1339.17, "resized_to": "3814x2145"}
+{"id": "pb-0114", "query": "Point to the person standing higher than the other.", "raw": "<point x=\"524\" y=\"797\">", "n_new_tokens": 15, "latency_ms": 1257.81, "resized_to": "3814x2145"}
+{"id": "pb-0115", "query": "Point to the building toward which the car is facing.", "raw": "<point x=\"947\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 1235.62, "resized_to": "3303x2477"}
+{"id": "pb-0116", "query": "Point to the right button of the existing point.", "raw": "<point x=\"980\" y=\"552\">", "n_new_tokens": 15, "latency_ms": 90.77}
+{"id": "pb-0117", "query": "Point to the profile picture below the existing point.", "raw": "<point x=\"187\" y=\"525\">", "n_new_tokens": 15, "latency_ms": 138.78}
+{"id": "pb-0118", "query": "Point to the correct object in front of the sofa.", "raw": "<point x=\"460\" y=\"751\">", "n_new_tokens": 15, "latency_ms": 1241.26, "resized_to": "3503x2335"}
+{"id": "pb-0119", "query": "Point to the car behind all the other cars.", "raw": "<point x=\"61\" y=\"465\">", "n_new_tokens": 14, "latency_ms": 135.7}
+{"id": "pb-0120", "query": "Point to the object that people can use to buy things.", "raw": "<point x=\"870\" y=\"641\">", "n_new_tokens": 15, "latency_ms": 85.11}
+{"id": "pb-0121", "query": "Point to the player on the left of another player.", "raw": "<point x=\"31\" y=\"480\">", "n_new_tokens": 14, "latency_ms": 1222.98, "resized_to": "3303x2477"}
+{"id": "pb-0122", "query": "Point to the other letter that matches the one to which the existing point refers.", "raw": "<point x=\"491\" y=\"473\">", "n_new_tokens": 15, "latency_ms": 192.09}
+{"id": "pb-0123", "query": "Point to the purpose of making coffee.", "raw": "<point x=\"335\" y=\"544\">", "n_new_tokens": 15, "latency_ms": 91.69}
+{"id": "pb-0124", "query": "Point to the object used to eat food.", "raw": "<point x=\"590\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 132.16}
+{"id": "pb-0125", "query": "Point to the lowest wind chime.", "raw": "<point x=\"637\" y=\"799\">", "n_new_tokens": 15, "latency_ms": 1257.69, "resized_to": "2145x3814"}
+{"id": "pb-0126", "query": "Point to the object the car is stopping for.", "raw": "<point x=\"738\" y=\"920\">", "n_new_tokens": 15, "latency_ms": 91.29}
+{"id": "pb-0127", "query": "Point to the object beneath the bird.", "raw": "<point x=\"550\" y=\"850\">", "n_new_tokens": 15, "latency_ms": 192.25}
+{"id": "pb-0128", "query": "Point to the car on top of the red car.", "raw": "<point x=\"530\" y=\"416\">", "n_new_tokens": 15, "latency_ms": 248.0}
+{"id": "pb-0129", "query": "Point to the word to the left of the existing point in the image.", "raw": "<point x=\"10\" y=\"80\">", "n_new_tokens": 13, "latency_ms": 167.2}
+{"id": "pb-0130", "query": "Point to the hand of the person that is closest to the existing point in the image.", "raw": "<point x=\"430\" y=\"905\">", "n_new_tokens": 15, "latency_ms": 127.07}
+{"id": "pb-0131", "query": "Point to the object on which you place the cup.", "raw": "<point x=\"168\" y=\"327\">", "n_new_tokens": 15, "latency_ms": 1264.0, "resized_to": "3384x2417"}
+{"id": "pb-0132", "query": "Point to the tool that people use to open the door.", "raw": "<point x=\"116\" y=\"871\">", "n_new_tokens": 15, "latency_ms": 87.96}
+{"id": "pb-0133", "query": "Point to the car that moves in the opposite direction of the other three cars.", "raw": "<point x=\"645\" y=\"587\">", "n_new_tokens": 15, "latency_ms": 135.41}
+{"id": "pb-0134", "query": "Point to the car that is on top of the other.", "raw": "<point x=\"580\" y=\"445\">", "n_new_tokens": 15, "latency_ms": 118.32}
+{"id": "pb-0135", "query": "Point to the person moving to the right.", "raw": "<point x=\"650\" y=\"457\">", "n_new_tokens": 15, "latency_ms": 1236.91, "resized_to": "3506x2333"}
+{"id": "pb-0136", "query": "Point to counting all the monkeys in the image.", "raw": "<point x=\"105\" y=\"327\"> <point x=\"180\" y=\"417\"> <point x=\"508\" y=\"300\"> <point x=\"529\" y=\"355\"> <point x=\"705\"", "n_new_tokens": 64, "latency_ms": 1447.35}
+{"id": "pb-0137", "query": "Point to the button located to the right of the existing point in the image.", "raw": "<point x=\"614\" y=\"729\">", "n_new_tokens": 15, "latency_ms": 130.62}
+{"id": "pb-0138", "query": "Point to the object that people use to brush their teeth.", "raw": "<point x=\"500\" y=\"697\">", "n_new_tokens": 15, "latency_ms": 1235.15, "resized_to": "3814x2145"}
+{"id": "pb-0139", "query": "Point to the cars parked under the tree.", "raw": "<point x=\"141\" y=\"207\">", "n_new_tokens": 15, "latency_ms": 123.44}
+{"id": "pb-0140", "query": "Point to the building closest to the existing location in the image.", "raw": "<point x=\"581\" y=\"716\">", "n_new_tokens": 15, "latency_ms": 303.0}
+{"id": "pb-0141", "query": "Point to the object closest to the one that the existing point indicates.", "raw": "<point x=\"880\" y=\"950\">", "n_new_tokens": 15, "latency_ms": 96.07}
+{"id": "pb-0142", "query": "Point to the object below all the pictures hanging on the wall.", "raw": "<point x=\"884\" y=\"730\">", "n_new_tokens": 15, "latency_ms": 91.69}
+{"id": "pb-0143", "query": "Point to the object beneath the phone.", "raw": "<point x=\"100\" y=\"930\">", "n_new_tokens": 15, "latency_ms": 95.8}
+{"id": "pb-0144", "query": "Point to the object used for cutting food.", "raw": "<point x=\"801\" y=\"405\">", "n_new_tokens": 15, "latency_ms": 84.74}
+{"id": "pb-0145", "query": "Point to the car moving away instead of getting closer.", "raw": "<point x=\"530\" y=\"487\">", "n_new_tokens": 15, "latency_ms": 1224.33, "resized_to": "3303x2477"}
+{"id": "pb-0146", "query": "Point to the button to the left of the existing point.", "raw": "<point x=\"438\" y=\"861\">", "n_new_tokens": 15, "latency_ms": 403.35}
+{"id": "pb-0147", "query": "Point to the tool people use for writing.", "raw": "<point x=\"730\" y=\"387\">", "n_new_tokens": 15, "latency_ms": 118.01}
+{"id": "pb-0148", "query": "Point to the tree to the right of the building.", "raw": "<point x=\"900\" y=\"511\">", "n_new_tokens": 15, "latency_ms": 1235.93, "resized_to": "3501x2337"}
+{"id": "pb-0149", "query": "Point to all the boxes.", "raw": "<point x=\"95\" y=\"394\">", "n_new_tokens": 14, "latency_ms": 87.11}
+{"id": "pb-0150", "query": "Point to an object that can be used to eat soup.", "raw": "<point x=\"165\" y=\"350\">", "n_new_tokens": 15, "latency_ms": 135.89}
+{"id": "pb-0151", "query": "Point to the object, which can be used to open doors.", "raw": "<point x=\"373\" y=\"437\">", "n_new_tokens": 15, "latency_ms": 270.07}
+{"id": "pb-0152", "query": "Point to the object that can be used to fix things.", "raw": "<point x=\"491\" y=\"380\">", "n_new_tokens": 15, "latency_ms": 127.63}
+{"id": "pb-0153", "query": "Point to the object that can be used to cut food.", "raw": "<point x=\"800\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 109.98}
+{"id": "pb-0154", "query": "Point to the object located beneath the object that the existing point indicates.", "raw": "<point x=\"820\" y=\"820\">", "n_new_tokens": 15, "latency_ms": 88.1}
+{"id": "pb-0155", "query": "Point to the traffic light adjacent to the left traffic light.", "raw": "<point x=\"866\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 1246.67, "resized_to": "3503x2335"}
+{"id": "pb-0156", "query": "Point to the tool that people use to eat the food on the plate.", "raw": "<point x=\"711\" y=\"240\">", "n_new_tokens": 15, "latency_ms": 91.35}
+{"id": "pb-0157", "query": "Point to the car moving away from the camera.", "raw": "<point x=\"334\" y=\"683\">", "n_new_tokens": 15, "latency_ms": 185.94}
+{"id": "pb-0158", "query": "Point to the wheel of the car farthest to the right in the image.", "raw": "<point x=\"880\" y=\"475\">", "n_new_tokens": 15, "latency_ms": 119.68}
+{"id": "pb-0159", "query": "Point to where people may sit.", "raw": "<point x=\"366\" y=\"708\">", "n_new_tokens": 15, "latency_ms": 92.02}
+{"id": "pb-0160", "query": "Point to the two cabinets in the upper right corner.", "raw": "<point x=\"926\" y=\"291\">", "n_new_tokens": 15, "latency_ms": 91.73}
+{"id": "pb-0161", "query": "Point to what the cows are pulling.", "raw": "<point x=\"716\" y=\"755\">", "n_new_tokens": 15, "latency_ms": 113.51}
+{"id": "pb-0162", "query": "Point to the word left of the existing point in the image.", "raw": "<point x=\"87\" y=\"890\">", "n_new_tokens": 14, "latency_ms": 92.58}
+{"id": "pb-0163", "query": "Point to the tool that people can use to open doors.", "raw": "<point x=\"448\" y=\"491\">", "n_new_tokens": 15, "latency_ms": 142.47}
+{"id": "pb-0164", "query": "Point to the person speaking to someone in the car.", "raw": "<point x=\"718\" y=\"635\">", "n_new_tokens": 15, "latency_ms": 613.37}
+{"id": "pb-0165", "query": "Point to the pointer tool.", "raw": "<point x=\"590\" y=\"873\">", "n_new_tokens": 15, "latency_ms": 134.92}
+{"id": "pb-0166", "query": "Point to the tool used for hammering.", "raw": "<point x=\"201\" y=\"739\">", "n_new_tokens": 15, "latency_ms": 84.61}
+{"id": "pb-0167", "query": "Point to the instrument that can make music.", "raw": "<point x=\"800\" y=\"708\">", "n_new_tokens": 15, "latency_ms": 96.67}
+{"id": "pb-0168", "query": "Point to the object used to carry the baby.", "raw": "<point x=\"619\" y=\"719\">", "n_new_tokens": 15, "latency_ms": 135.84}
+{"id": "pb-0169", "query": "Point to the object used to cover a person's mouth and nose.", "raw": "<point x=\"241\" y=\"447\">", "n_new_tokens": 15, "latency_ms": 1176.76}
+{"id": "pb-0170", "query": "Point to what might be used to shovel snow.", "raw": "<point x=\"136\" y=\"965\">", "n_new_tokens": 15, "latency_ms": 474.23}
+{"id": "pb-0171", "query": "Point to the devices with buttons.", "raw": "<point x=\"260\" y=\"587\"> <point x=\"670\" y=\"617\">", "n_new_tokens": 29, "latency_ms": 186.93}
+{"id": "pb-0172", "query": "Point to the nearest pillow.", "raw": "<point x=\"480\" y=\"496\">", "n_new_tokens": 15, "latency_ms": 91.5}
+{"id": "pb-0173", "query": "Point to the tool that people can use to write.", "raw": "<point x=\"560\" y=\"701\">", "n_new_tokens": 15, "latency_ms": 144.88}
+{"id": "pb-0174", "query": "Point to down and left until you reach the tool that people can use to write.", "raw": "<point x=\"325\" y=\"885\">", "n_new_tokens": 15, "latency_ms": 169.31}
+{"id": "pb-0175", "query": "Point to where cars might stop.", "raw": "<point x=\"741\" y=\"438\">", "n_new_tokens": 15, "latency_ms": 185.01}
+{"id": "pb-0176", "query": "Point to the object to the right of the existing point.", "raw": "<point x=\"891\" y=\"521\">", "n_new_tokens": 15, "latency_ms": 84.65}
+{"id": "pb-0177", "query": "Point to the object that people can use to listen to music.", "raw": "<point x=\"518\" y=\"206\">", "n_new_tokens": 15, "latency_ms": 1254.29, "resized_to": "2392x3420"}
+{"id": "pb-0178", "query": "Point to the middle car in the leftmost lane.", "raw": "<point x=\"297\" y=\"548\">", "n_new_tokens": 15, "latency_ms": 185.57}
+{"id": "pb-0179", "query": "Point to the object to the left of the existing point.", "raw": "<point x=\"110\" y=\"490\">", "n_new_tokens": 15, "latency_ms": 95.46}
+{"id": "pb-0180", "query": "Point to the object that can be used to cut things.", "raw": "<point x=\"690\" y=\"861\">", "n_new_tokens": 15, "latency_ms": 1234.48, "resized_to": "3198x2558"}
+{"id": "pb-0181", "query": "Point to the object that can be used to turn the light on or off.", "raw": "<point x=\"487\" y=\"627\">", "n_new_tokens": 15, "latency_ms": 120.69}
+{"id": "pb-0182", "query": "Point to the objects above the sofa.", "raw": "<point x=\"491\" y=\"151\">", "n_new_tokens": 15, "latency_ms": 112.79}
+{"id": "pb-0183", "query": "Point to the object that can be used to measure length.", "raw": "<point x=\"410\" y=\"895\">", "n_new_tokens": 15, "latency_ms": 1245.16, "resized_to": "3503x2335"}
+{"id": "pb-0184", "query": "Point to the object below the existing point.", "raw": "<point x=\"600\" y=\"983\">", "n_new_tokens": 15, "latency_ms": 106.89}
+{"id": "pb-0185", "query": "Point to the object drivers use to check vehicles behind their cars.", "raw": "<point x=\"624\" y=\"360\">", "n_new_tokens": 15, "latency_ms": 113.47}
+{"id": "pb-0186", "query": "Point to the object people use to eat.", "raw": "<point x=\"320\" y=\"811\">", "n_new_tokens": 15, "latency_ms": 1251.87, "resized_to": "2335x3503"}
+{"id": "pb-0187", "query": "Point to the object to the right of the existing point.", "raw": "<point x=\"540\" y=\"171\">", "n_new_tokens": 15, "latency_ms": 332.39}
+{"id": "pb-0188", "query": "Point to the object people use to perform calculations.", "raw": "<point x=\"870\" y=\"390\">", "n_new_tokens": 15, "latency_ms": 1164.0}
+{"id": "pb-0189", "query": "Point to the window to the left of the existing point.", "raw": "<point x=\"100\" y=\"510\">", "n_new_tokens": 15, "latency_ms": 84.62}
+{"id": "pb-0190", "query": "Point to the car to the left of the blue car.", "raw": "<point x=\"170\" y=\"307\">", "n_new_tokens": 15, "latency_ms": 1206.27, "resized_to": "3303x2477"}
+{"id": "pb-0191", "query": "Point to how you could identify this car.", "raw": "<point x=\"540\" y=\"524\">", "n_new_tokens": 15, "latency_ms": 118.51}
+{"id": "pb-0192", "query": "Point to moving left until you reach the chair.", "raw": "<point x=\"237\" y=\"703\">", "n_new_tokens": 15, "latency_ms": 553.37}
+{"id": "pb-0193", "query": "Point to the moving car.", "raw": "<point x=\"465\" y=\"681\">", "n_new_tokens": 15, "latency_ms": 137.02}
+{"id": "pb-0194", "query": "Point to the nearest person.", "raw": "<point x=\"795\" y=\"276\">", "n_new_tokens": 15, "latency_ms": 92.29}
+{"id": "pb-0195", "query": "Point to the person riding the bicycle.", "raw": "<point x=\"305\" y=\"245\">", "n_new_tokens": 15, "latency_ms": 96.59}
+{"id": "pb-0196", "query": "Point to the object that can charge devices.", "raw": "<point x=\"666\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 226.66}
+{"id": "pb-0197", "query": "Point to what could ignite things.", "raw": "<point x=\"620\" y=\"440\">", "n_new_tokens": 15, "latency_ms": 128.59}
+{"id": "pb-0198", "query": "Point to the geese.", "raw": "<point x=\"213\" y=\"529\"> <point x=\"292\" y=\"605\"> <point x=\"484\" y=\"521\"> <point x=\"720\" y=\"580\">", "n_new_tokens": 57, "latency_ms": 335.41}
+{"id": "pb-0199", "query": "Point to where people might cross the river.", "raw": "<point x=\"700\" y=\"560\">", "n_new_tokens": 15, "latency_ms": 1224.39, "resized_to": "2477x3303"}
+{"id": "pb-0200", "query": "Point to moving the point down until it touches the bowl of water.", "raw": "<point x=\"681\" y=\"900\">", "n_new_tokens": 15, "latency_ms": 126.73}
+{"id": "pb-0201", "query": "Point to what the exercise machines could be.", "raw": "<point x=\"260\" y=\"674\">", "n_new_tokens": 15, "latency_ms": 91.89}
+{"id": "pb-0202", "query": "Point to the tool used for cutting.", "raw": "<point x=\"491\" y=\"550\">", "n_new_tokens": 15, "latency_ms": 128.16}
+{"id": "pb-0203", "query": "Point to the tool used for listening to music or other sounds.", "raw": "<point x=\"630\" y=\"535\">", "n_new_tokens": 15, "latency_ms": 190.26}
+{"id": "pb-0204", "query": "Point to the tool that creates music.", "raw": "<point x=\"550\" y=\"570\">", "n_new_tokens": 15, "latency_ms": 1217.59, "resized_to": "2477x3303"}
+{"id": "pb-0205", "query": "Point to the coin with a B on it.", "raw": "<point x=\"545\" y=\"518\">", "n_new_tokens": 15, "latency_ms": 185.61}
+{"id": "pb-0206", "query": "Point to the need to move the point down and then left until it is in the middle of the tape.", "raw": "<point x=\"200\" y=\"607\">", "n_new_tokens": 15, "latency_ms": 173.86}
+{"id": "pb-0207", "query": "Point to the closest biker.", "raw": "<point x=\"718\" y=\"785\">", "n_new_tokens": 15, "latency_ms": 127.65}
+{"id": "pb-0208", "query": "Point to the object that can be ridden to places.", "raw": "<point x=\"670\" y=\"597\">", "n_new_tokens": 15, "latency_ms": 118.77}
+{"id": "pb-0209", "query": "Point to moving the point down until it is inside the bucket.", "raw": "<point x=\"260\" y=\"222\">", "n_new_tokens": 15, "latency_ms": 360.49}
+{"id": "pb-0210", "query": "Point to where items could be placed on the bicycle.", "raw": "<point x=\"160\" y=\"780\">", "n_new_tokens": 15, "latency_ms": 457.1}
+{"id": "pb-0211", "query": "Point to the tool used for drinking that comes from the company STANLEY.", "raw": "<point x=\"851\" y=\"110\">", "n_new_tokens": 15, "latency_ms": 114.45}
+{"id": "pb-0212", "query": "Point to the glass closest to the camera.", "raw": "<point x=\"335\" y=\"543\">", "n_new_tokens": 15, "latency_ms": 136.76}
+{"id": "pb-0213", "query": "Point to the face above the existing point.", "raw": "<point x=\"611\" y=\"105\">", "n_new_tokens": 15, "latency_ms": 101.78}
+{"id": "pb-0214", "query": "Point to the text to the left of the existing point.", "raw": "<point x=\"100\" y=\"127\">", "n_new_tokens": 15, "latency_ms": 279.1}
+{"id": "pb-0215", "query": "Point to the person holding a bag.", "raw": "<point x=\"557\" y=\"407\">", "n_new_tokens": 15, "latency_ms": 1250.81, "resized_to": "3816x2144"}
+{"id": "pb-0216", "query": "Point to the tip of the yellow pencil.", "raw": "<point x=\"250\" y=\"551\">", "n_new_tokens": 15, "latency_ms": 145.92}
+{"id": "pb-0217", "query": "Point to the tallest building.", "raw": "<point x=\"433\" y=\"273\">", "n_new_tokens": 15, "latency_ms": 96.1}
+{"id": "pb-0218", "query": "Point to the picture above the current point.", "raw": "<point x=\"328\" y=\"370\">", "n_new_tokens": 15, "latency_ms": 96.12}
+{"id": "pb-0219", "query": "Point to the object used to identify the car.", "raw": "<point x=\"741\" y=\"747\">", "n_new_tokens": 15, "latency_ms": 1246.38, "resized_to": "3505x2334"}
+{"id": "pb-0220", "query": "Point to the object to the right of the table.", "raw": "<point x=\"411\" y=\"741\">", "n_new_tokens": 15, "latency_ms": 93.1}
+{"id": "pb-0221", "query": "Point to the people who have raised their arms.", "raw": "<point x=\"514\" y=\"350\">", "n_new_tokens": 15, "latency_ms": 1242.6, "resized_to": "3568x2293"}
+{"id": "pb-0222", "query": "Point to the object in front of the black bus.", "raw": "<point x=\"547\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 1231.06, "resized_to": "3814x2145"}
+{"id": "pb-0223", "query": "Point to the leftmost speaker.", "raw": "<point x=\"199\" y=\"606\">", "n_new_tokens": 15, "latency_ms": 225.89}
+{"id": "pb-0224", "query": "Point to the button located to the right of the current point in the image.", "raw": "<point x=\"989\" y=\"49\">", "n_new_tokens": 14, "latency_ms": 133.17}
+{"id": "pb-0225", "query": "Point to the bus positioned behind the other bus.", "raw": "<point x=\"880\" y=\"390\">", "n_new_tokens": 15, "latency_ms": 91.75}
+{"id": "pb-0226", "query": "Point to the person using the phone.", "raw": "<point x=\"507\" y=\"711\">", "n_new_tokens": 15, "latency_ms": 1227.33, "resized_to": "3815x2145"}
+{"id": "pb-0227", "query": "Point to the person riding a tricycle.", "raw": "<point x=\"791\" y=\"687\">", "n_new_tokens": 15, "latency_ms": 1213.91, "resized_to": "3502x2336"}
+{"id": "pb-0228", "query": "Point to the tool people use to eat ice cream.", "raw": "<point x=\"604\" y=\"655\">", "n_new_tokens": 15, "latency_ms": 124.59}
+{"id": "pb-0229", "query": "Point to the word closest to the left of the existing point in the image.", "raw": "<point x=\"48\" y=\"969\">", "n_new_tokens": 14, "latency_ms": 167.47}
+{"id": "pb-0230", "query": "Point to the plant closer to the window.", "raw": "<point x=\"684\" y=\"411\">", "n_new_tokens": 15, "latency_ms": 90.96}
+{"id": "pb-0231", "query": "Point to the object to the right of the left container.", "raw": "<point x=\"766\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 1239.84, "resized_to": "2942x2781"}
+{"id": "pb-0232", "query": "Point to the object that can hold tea.", "raw": "<point x=\"360\" y=\"347\">", "n_new_tokens": 15, "latency_ms": 1219.77, "resized_to": "2335x3503"}
+{"id": "pb-0233", "query": "Point to the person's foot that is closer to the existing point in the image.", "raw": "<point x=\"808\" y=\"900\">", "n_new_tokens": 15, "latency_ms": 106.39}
+{"id": "pb-0234", "query": "Point to the object below the board.", "raw": "<point x=\"850\" y=\"957\">", "n_new_tokens": 15, "latency_ms": 1187.69, "resized_to": "3303x2477"}
+{"id": "pb-0235", "query": "Point to the object used to protect people's hands.", "raw": "<point x=\"480\" y=\"227\">", "n_new_tokens": 15, "latency_ms": 117.65}
+{"id": "pb-0236", "query": "Point to the object used to listen to music or other sounds.", "raw": "<point x=\"601\" y=\"570\">", "n_new_tokens": 15, "latency_ms": 189.68}
+{"id": "pb-0237", "query": "Point to the car on the left.", "raw": "<point x=\"278\" y=\"784\">", "n_new_tokens": 15, "latency_ms": 90.68}
+{"id": "pb-0238", "query": "Point to what could identify the biker.", "raw": "<point x=\"398\" y=\"450\">", "n_new_tokens": 15, "latency_ms": 112.65}
+{"id": "pb-0239", "query": "Point to the nearest cow.", "raw": "<point x=\"648\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 1220.37, "resized_to": "3812x2146"}
+{"id": "pb-0240", "query": "Point to the nearest chair on the right.", "raw": "<point x=\"800\" y=\"884\">", "n_new_tokens": 15, "latency_ms": 93.56}
+{"id": "pb-0241", "query": "Point to the tool made from metal.", "raw": "<point x=\"130\" y=\"901\">", "n_new_tokens": 15, "latency_ms": 125.95}
+{"id": "pb-0242", "query": "Point to the cap of the tool for storing items.", "raw": "<point x=\"111\" y=\"100\">", "n_new_tokens": 15, "latency_ms": 96.32}
+{"id": "pb-0243", "query": "Point to the color of the light at which people can drive.", "raw": "<point x=\"426\" y=\"727\">", "n_new_tokens": 15, "latency_ms": 131.18}
+{"id": "pb-0244", "query": "Point to the first three Coca-Cola bottles.", "raw": "<point x=\"290\" y=\"470\"> <point x=\"352\" y=\"470\"> <point x=\"498\" y=\"470\">", "n_new_tokens": 43, "latency_ms": 230.4}
+{"id": "pb-0245", "query": "Point to what the brand of the bag could be.", "raw": "<point x=\"621\" y=\"440\">", "n_new_tokens": 15, "latency_ms": 117.58}
+{"id": "pb-0246", "query": "Point to the object used for grabbing that is already open.", "raw": "<point x=\"134\" y=\"130\">", "n_new_tokens": 15, "latency_ms": 86.04}
+{"id": "pb-0247", "query": "Point to all the books with the word MAVADA.", "raw": "<point x=\"245\" y=\"261\">", "n_new_tokens": 15, "latency_ms": 113.35}
+{"id": "pb-0248", "query": "Point to what brand the hat might be.", "raw": "<point x=\"483\" y=\"237\">", "n_new_tokens": 15, "latency_ms": 1217.81, "resized_to": "2335x3503"}
+{"id": "pb-0249", "query": "Point to the farthest light.", "raw": "<point x=\"168\" y=\"126\">", "n_new_tokens": 15, "latency_ms": 1186.91, "resized_to": "3303x2477"}
+{"id": "pb-0250", "query": "Point to all the elephant statues.", "raw": "<point x=\"509\" y=\"585\">", "n_new_tokens": 15, "latency_ms": 190.81}
+{"id": "pb-0251", "query": "Point to moving right until reaching the sign.", "raw": "<point x=\"899\" y=\"491\">", "n_new_tokens": 15, "latency_ms": 94.64}
+{"id": "pb-0252", "query": "Point to where people might walk or ride their bikes.", "raw": "<point x=\"171\" y=\"705\">", "n_new_tokens": 15, "latency_ms": 1191.29, "resized_to": "3303x2477"}
+{"id": "pb-0253", "query": "Point to moving the point up until it touches the building.", "raw": "<point x=\"491\" y=\"361\">", "n_new_tokens": 15, "latency_ms": 116.49}
+{"id": "pb-0254", "query": "Point to what people sit on while riding a bicycle.", "raw": "<point x=\"530\" y=\"188\">", "n_new_tokens": 15, "latency_ms": 142.13}
+{"id": "pb-0255", "query": "Point to the leftmost seat.", "raw": "<point x=\"691\" y=\"641\">", "n_new_tokens": 15, "latency_ms": 1164.1}
+{"id": "pb-0256", "query": "Point to the rightmost door.", "raw": "<point x=\"381\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 85.52}
+{"id": "pb-0257", "query": "Point to the tool that creates music.", "raw": "<point x=\"516\" y=\"958\">", "n_new_tokens": 15, "latency_ms": 105.58}
+{"id": "pb-0258", "query": "Point to the closest table.", "raw": "<point x=\"330\" y=\"649\">", "n_new_tokens": 15, "latency_ms": 90.63}
+{"id": "pb-0259", "query": "Point to the nearest umbrella pole.", "raw": "<point x=\"711\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 94.77}
+{"id": "pb-0260", "query": "Point to moving up, then right until you are on the leg of the spider.", "raw": "<point x=\"591\" y=\"208\">", "n_new_tokens": 15, "latency_ms": 118.35}
+{"id": "pb-0261", "query": "Point to the nearest boat.", "raw": "<point x=\"876\" y=\"680\">", "n_new_tokens": 15, "latency_ms": 131.43}
+{"id": "pb-0262", "query": "Point to what can record or take pictures.", "raw": "<point x=\"520\" y=\"609\">", "n_new_tokens": 15, "latency_ms": 498.34}
+{"id": "pb-0263", "query": "Point to all the trucks.", "raw": "<point x=\"138\" y=\"666\">", "n_new_tokens": 15, "latency_ms": 95.34}
+{"id": "pb-0264", "query": "Point to the closest person.", "raw": "<point x=\"976\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 113.6}
+{"id": "pb-0265", "query": "Point to the window to the right of the red door.", "raw": "<point x=\"677\" y=\"541\">", "n_new_tokens": 15, "latency_ms": 93.54}
+{"id": "pb-0266", "query": "Point to the tool that people use for drawing.", "raw": "<point x=\"800\" y=\"745\">", "n_new_tokens": 15, "latency_ms": 88.58}
+{"id": "pb-0267", "query": "Point to where people sit.", "raw": "<point x=\"390\" y=\"250\">", "n_new_tokens": 15, "latency_ms": 113.47}
+{"id": "pb-0268", "query": "Point to the top left drawer.", "raw": "<point x=\"52\" y=\"534\">", "n_new_tokens": 14, "latency_ms": 86.07}
+{"id": "pb-0269", "query": "Point to the car closest to the designated point in the image.", "raw": "<point x=\"470\" y=\"680\">", "n_new_tokens": 15, "latency_ms": 90.68}
+{"id": "pb-0270", "query": "Point to the tool people use to calculate numbers.", "raw": "<point x=\"190\" y=\"340\">", "n_new_tokens": 15, "latency_ms": 289.64}
+{"id": "pb-0271", "query": "Point to the car farthest to the right.", "raw": "<point x=\"926\" y=\"652\">", "n_new_tokens": 15, "latency_ms": 1086.93}
+{"id": "pb-0272", "query": "Point to where people carry objects on a bike.", "raw": "<point x=\"720\" y=\"320\">", "n_new_tokens": 15, "latency_ms": 144.74}
+{"id": "pb-0273", "query": "Point to the direction in which the person is moving.", "raw": "<point x=\"820\" y=\"617\">", "n_new_tokens": 15, "latency_ms": 112.94}
+{"id": "pb-0274", "query": "Point to the price listed above the current position in the image.", "raw": "<point x=\"260\" y=\"720\">", "n_new_tokens": 15, "latency_ms": 163.79}
+{"id": "pb-0275", "query": "Point to the word closest to the left of the existing point in the image.", "raw": "<point x=\"111\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 101.89}
+{"id": "pb-0276", "query": "Point to the chair closest to the existing point in the image.", "raw": "<point x=\"577\" y=\"680\">", "n_new_tokens": 15, "latency_ms": 1187.28, "resized_to": "3849x2125"}
+{"id": "pb-0277", "query": "Point to the tool with which you cut.", "raw": "<point x=\"480\" y=\"290\">", "n_new_tokens": 15, "latency_ms": 144.57}
+{"id": "pb-0278", "query": "Point to the next clickable feature or button.", "raw": "<point x=\"908\" y=\"938\">", "n_new_tokens": 15, "latency_ms": 124.89}
+{"id": "pb-0279", "query": "Point to the straightest item in this image.", "raw": "<point x=\"537\" y=\"950\">", "n_new_tokens": 15, "latency_ms": 98.43}
+{"id": "pb-0280", "query": "Point to all the bottles.", "raw": "<point x=\"175\" y=\"405\"> <point x=\"502\" y=\"405\"> <point x=\"850\" y=\"405\">", "n_new_tokens": 43, "latency_ms": 291.06}
+{"id": "pb-0281", "query": "Point to the closest tabletop.", "raw": "<point x=\"800\" y=\"770\">", "n_new_tokens": 15, "latency_ms": 91.07}
+{"id": "pb-0282", "query": "Point to the \"nearest trash can.\"", "raw": "<point x=\"848\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 1219.8, "resized_to": "3503x2335"}
+{"id": "pb-0283", "query": "Point to the tool made of wood.", "raw": "<point x=\"861\" y=\"730\">", "n_new_tokens": 15, "latency_ms": 148.82}
+{"id": "pb-0284", "query": "Point to the tool used for cleaning.", "raw": "<point x=\"541\" y=\"511\">", "n_new_tokens": 15, "latency_ms": 107.9}
+{"id": "pb-0285", "query": "Point to the object to the right of the central building.", "raw": "<point x=\"870\" y=\"449\">", "n_new_tokens": 15, "latency_ms": 1188.12, "resized_to": "3439x2379"}
+{"id": "pb-0286", "query": "Point to the object to the right of the left picture on the wall.", "raw": "<point x=\"455\" y=\"308\">", "n_new_tokens": 15, "latency_ms": 84.3}
+{"id": "pb-0287", "query": "Point to the object toward which the three women in the middle are walking.", "raw": "<point x=\"538\" y=\"651\">", "n_new_tokens": 15, "latency_ms": 134.41}
+{"id": "pb-0288", "query": "Point to the object next to the blue boat on the left.", "raw": "<point x=\"660\" y=\"761\">", "n_new_tokens": 15, "latency_ms": 1221.25, "resized_to": "3767x2172"}
+{"id": "pb-0289", "query": "Point to the object that can illuminate the direction of the car.", "raw": "<point x=\"245\" y=\"564\">", "n_new_tokens": 15, "latency_ms": 92.25}
+{"id": "pb-0290", "query": "Point to the foremost tree.", "raw": "<point x=\"625\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 188.9}
+{"id": "pb-0291", "query": "Point to the source of light.", "raw": "<point x=\"99\" y=\"580\">", "n_new_tokens": 14, "latency_ms": 317.5}
+{"id": "pb-0292", "query": "Point to all the statues.", "raw": "<point x=\"155\" y=\"451\"> <point x=\"355\" y=\"451\"> <point x=\"573\" y=\"475\"> <point x=\"801\" y=\"411\">", "n_new_tokens": 57, "latency_ms": 284.98}
+{"id": "pb-0293", "query": "Point to the tank.", "raw": "<point x=\"390\" y=\"355\">", "n_new_tokens": 15, "latency_ms": 112.92}
+{"id": "pb-0294", "query": "Point to the car on the far right.", "raw": "<point x=\"926\" y=\"580\">", "n_new_tokens": 15, "latency_ms": 133.07}
+{"id": "pb-0295", "query": "Point to all the cows.", "raw": "<point x=\"620\" y=\"647\"> <point x=\"827\" y=\"470\">", "n_new_tokens": 29, "latency_ms": 177.66}
+{"id": "pb-0296", "query": "Point to the object that people can use to play music.", "raw": "<point x=\"502\" y=\"510\">", "n_new_tokens": 15, "latency_ms": 95.28}
+{"id": "pb-0297", "query": "Point to 'Cans.'", "raw": "<point x=\"237\" y=\"500\"> <point x=\"460\" y=\"500\"> <point x=\"727\" y=\"500\">", "n_new_tokens": 43, "latency_ms": 1349.86, "resized_to": "2860x2860"}
+{"id": "pb-0298", "query": "Point to the figure to the left of the existing point.", "raw": "<point x=\"151\" y=\"305\">", "n_new_tokens": 15, "latency_ms": 247.43}
+{"id": "pb-0299", "query": "Point to move the point up until reaching the down arrow.", "raw": "<point x=\"99\" y=\"739\">", "n_new_tokens": 14, "latency_ms": 406.81}
+{"id": "pb-0300", "query": "Point to all the birds.", "raw": "<point x=\"521\" y=\"441\"> <point x=\"524\" y=\"573\"> <point x=\"591\" y=\"517\">", "n_new_tokens": 43, "latency_ms": 1350.25, "resized_to": "3303x2477"}
+{"id": "pb-0301", "query": "Point to the object on which the person is riding.", "raw": "<point x=\"593\" y=\"824\">", "n_new_tokens": 15, "latency_ms": 95.14}
+{"id": "pb-0302", "query": "Point to the nearest window.", "raw": "<point x=\"740\" y=\"473\">", "n_new_tokens": 15, "latency_ms": 117.85}
+{"id": "pb-0303", "query": "Point to the object to the left of the existing point.", "raw": "<point x=\"11\" y=\"899\">", "n_new_tokens": 14, "latency_ms": 142.66}
+{"id": "pb-0304", "query": "Point to the person to the right of the existing point.", "raw": "<point x=\"943\" y=\"630\">", "n_new_tokens": 15, "latency_ms": 91.26}
+{"id": "pb-0305", "query": "Point to what could be used to listen to music or other sounds.", "raw": "<point x=\"500\" y=\"591\">", "n_new_tokens": 15, "latency_ms": 190.87}
+{"id": "pb-0306", "query": "Point to the tool used for scooping food.", "raw": "<point x=\"640\" y=\"950\">", "n_new_tokens": 15, "latency_ms": 143.75}
+{"id": "pb-0307", "query": "Point to the tool with which you write.", "raw": "<point x=\"550\" y=\"710\">", "n_new_tokens": 15, "latency_ms": 118.13}
+{"id": "pb-0308", "query": "Point to where firefighters might obtain water.", "raw": "<point x=\"650\" y=\"89\">", "n_new_tokens": 14, "latency_ms": 91.07}
+{"id": "pb-0309", "query": "Point to the building on the left.", "raw": "<point x=\"105\" y=\"391\">", "n_new_tokens": 15, "latency_ms": 96.36}
+{"id": "pb-0310", "query": "Point to the tool people use to erase.", "raw": "<point x=\"475\" y=\"411\">", "n_new_tokens": 15, "latency_ms": 110.22}
+{"id": "pb-0311", "query": "Point to the closest table.", "raw": "<point x=\"590\" y=\"839\">", "n_new_tokens": 15, "latency_ms": 1188.81, "resized_to": "3303x2477"}
+{"id": "pb-0312", "query": "Point to the lamp on the right side of the couch.", "raw": "<point x=\"694\" y=\"555\">", "n_new_tokens": 15, "latency_ms": 1210.91, "resized_to": "3503x2335"}
+{"id": "pb-0313", "query": "Point to the tool that people use for eating.", "raw": "<point x=\"939\" y=\"861\">", "n_new_tokens": 15, "latency_ms": 1221.0, "resized_to": "3503x2335"}
+{"id": "pb-0314", "query": "Point to the tool that can be lit to produce light.", "raw": "<point x=\"991\" y=\"335\">", "n_new_tokens": 15, "latency_ms": 142.41}
+{"id": "pb-0315", "query": "Point to all the bottles.", "raw": "<point x=\"77\" y=\"100\"> <point x=\"78\" y=\"540\"> <point x=\"334\" y=\"360\"> <point x=\"752\" y=\"360\">", "n_new_tokens": 55, "latency_ms": 284.25}
+{"id": "pb-0316", "query": "Point to the road sign indicating the speed limit.", "raw": "<point x=\"748\" y=\"619\">", "n_new_tokens": 15, "latency_ms": 1211.61, "resized_to": "3351x2441"}
+{"id": "pb-0317", "query": "Point to the car driving towards the camera.", "raw": "<point x=\"223\" y=\"674\">", "n_new_tokens": 15, "latency_ms": 90.42}
+{"id": "pb-0318", "query": "Point to all the cars in the image.", "raw": "<point x=\"97\" y=\"517\"> <point x=\"261\" y=\"511\"> <point x=\"400\" y=\"511\"> <point x=\"547\" y=\"511\"> <point x=\"677\" y", "n_new_tokens": 64, "latency_ms": 354.57}
+{"id": "pb-0319", "query": "Point to the person's hand closest to the existing point in the image.", "raw": "<point x=\"362\" y=\"740\">", "n_new_tokens": 15, "latency_ms": 259.55}
+{"id": "pb-0320", "query": "Point to moving up until reaching the faces.", "raw": "<point x=\"711\" y=\"141\">", "n_new_tokens": 15, "latency_ms": 82.76}
+{"id": "pb-0321", "query": "Point to the face closest to the point in the image.", "raw": "<point x=\"516\" y=\"249\">", "n_new_tokens": 15, "latency_ms": 163.55}
+{"id": "pb-0322", "query": "Point to the object that can be ridden from place to place.", "raw": "<point x=\"550\" y=\"490\">", "n_new_tokens": 15, "latency_ms": 122.71}
+{"id": "pb-0323", "query": "Point to the tool made of wood, string, and metal.", "raw": "<point x=\"591\" y=\"841\">", "n_new_tokens": 15, "latency_ms": 92.01}
+{"id": "pb-0324", "query": "Point to all the bottles in the image.", "raw": "<point x=\"316\" y=\"500\"> <point x=\"710\" y=\"500\">", "n_new_tokens": 29, "latency_ms": 190.8}
+{"id": "pb-0325", "query": "Point to the tool used to calculate math questions more quickly.", "raw": "<point x=\"841\" y=\"445\">", "n_new_tokens": 15, "latency_ms": 135.99}
+{"id": "pb-0326", "query": "Point to the button at the top of the existing point in the image.", "raw": "<point x=\"857\" y=\"57\">", "n_new_tokens": 14, "latency_ms": 220.65}
+{"id": "pb-0327", "query": "Point to the tool designed to be worn on the hand.", "raw": "<point x=\"750\" y=\"300\">", "n_new_tokens": 15, "latency_ms": 243.58}
+{"id": "pb-0328", "query": "Point to the skateboard on the left side of the existing point in the image.", "raw": "<point x=\"348\" y=\"501\">", "n_new_tokens": 15, "latency_ms": 83.9}
+{"id": "pb-0329", "query": "Point to all the people riding bikes.", "raw": "<point x=\"80\" y=\"361\"> <point x=\"280\" y=\"405\"> <point x=\"390\" y=\"371\">", "n_new_tokens": 42, "latency_ms": 218.93}
+{"id": "pb-0330", "query": "Point to the house on the left.", "raw": "<point x=\"185\" y=\"244\">", "n_new_tokens": 15, "latency_ms": 96.78}
+{"id": "pb-0331", "query": "Point to the person waiting at the bus stop.", "raw": "<point x=\"364\" y=\"570\">", "n_new_tokens": 15, "latency_ms": 90.02}
+{"id": "pb-0332", "query": "Point to the tool that can create music.", "raw": "<point x=\"500\" y=\"799\">", "n_new_tokens": 15, "latency_ms": 236.85}
+{"id": "pb-0333", "query": "Point to the bike closest to the camera.", "raw": "<point x=\"335\" y=\"705\">", "n_new_tokens": 15, "latency_ms": 119.61}
+{"id": "pb-0334", "query": "Point to all the birds that are clearly visible.", "raw": "<point x=\"338\" y=\"384\"> <point x=\"687\" y=\"745\"> <point x=\"843\" y=\"324\">", "n_new_tokens": 43, "latency_ms": 263.0}
+{"id": "pb-0335", "query": "Point to the object to the right of the existing point.", "raw": "<point x=\"980\" y=\"790\">", "n_new_tokens": 15, "latency_ms": 120.28}
+{"id": "pb-0336", "query": "Point to the car in the direction of the bike's movement.", "raw": "<point x=\"355\" y=\"404\">", "n_new_tokens": 15, "latency_ms": 118.6}
+{"id": "pb-0337", "query": "Point to moving left until you reach the left wall past the sink drawers.", "raw": "<point x=\"100\" y=\"308\">", "n_new_tokens": 15, "latency_ms": 104.56}
+{"id": "pb-0338", "query": "Point to the tool used to determine the time.", "raw": "<point x=\"544\" y=\"412\">", "n_new_tokens": 15, "latency_ms": 127.67}
+{"id": "pb-0339", "query": "Point to all the cans in the image.", "raw": "<point x=\"218\" y=\"543\"> <point x=\"237\" y=\"700\"> <point x=\"351\" y=\"473\"> <point x=\"405\" y=\"740\"> <point x=\"500\"", "n_new_tokens": 64, "latency_ms": 393.76}
+{"id": "pb-0340", "query": "Point to the truck behind the pink bus.", "raw": "<point x=\"380\" y=\"310\">", "n_new_tokens": 15, "latency_ms": 224.98}
+{"id": "pb-0341", "query": "Point to the first two visible wine bottles.", "raw": "<point x=\"107\" y=\"649\"> <point x=\"247\" y=\"609\">", "n_new_tokens": 29, "latency_ms": 342.64}
+{"id": "pb-0342", "query": "Point to the car that's moving right behind the bike.", "raw": "<point x=\"480\" y=\"452\">", "n_new_tokens": 15, "latency_ms": 113.87}
+{"id": "pb-0343", "query": "Point to what people might ride to get from place to place.", "raw": "<point x=\"600\" y=\"547\">", "n_new_tokens": 15, "latency_ms": 148.1}
+{"id": "pb-0344", "query": "Point to the people standing at the door.", "raw": "<point x=\"801\" y=\"811\"> <point x=\"833\" y=\"811\">", "n_new_tokens": 29, "latency_ms": 235.18}
+{"id": "pb-0345", "query": "Point to all the circular chocolate bars.", "raw": "<point x=\"252\" y=\"119\">", "n_new_tokens": 15, "latency_ms": 94.03}
+{"id": "pb-0346", "query": "Point to what the speed limit might be.", "raw": "<point x=\"405\" y=\"361\">", "n_new_tokens": 15, "latency_ms": 104.03}
+{"id": "pb-0347", "query": "Point to all the glasses in the image.", "raw": "<point x=\"255\" y=\"530\"> <point x=\"510\" y=\"530\"> <point x=\"651\" y=\"527\"> <point x=\"723\" y=\"527\"> <point x=\"780\"", "n_new_tokens": 64, "latency_ms": 335.41}
+{"id": "pb-0348", "query": "Point to the tool used for forking food.", "raw": "<point x=\"150\" y=\"680\">", "n_new_tokens": 15, "latency_ms": 142.39}
+{"id": "pb-0349", "query": "Point to what this road could be named.", "raw": "<point x=\"111\" y=\"545\">", "n_new_tokens": 15, "latency_ms": 135.62}
+{"id": "pb-0350", "query": "Point to the person who is closest to the door.", "raw": "<point x=\"582\" y=\"534\">", "n_new_tokens": 15, "latency_ms": 1217.23, "resized_to": "2335x3503"}
+{"id": "pb-0351", "query": "Point to the car closest to the bottom middle of the picture.", "raw": "<point x=\"740\" y=\"960\">", "n_new_tokens": 15, "latency_ms": 186.1}
+{"id": "pb-0352", "query": "Point to all the cans in the image.", "raw": "<point x=\"305\" y=\"490\"> <point x=\"520\" y=\"490\"> <point x=\"730\" y=\"490\">", "n_new_tokens": 43, "latency_ms": 245.18}
+{"id": "pb-0353", "query": "Point to the object in front of the building.", "raw": "<point x=\"814\" y=\"820\">", "n_new_tokens": 15, "latency_ms": 1229.64, "resized_to": "3509x2331"}
+{"id": "pb-0354", "query": "Point to the object used to navigate where the biker is going.", "raw": "<point x=\"436\" y=\"140\">", "n_new_tokens": 15, "latency_ms": 123.11}
+{"id": "pb-0355", "query": "Point to the object used to communicate with others by hearing what the pilot says.", "raw": "<point x=\"315\" y=\"508\">", "n_new_tokens": 15, "latency_ms": 111.12}
+{"id": "pb-0356", "query": "Point to the car closest to the camera.", "raw": "<point x=\"140\" y=\"641\">", "n_new_tokens": 15, "latency_ms": 123.85}
+{"id": "pb-0357", "query": "Point to the object used to cover the camera's lens.", "raw": "<point x=\"218\" y=\"757\">", "n_new_tokens": 15, "latency_ms": 136.13}
+{"id": "pb-0358", "query": "Point to the lamp on the right side of the bed.", "raw": "<point x=\"670\" y=\"407\">", "n_new_tokens": 15, "latency_ms": 1225.07, "resized_to": "3503x2335"}
+{"id": "pb-0359", "query": "Point to all the bottles.", "raw": "<point x=\"130\" y=\"375\"> <point x=\"311\" y=\"690\">", "n_new_tokens": 29, "latency_ms": 901.05}
+{"id": "pb-0360", "query": "Point to the train car in the middle of the picture.", "raw": "<point x=\"670\" y=\"460\">", "n_new_tokens": 15, "latency_ms": 118.55}
+{"id": "pb-0361", "query": "Point to moving up, then left, until you are on top of the baseball glove.", "raw": "<point x=\"550\" y=\"330\">", "n_new_tokens": 15, "latency_ms": 123.92}
+{"id": "pb-0362", "query": "Point to the legs of the person farthest to the left who is wearing gray pants.", "raw": "<point x=\"41\" y=\"70\">", "n_new_tokens": 13, "latency_ms": 216.39}
+{"id": "pb-0363", "query": "Point to the dome-shaped building in the top right of the image.", "raw": "<point x=\"738\" y=\"211\">", "n_new_tokens": 15, "latency_ms": 135.96}
+{"id": "pb-0364", "query": "Point to what could identify the white car in the middle of the picture.", "raw": "<point x=\"666\" y=\"651\">", "n_new_tokens": 15, "latency_ms": 1223.47, "resized_to": "3814x2145"}
+{"id": "pb-0365", "query": "Point to the cow farthest to the left in the background.", "raw": "<point x=\"161\" y=\"514\">", "n_new_tokens": 15, "latency_ms": 119.68}
+{"id": "pb-0366", "query": "Point to moving left until you are on top of the machine.", "raw": "<point x=\"308\" y=\"741\">", "n_new_tokens": 15, "latency_ms": 89.77}
+{"id": "pb-0367", "query": "Point to the tool used to protect the hands.", "raw": "<point x=\"730\" y=\"620\">", "n_new_tokens": 15, "latency_ms": 136.81}
+{"id": "pb-0368", "query": "Point to the cat.", "raw": "<point x=\"648\" y=\"774\">", "n_new_tokens": 15, "latency_ms": 90.82}
+{"id": "pb-0369", "query": "Point to the dish closest to the previous point.", "raw": "<point x=\"870\" y=\"301\">", "n_new_tokens": 15, "latency_ms": 91.23}
+{"id": "pb-0370", "query": "Point to the first car.", "raw": "<point x=\"730\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 185.22}
+{"id": "pb-0371", "query": "Point to moving the previous points to the words nearest them.", "raw": "<point x=\"100\" y=\"319\">", "n_new_tokens": 15, "latency_ms": 84.91}
+{"id": "pb-0372", "query": "Point to what the biker will drink.", "raw": "<point x=\"385\" y=\"637\">", "n_new_tokens": 15, "latency_ms": 119.13}
+{"id": "pb-0373", "query": "Point to the blue tool used for writing.", "raw": "<point x=\"400\" y=\"227\">", "n_new_tokens": 15, "latency_ms": 109.72}
+{"id": "pb-0374", "query": "Point to all the cans.", "raw": "<point x=\"198\" y=\"500\"> <point x=\"511\" y=\"500\"> <point x=\"815\" y=\"500\">", "n_new_tokens": 43, "latency_ms": 223.08}
+{"id": "pb-0375", "query": "Point to the tool for writing.", "raw": "<point x=\"684\" y=\"240\">", "n_new_tokens": 15, "latency_ms": 1169.09}
+{"id": "pb-0376", "query": "Point to the object to the right of the existing point.", "raw": "<point x=\"880\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 87.54}
+{"id": "pb-0377", "query": "Point to the object to the left of the goat.", "raw": "<point x=\"414\" y=\"639\">", "n_new_tokens": 15, "latency_ms": 1199.58, "resized_to": "3301x2478"}
+{"id": "pb-0378", "query": "Point to the object indicating the exit door.", "raw": "<point x=\"953\" y=\"129\">", "n_new_tokens": 15, "latency_ms": 117.96}
+{"id": "pb-0379", "query": "Point to the object to the left of the existing point.", "raw": "<point x=\"411\" y=\"891\">", "n_new_tokens": 15, "latency_ms": 409.72}
+{"id": "pb-0380", "query": "Point to the object below the bird.", "raw": "<point x=\"570\" y=\"761\">", "n_new_tokens": 15, "latency_ms": 195.55}
+{"id": "pb-0381", "query": "Point to the tool that people can use to write.", "raw": "<point x=\"541\" y=\"251\">", "n_new_tokens": 15, "latency_ms": 135.03}
+{"id": "pb-0382", "query": "Point to the object that can illuminate the space.", "raw": "<point x=\"449\" y=\"417\">", "n_new_tokens": 15, "latency_ms": 165.81}
+{"id": "pb-0383", "query": "Point to the object that people can use to pick up food.", "raw": "<point x=\"784\" y=\"448\">", "n_new_tokens": 15, "latency_ms": 87.7}
+{"id": "pb-0384", "query": "Point to the object that people can use to control the flight.", "raw": "<point x=\"508\" y=\"738\">", "n_new_tokens": 15, "latency_ms": 111.87}
+{"id": "pb-0385", "query": "Point to the object to the right of the television.", "raw": "<point x=\"750\" y=\"480\">", "n_new_tokens": 15, "latency_ms": 91.68}
+{"id": "pb-0386", "query": "Point to all the birds.", "raw": "<point x=\"205\" y=\"448\"> <point x=\"550\" y=\"430\"> <point x=\"800\" y=\"541\">", "n_new_tokens": 43, "latency_ms": 249.58}
+{"id": "pb-0387", "query": "Point to all the apples.", "raw": "<point x=\"170\" y=\"511\"> <point x=\"473\" y=\"530\"> <point x=\"834\" y=\"555\">", "n_new_tokens": 43, "latency_ms": 270.77}
+{"id": "pb-0388", "query": "Point to the text to the right of the existing point.", "raw": "<point x=\"899\" y=\"97\">", "n_new_tokens": 14, "latency_ms": 109.43}
+{"id": "pb-0389", "query": "Point to all the insects.", "raw": "<point x=\"266\" y=\"350\"> <point x=\"505\" y=\"175\"> <point x=\"511\" y=\"491\"> <point x=\"514\" y=\"710\"> <point x=\"748\"", "n_new_tokens": 64, "latency_ms": 349.19}
+{"id": "pb-0390", "query": "Point to the object to the left of the pink vase.", "raw": "<point x=\"340\" y=\"897\">", "n_new_tokens": 15, "latency_ms": 148.14}
+{"id": "pb-0391", "query": "Point to going to an area where it will identify the white car.", "raw": "<point x=\"270\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 226.27}
+{"id": "pb-0392", "query": "Point to the tool that people can use to write.", "raw": "<point x=\"760\" y=\"807\">", "n_new_tokens": 15, "latency_ms": 145.19}
+{"id": "pb-0393", "query": "Point to all the shoes.", "raw": "<point x=\"105\" y=\"516\"> <point x=\"328\" y=\"495\"> <point x=\"496\" y=\"865\"> <point x=\"584\" y=\"755\"> <point x=\"680\"", "n_new_tokens": 64, "latency_ms": 320.04}
+{"id": "pb-0394", "query": "Point to the object to the right of the existing point.", "raw": "<point x=\"900\" y=\"770\">", "n_new_tokens": 15, "latency_ms": 116.82}
+{"id": "pb-0395", "query": "Point to the object that people can use to cut.", "raw": "<point x=\"580\" y=\"525\">", "n_new_tokens": 15, "latency_ms": 86.6}
+{"id": "pb-0396", "query": "Point to the object below the glass.", "raw": "<point x=\"840\" y=\"940\">", "n_new_tokens": 15, "latency_ms": 150.98}
+{"id": "pb-0397", "query": "Point to the person walking.", "raw": "<point x=\"24\" y=\"760\">", "n_new_tokens": 14, "latency_ms": 127.98}
+{"id": "pb-0398", "query": "Point to the text above the existing point.", "raw": "<point x=\"500\" y=\"69\">", "n_new_tokens": 14, "latency_ms": 79.64}
+{"id": "pb-0399", "query": "Point to the person not riding his tricycle.", "raw": "<point x=\"841\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 1213.49, "resized_to": "3502x2336"}
+{"id": "pb-0400", "query": "Point to the figure to the left of the existing point.", "raw": "<point x=\"450\" y=\"529\">", "n_new_tokens": 15, "latency_ms": 92.05}
+{"id": "pb-0401", "query": "Point to the person to whom the woman is talking.", "raw": "<point x=\"328\" y=\"420\">", "n_new_tokens": 15, "latency_ms": 142.83}
+{"id": "pb-0402", "query": "Point to the object to the left of the wine.", "raw": "<point x=\"170\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 152.15}
+{"id": "pb-0403", "query": "Point to a tool that can be used for cutting.", "raw": "<point x=\"570\" y=\"480\">", "n_new_tokens": 15, "latency_ms": 106.27}
+{"id": "pb-0404", "query": "Point to the vehicle that the men are holding.", "raw": "<point x=\"548\" y=\"670\">", "n_new_tokens": 15, "latency_ms": 116.61}
+{"id": "pb-0405", "query": "Point to the object above the bedstand.", "raw": "<point x=\"970\" y=\"670\">", "n_new_tokens": 15, "latency_ms": 91.66}
+{"id": "pb-0406", "query": "Point to the person riding a bike.", "raw": "<point x=\"851\" y=\"711\">", "n_new_tokens": 15, "latency_ms": 1199.05, "resized_to": "3303x2477"}
+{"id": "pb-0407", "query": "Point to the object below the existing point.", "raw": "<point x=\"380\" y=\"809\">", "n_new_tokens": 15, "latency_ms": 101.17}
+{"id": "pb-0408", "query": "Point to the object people use to cut.", "raw": "<point x=\"448\" y=\"427\">", "n_new_tokens": 15, "latency_ms": 1229.3, "resized_to": "2335x3503"}
+{"id": "pb-0409", "query": "Point to the left of the existing point.", "raw": "<point x=\"19\" y=\"491\">", "n_new_tokens": 14, "latency_ms": 81.53}
+{"id": "pb-0410", "query": "Point to the object that people can use to carry things.", "raw": "<point x=\"760\" y=\"217\">", "n_new_tokens": 15, "latency_ms": 1201.44, "resized_to": "3303x2477"}
+{"id": "pb-0411", "query": "Point to the building above the existing point.", "raw": "<point x=\"520\" y=\"417\">", "n_new_tokens": 15, "latency_ms": 109.62}
+{"id": "pb-0412", "query": "Point to the object people can use to cut.", "raw": "<point x=\"501\" y=\"344\">", "n_new_tokens": 15, "latency_ms": 95.53}
+{"id": "pb-0413", "query": "Point to the car from which the person is coming.", "raw": "<point x=\"550\" y=\"548\">", "n_new_tokens": 15, "latency_ms": 1064.35}
+{"id": "pb-0414", "query": "Point to the object above the chairs.", "raw": "<point x=\"500\" y=\"19\">", "n_new_tokens": 14, "latency_ms": 1216.23, "resized_to": "3503x2335"}
+{"id": "pb-0415", "query": "Point to all the birds.", "raw": "<point x=\"13\" y=\"580\"> <point x=\"138\" y=\"580\"> <point x=\"283\" y=\"577\"> <point x=\"362\" y=\"607\"> <point x=\"434\" y", "n_new_tokens": 64, "latency_ms": 399.97}
+{"id": "pb-0416", "query": "Point to an object people can hold when opening a door.", "raw": "<point x=\"500\" y=\"547\">", "n_new_tokens": 15, "latency_ms": 145.97}
+{"id": "pb-0417", "query": "Point to the car's logo.", "raw": "<point x=\"675\" y=\"575\">", "n_new_tokens": 15, "latency_ms": 115.8}
+{"id": "pb-0418", "query": "Point to the object to the right of the wall lamp.", "raw": "<point x=\"553\" y=\"376\">", "n_new_tokens": 15, "latency_ms": 85.38}
+{"id": "pb-0419", "query": "Point to the object that people can use to make music.", "raw": "<point x=\"648\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 1231.69, "resized_to": "3467x2360"}
+{"id": "pb-0420", "query": "Point to the object to the right of the cars.", "raw": "<point x=\"500\" y=\"627\">", "n_new_tokens": 15, "latency_ms": 1219.1, "resized_to": "3408x2401"}
+{"id": "pb-0421", "query": "Point to the object that the player is kicking.", "raw": "<point x=\"680\" y=\"860\">", "n_new_tokens": 15, "latency_ms": 1198.65, "resized_to": "2860x2860"}
+{"id": "pb-0422", "query": "Point to the lids of all the bottles.", "raw": "<point x=\"228\" y=\"99\"> <point x=\"460\" y=\"67\"> <point x=\"700\" y=\"48\">", "n_new_tokens": 40, "latency_ms": 1102.97}
+{"id": "pb-0423", "query": "Point to the object that people can hold when opening the door.", "raw": "<point x=\"415\" y=\"507\">", "n_new_tokens": 15, "latency_ms": 189.77}
+{"id": "pb-0424", "query": "Point to the object to the left of the right train.", "raw": "<point x=\"400\" y=\"548\">", "n_new_tokens": 15, "latency_ms": 187.41}
+{"id": "pb-0425", "query": "Point to the object that the people are repairing.", "raw": "<point x=\"480\" y=\"716\">", "n_new_tokens": 15, "latency_ms": 135.69}
+{"id": "pb-0426", "query": "Point to all the traffic signs.", "raw": "<point x=\"55\" y=\"326\">", "n_new_tokens": 14, "latency_ms": 91.89}
+{"id": "pb-0427", "query": "Point to all the birds.", "raw": "<point x=\"375\" y=\"566\"> <point x=\"495\" y=\"570\"> <point x=\"636\" y=\"566\">", "n_new_tokens": 43, "latency_ms": 247.29}
+{"id": "pb-0428", "query": "Point to the object to the right of the right columns.", "raw": "<point x=\"987\" y=\"599\">", "n_new_tokens": 15, "latency_ms": 109.0}
+{"id": "pb-0429", "query": "Point to the object that people can use to open a car door.", "raw": "<point x=\"345\" y=\"345\">", "n_new_tokens": 15, "latency_ms": 85.27}
+{"id": "pb-0430", "query": "Point to the moving truck.", "raw": "<point x=\"586\" y=\"510\">", "n_new_tokens": 15, "latency_ms": 1221.62, "resized_to": "3503x2335"}
+{"id": "pb-0431", "query": "Point to the object the boat is approaching.", "raw": "<point x=\"330\" y=\"440\">", "n_new_tokens": 15, "latency_ms": 1220.28, "resized_to": "2335x3503"}
+{"id": "pb-0432", "query": "Point to the object to the left of the right candle.", "raw": "<point x=\"190\" y=\"900\">", "n_new_tokens": 15, "latency_ms": 1219.81, "resized_to": "3503x2335"}
+{"id": "pb-0433", "query": "Point to the logo above the existing point.", "raw": "<point x=\"87\" y=\"70\">", "n_new_tokens": 13, "latency_ms": 92.05}
+{"id": "pb-0434", "query": "Point to the sign that indicates the buffalo.", "raw": "<point x=\"819\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 118.9}
+{"id": "pb-0435", "query": "Point to the object to the left of the goat.", "raw": "<point x=\"411\" y=\"490\">", "n_new_tokens": 15, "latency_ms": 1219.66, "resized_to": "2538x3224"}
+{"id": "pb-0436", "query": "Point to the traffic light at which the cars are waiting.", "raw": "<point x=\"586\" y=\"235\">", "n_new_tokens": 15, "latency_ms": 1221.54, "resized_to": "3814x2145"}
+{"id": "pb-0437", "query": "Point to the person walking.", "raw": "<point x=\"412\" y=\"740\">", "n_new_tokens": 15, "latency_ms": 1229.68, "resized_to": "2146x3812"}
+{"id": "pb-0438", "query": "Point to the object that people can use to write with.", "raw": "<point x=\"415\" y=\"787\">", "n_new_tokens": 15, "latency_ms": 1165.37}
+{"id": "pb-0439", "query": "Point to the building that is to the left of the rightmost building.", "raw": "<point x=\"870\" y=\"570\">", "n_new_tokens": 15, "latency_ms": 115.85}
+{"id": "pb-0440", "query": "Point to the object that can chain keys together.", "raw": "<point x=\"316\" y=\"430\">", "n_new_tokens": 15, "latency_ms": 1221.82, "resized_to": "3814x2145"}
+{"id": "pb-0441", "query": "Point to the object on the water.", "raw": "<point x=\"825\" y=\"695\">", "n_new_tokens": 15, "latency_ms": 116.18}
+{"id": "pb-0442", "query": "Point to the object people can use to open a car door.", "raw": "<point x=\"490\" y=\"750\">", "n_new_tokens": 15, "latency_ms": 97.0}
+{"id": "pb-0443", "query": "Point to the traffic sign.", "raw": "<point x=\"905\" y=\"165\">", "n_new_tokens": 15, "latency_ms": 118.41}
+{"id": "pb-0444", "query": "Point to the object that people can use to cut hair.", "raw": "<point x=\"620\" y=\"937\">", "n_new_tokens": 15, "latency_ms": 1199.01, "resized_to": "3909x2093"}
+{"id": "pb-0445", "query": "Point to the nearest cross from the previous point.", "raw": "<point x=\"291\" y=\"235\">", "n_new_tokens": 15, "latency_ms": 84.78}
+{"id": "pb-0446", "query": "Point to the animal in the image.", "raw": "<point x=\"741\" y=\"480\">", "n_new_tokens": 15, "latency_ms": 136.16}
+{"id": "pb-0447", "query": "Point to the face of the person that the current point is on.", "raw": "<point x=\"705\" y=\"280\">", "n_new_tokens": 15, "latency_ms": 128.22}
+{"id": "pb-0448", "query": "Point to the person between the two buses.", "raw": "<point x=\"446\" y=\"640\">", "n_new_tokens": 15, "latency_ms": 94.92}
+{"id": "pb-0449", "query": "Point to the item that can be read.", "raw": "<point x=\"481\" y=\"264\">", "n_new_tokens": 15, "latency_ms": 1219.52, "resized_to": "2335x3503"}
+{"id": "pb-0450", "query": "Point to the rock between the two people.", "raw": "<point x=\"540\" y=\"575\">", "n_new_tokens": 15, "latency_ms": 114.34}
+{"id": "pb-0451", "query": "Point to the space bar.", "raw": "<point x=\"250\" y=\"100\">", "n_new_tokens": 15, "latency_ms": 113.88}
+{"id": "pb-0452", "query": "Point to the outer right side of the bowl.", "raw": "<point x=\"755\" y=\"297\">", "n_new_tokens": 15, "latency_ms": 169.56}
+{"id": "pb-0453", "query": "Point to the pen that can be used for highlighting.", "raw": "<point x=\"352\" y=\"590\">", "n_new_tokens": 15, "latency_ms": 111.11}
+{"id": "pb-0454", "query": "Point to the item used for drinking coffee.", "raw": "<point x=\"297\" y=\"311\">", "n_new_tokens": 15, "latency_ms": 127.62}
+{"id": "pb-0455", "query": "Point to the frame for placing luggage outside the car.", "raw": "<point x=\"600\" y=\"430\">", "n_new_tokens": 15, "latency_ms": 117.56}
+{"id": "pb-0456", "query": "Point to the item that indicates which country I am in.", "raw": "<point x=\"75\" y=\"428\">", "n_new_tokens": 14, "latency_ms": 111.44}
+{"id": "pb-0457", "query": "Point to the object that people can use to amplify sound.", "raw": "<point x=\"645\" y=\"387\">", "n_new_tokens": 15, "latency_ms": 331.65}
+{"id": "pb-0458", "query": "Point to the object in front of the tent.", "raw": "<point x=\"856\" y=\"767\">", "n_new_tokens": 15, "latency_ms": 209.53}
+{"id": "pb-0459", "query": "Point to the road to the right of the existing point.", "raw": "<point x=\"695\" y=\"191\">", "n_new_tokens": 15, "latency_ms": 119.37}
+{"id": "pb-0460", "query": "Point to the person holding the animal indicated by the existing point.", "raw": "<point x=\"600\" y=\"570\">", "n_new_tokens": 15, "latency_ms": 111.78}
+{"id": "pb-0461", "query": "Point to the object behind the wheel.", "raw": "<point x=\"800\" y=\"111\">", "n_new_tokens": 15, "latency_ms": 114.17}
+{"id": "pb-0462", "query": "Point to the object to the right of the existing point.", "raw": "<point x=\"980\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 94.69}
+{"id": "pb-0463", "query": "Point to the object behind the flag.", "raw": "<point x=\"443\" y=\"370\">", "n_new_tokens": 15, "latency_ms": 1221.25, "resized_to": "3814x2145"}
+{"id": "pb-0464", "query": "Point to the object on the bed.", "raw": "<point x=\"71\" y=\"570\">", "n_new_tokens": 14, "latency_ms": 80.57}
+{"id": "pb-0465", "query": "Point to the object that can produce light.", "raw": "<point x=\"638\" y=\"95\">", "n_new_tokens": 14, "latency_ms": 1212.52, "resized_to": "3814x2145"}
+{"id": "pb-0466", "query": "Point to the object behind the buildings.", "raw": "<point x=\"598\" y=\"360\">", "n_new_tokens": 15, "latency_ms": 112.51}
+{"id": "pb-0467", "query": "Point to the object people can use to paint.", "raw": "<point x=\"85\" y=\"460\">", "n_new_tokens": 14, "latency_ms": 1230.75, "resized_to": "3061x2673"}
+{"id": "pb-0468", "query": "Point to where people could dispose of trash.", "raw": "<point x=\"963\" y=\"403\">", "n_new_tokens": 15, "latency_ms": 613.89}
+{"id": "pb-0469", "query": "Point to the hut that is farthest to the left in this image.", "raw": "<point x=\"214\" y=\"501\">", "n_new_tokens": 15, "latency_ms": 92.06}
+{"id": "pb-0470", "query": "Point to the candle on the left that is on the table.", "raw": "<point x=\"438\" y=\"620\">", "n_new_tokens": 15, "latency_ms": 1203.21, "resized_to": "2477x3303"}
+{"id": "pb-0471", "query": "Point to the shoes.", "raw": "<point x=\"148\" y=\"750\">", "n_new_tokens": 15, "latency_ms": 1222.28, "resized_to": "3361x2434"}
+{"id": "pb-0472", "query": "Point to the telephone pole on the far right.", "raw": "<point x=\"28\" y=\"604\">", "n_new_tokens": 14, "latency_ms": 86.02}
+{"id": "pb-0473", "query": "Point to the wheel that is most correct.", "raw": "<point x=\"540\" y=\"740\">", "n_new_tokens": 15, "latency_ms": 1201.34, "resized_to": "3303x2477"}
+{"id": "pb-0474", "query": "Point to the tool used for cutting.", "raw": "<point x=\"305\" y=\"440\">", "n_new_tokens": 15, "latency_ms": 119.84}
+{"id": "pb-0475", "query": "Point to moving right until you are on top of the orange magnifying glass.", "raw": "<point x=\"841\" y=\"37\">", "n_new_tokens": 14, "latency_ms": 256.55}
+{"id": "pb-0476", "query": "Point to where a biker or a pedestrian might continue.", "raw": "<point x=\"590\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 1215.55, "resized_to": "2335x3503"}
+{"id": "pb-0477", "query": "Point to moving right until you are on the steak.", "raw": "<point x=\"805\" y=\"608\">", "n_new_tokens": 15, "latency_ms": 112.74}
+{"id": "pb-0478", "query": "Point to all the black cars.", "raw": "<point x=\"150\" y=\"670\">", "n_new_tokens": 15, "latency_ms": 408.39}
+{"id": "pb-0479", "query": "Point to one of the oranges.", "raw": "<point x=\"270\" y=\"601\">", "n_new_tokens": 15, "latency_ms": 94.68}
+{"id": "pb-0480", "query": "Point to all the chickens.", "raw": "<point x=\"491\" y=\"707\">", "n_new_tokens": 15, "latency_ms": 1199.98, "resized_to": "3303x2477"}
+{"id": "pb-0481", "query": "Point to the wheelbarrow on the far left.", "raw": "<point x=\"248\" y=\"561\">", "n_new_tokens": 15, "latency_ms": 1229.31, "resized_to": "3296x2482"}
+{"id": "pb-0482", "query": "Point to moving upward until touching the neck.", "raw": "<point x=\"518\" y=\"171\">", "n_new_tokens": 15, "latency_ms": 83.93}
+{"id": "pb-0483", "query": "Point to the tool that creates music.", "raw": "<point x=\"340\" y=\"308\">", "n_new_tokens": 15, "latency_ms": 112.23}
+{"id": "pb-0484", "query": "Point to the tool on which things can be placed.", "raw": "<point x=\"755\" y=\"400\">", "n_new_tokens": 15, "latency_ms": 1218.81, "resized_to": "3503x2335"}
+{"id": "pb-0485", "query": "Point to the red tool.", "raw": "<point x=\"150\" y=\"556\">", "n_new_tokens": 15, "latency_ms": 127.48}
+{"id": "pb-0486", "query": "Point to the chair farthest to the left.", "raw": "<point x=\"127\" y=\"680\">", "n_new_tokens": 15, "latency_ms": 1202.55, "resized_to": "3303x2477"}
+{"id": "pb-0487", "query": "Point to what could protect the biker's head.", "raw": "<point x=\"548\" y=\"365\">", "n_new_tokens": 15, "latency_ms": 1218.79, "resized_to": "2335x3503"}
+{"id": "pb-0488", "query": "Point to the green vehicle used for transportation.", "raw": "<point x=\"620\" y=\"508\">", "n_new_tokens": 15, "latency_ms": 98.01}
+{"id": "pb-0489", "query": "Point to the tool used to make a house cooler.", "raw": "<point x=\"620\" y=\"511\">", "n_new_tokens": 15, "latency_ms": 113.58}
+{"id": "pb-0490", "query": "Point to the animal that lays eggs.", "raw": "<point x=\"598\" y=\"640\">", "n_new_tokens": 15, "latency_ms": 113.58}
+{"id": "pb-0491", "query": "Point to moving slightly up until it's on the gun.", "raw": "<point x=\"948\" y=\"538\">", "n_new_tokens": 15, "latency_ms": 128.47}
+{"id": "pb-0492", "query": "Point to where people could sit.", "raw": "<point x=\"155\" y=\"820\">", "n_new_tokens": 15, "latency_ms": 144.57}
+{"id": "pb-0493", "query": "Point to moving right until reaching the blue app.", "raw": "<point x=\"865\" y=\"940\">", "n_new_tokens": 15, "latency_ms": 151.74}
+{"id": "pb-0494", "query": "Point to directly onto the blue lens of the glasses.", "raw": "<point x=\"500\" y=\"471\">", "n_new_tokens": 15, "latency_ms": 87.66}
+{"id": "pb-0495", "query": "Point to the tent farthest to the left.", "raw": "<point x=\"325\" y=\"536\">", "n_new_tokens": 15, "latency_ms": 89.02}
+{"id": "pb-0496", "query": "Point to the tool used for cutting.", "raw": "<point x=\"105\" y=\"308\">", "n_new_tokens": 15, "latency_ms": 128.06}
+{"id": "pb-0497", "query": "Point to the 5-euro bill.", "raw": "<point x=\"590\" y=\"870\">", "n_new_tokens": 15, "latency_ms": 272.39}
+{"id": "pb-0498", "query": "Point to the keys.", "raw": "<point x=\"570\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 1166.98}
+{"id": "pb-0499", "query": "Point to the pillow to the left of the table.", "raw": "<point x=\"148\" y=\"407\">", "n_new_tokens": 15, "latency_ms": 1199.11, "resized_to": "2477x3303"}
+{"id": "pb-0500", "query": "Point to moving upward until reaching the head of the yellow character.", "raw": "<point x=\"311\" y=\"285\">", "n_new_tokens": 15, "latency_ms": 109.93}
+{"id": "pb-0501", "query": "Point to the bug.", "raw": "<point x=\"508\" y=\"400\">", "n_new_tokens": 15, "latency_ms": 95.43}
+{"id": "pb-0502", "query": "Point to the candle closest to the bottom of the picture.", "raw": "<point x=\"670\" y=\"805\">", "n_new_tokens": 15, "latency_ms": 98.06}
+{"id": "pb-0503", "query": "Point to the statues.", "raw": "<point x=\"297\" y=\"350\"> <point x=\"800\" y=\"350\">", "n_new_tokens": 29, "latency_ms": 1297.46, "resized_to": "2335x3503"}
+{"id": "pb-0504", "query": "Point to where people might obtain wet wipes.", "raw": "<point x=\"312\" y=\"521\">", "n_new_tokens": 15, "latency_ms": 144.7}
+{"id": "pb-0505", "query": "Point to the car on the far left.", "raw": "<point x=\"266\" y=\"813\">", "n_new_tokens": 15, "latency_ms": 1196.88, "resized_to": "2477x3303"}
+{"id": "pb-0506", "query": "Point to moving down until you reach the green letters.", "raw": "<point x=\"884\" y=\"918\">", "n_new_tokens": 15, "latency_ms": 403.39}
+{"id": "pb-0507", "query": "Point to the tool people used for transportation.", "raw": "<point x=\"465\" y=\"130\">", "n_new_tokens": 15, "latency_ms": 117.42}
+{"id": "pb-0508", "query": "Point to the smallest stack of coins.", "raw": "<point x=\"500\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 1222.53, "resized_to": "3816x2144"}
+{"id": "pb-0509", "query": "Point to the birds.", "raw": "<point x=\"221\" y=\"316\"> <point x=\"348\" y=\"480\"> <point x=\"462\" y=\"510\"> <point x=\"690\" y=\"871\">", "n_new_tokens": 57, "latency_ms": 334.9}
+{"id": "pb-0510", "query": "Point to the tool used for taking pictures.", "raw": "<point x=\"452\" y=\"220\">", "n_new_tokens": 15, "latency_ms": 224.14}
+{"id": "pb-0511", "query": "Point to all the glasses of drinks.", "raw": "<point x=\"183\" y=\"291\"> <point x=\"497\" y=\"280\"> <point x=\"848\" y=\"291\">", "n_new_tokens": 43, "latency_ms": 1326.14}
+{"id": "pb-0512", "query": "Point to the stringed instrument.", "raw": "<point x=\"620\" y=\"552\">", "n_new_tokens": 15, "latency_ms": 94.19}
+{"id": "pb-0513", "query": "Point to the bunk bed on the right.", "raw": "<point x=\"848\" y=\"405\">", "n_new_tokens": 15, "latency_ms": 135.24}
+{"id": "pb-0514", "query": "Point to the object used to stir or mix things.", "raw": "<point x=\"670\" y=\"770\">", "n_new_tokens": 15, "latency_ms": 165.09}
+{"id": "pb-0515", "query": "Point to where the road might be under repair.", "raw": "<point x=\"738\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 149.95}
+{"id": "pb-0516", "query": "Point to the object used for cutting.", "raw": "<point x=\"750\" y=\"590\">", "n_new_tokens": 15, "latency_ms": 111.67}
+{"id": "pb-0517", "query": "Point to the bird in the middle of the picture.", "raw": "<point x=\"590\" y=\"428\">", "n_new_tokens": 15, "latency_ms": 194.55}
+{"id": "pb-0518", "query": "Point to the case for the object used to listen to music.", "raw": "<point x=\"470\" y=\"511\">", "n_new_tokens": 15, "latency_ms": 1221.84, "resized_to": "3814x2145"}
+{"id": "pb-0519", "query": "Point to the blue tool used for writing.", "raw": "<point x=\"524\" y=\"335\">", "n_new_tokens": 15, "latency_ms": 102.67}
+{"id": "pb-0520", "query": "Point to what might be the tallest building in the area.", "raw": "<point x=\"643\" y=\"250\">", "n_new_tokens": 15, "latency_ms": 185.87}
+{"id": "pb-0521", "query": "Point to the cans.", "raw": "<point x=\"228\" y=\"490\"> <point x=\"510\" y=\"490\"> <point x=\"790\" y=\"490\">", "n_new_tokens": 43, "latency_ms": 238.0}
+{"id": "pb-0522", "query": "Point to the paper bills.", "raw": "<point x=\"100\" y=\"300\">", "n_new_tokens": 15, "latency_ms": 1113.37}
+{"id": "pb-0523", "query": "Point to the musical instrument.", "raw": "<point x=\"650\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 113.23}
+{"id": "pb-0524", "query": "Point to the tool that fires bullets.", "raw": "<point x=\"550\" y=\"520\">", "n_new_tokens": 15, "latency_ms": 1218.14, "resized_to": "3503x2335"}
+{"id": "pb-0525", "query": "Point to moving downward until touching the ground.", "raw": "<point x=\"400\" y=\"945\">", "n_new_tokens": 15, "latency_ms": 84.03}
+{"id": "pb-0526", "query": "Point to the tool used to play music.", "raw": "<point x=\"570\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 113.36}
+{"id": "pb-0527", "query": "Point to all the bottles.", "raw": "<point x=\"241\" y=\"800\"> <point x=\"256\" y=\"540\"> <point x=\"360\" y=\"530\"> <point x=\"371\" y=\"800\"> <point x=\"477\"", "n_new_tokens": 64, "latency_ms": 1508.47, "resized_to": "2463x3322"}
+{"id": "pb-0528", "query": "Point to the instrument that plays music.", "raw": "<point x=\"500\" y=\"548\">", "n_new_tokens": 15, "latency_ms": 135.85}
+{"id": "pb-0529", "query": "Point to the TV on the right.", "raw": "<point x=\"755\" y=\"480\">", "n_new_tokens": 15, "latency_ms": 226.76}
+{"id": "pb-0530", "query": "Point to what could identify the car.", "raw": "<point x=\"641\" y=\"616\">", "n_new_tokens": 15, "latency_ms": 117.96}
+{"id": "pb-0531", "query": "Point to moving left until you are on the table.", "raw": "<point x=\"111\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 150.25}
+{"id": "pb-0532", "query": "Point to what could drive people from one place to another in the airport.", "raw": "<point x=\"500\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 117.45}
+{"id": "pb-0533", "query": "Point to the tool made of wood and metal.", "raw": "<point x=\"770\" y=\"570\">", "n_new_tokens": 15, "latency_ms": 127.75}
+{"id": "pb-0534", "query": "Point to the steering wheel at the front of the bus.", "raw": "<point x=\"518\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 119.88}
+{"id": "pb-0535", "query": "Point to moving down until reaching the dial.", "raw": "<point x=\"711\" y=\"556\">", "n_new_tokens": 15, "latency_ms": 91.26}
+{"id": "pb-0536", "query": "Point to the object used for weighing things.", "raw": "<point x=\"355\" y=\"528\">", "n_new_tokens": 15, "latency_ms": 87.64}
+{"id": "pb-0537", "query": "Point to the tool used for hammering.", "raw": "<point x=\"100\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 115.71}
+{"id": "pb-0538", "query": "Point to moving downward until reaching the ground.", "raw": "<point x=\"508\" y=\"785\">", "n_new_tokens": 15, "latency_ms": 297.72}
+{"id": "pb-0539", "query": "Point to the car that will be used to hold larger objects, such as furniture.", "raw": "<point x=\"370\" y=\"674\">", "n_new_tokens": 15, "latency_ms": 94.35}
+{"id": "pb-0540", "query": "Point to where construction might be occurring.", "raw": "<point x=\"980\" y=\"575\">", "n_new_tokens": 15, "latency_ms": 1194.61, "resized_to": "3303x2477"}
+{"id": "pb-0541", "query": "Point to what people might drink from.", "raw": "<point x=\"354\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 96.1}
+{"id": "pb-0542", "query": "Point to moving right until reaching the silver bear.", "raw": "<point x=\"877\" y=\"627\">", "n_new_tokens": 15, "latency_ms": 237.38}
+{"id": "pb-0543", "query": "Point to where people might swing.", "raw": "<point x=\"811\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 98.03}
+{"id": "pb-0544", "query": "Point to the jewelry boxes.", "raw": "<point x=\"270\" y=\"690\"> <point x=\"500\" y=\"490\"> <point x=\"700\" y=\"710\"> <point x=\"800\" y=\"410\">", "n_new_tokens": 57, "latency_ms": 332.36}
+{"id": "pb-0545", "query": "Point to the glass of water in the middle of the picture.", "raw": "<point x=\"543\" y=\"340\">", "n_new_tokens": 15, "latency_ms": 144.69}
+{"id": "pb-0546", "query": "Point to all the green cars.", "raw": "<point x=\"690\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 267.36}
+{"id": "pb-0547", "query": "Point to the sliced fruit.", "raw": "<point x=\"590\" y=\"550\">", "n_new_tokens": 15, "latency_ms": 1216.89, "resized_to": "3503x2335"}
+{"id": "pb-0548", "query": "Point to where people might live inside.", "raw": "<point x=\"755\" y=\"497\">", "n_new_tokens": 15, "latency_ms": 145.16}
+{"id": "pb-0549", "query": "Point to what people might drink from.", "raw": "<point x=\"130\" y=\"805\">", "n_new_tokens": 15, "latency_ms": 128.51}
+{"id": "pb-0550", "query": "Point to where people might see the wrong-way sign.", "raw": "<point x=\"555\" y=\"191\">", "n_new_tokens": 15, "latency_ms": 1220.44, "resized_to": "3814x2145"}
+{"id": "pb-0551", "query": "Point to where people might sit.", "raw": "<point x=\"716\" y=\"105\">", "n_new_tokens": 15, "latency_ms": 94.51}
+{"id": "pb-0552", "query": "Point to moving left until reaching the lance.", "raw": "<point x=\"116\" y=\"637\">", "n_new_tokens": 15, "latency_ms": 91.51}
+{"id": "pb-0553", "query": "Point to what people might ride to travel from place to place.", "raw": "<point x=\"600\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 122.5}
+{"id": "pb-0554", "query": "Point to the bus that is farthest to the right and bottom.", "raw": "<point x=\"948\" y=\"820\">", "n_new_tokens": 15, "latency_ms": 185.5}
+{"id": "pb-0555", "query": "Point to the tool that people use to open locks.", "raw": "<point x=\"350\" y=\"517\">", "n_new_tokens": 15, "latency_ms": 1221.58, "resized_to": "3814x2145"}
+{"id": "pb-0556", "query": "Point to the window in the top left.", "raw": "<point x=\"202\" y=\"492\">", "n_new_tokens": 15, "latency_ms": 1200.04, "resized_to": "3303x2477"}
+{"id": "pb-0557", "query": "Point to the tool that people use for cutting.", "raw": "<point x=\"305\" y=\"361\">", "n_new_tokens": 15, "latency_ms": 95.36}
+{"id": "pb-0558", "query": "Point to the window above the bushes.", "raw": "<point x=\"773\" y=\"284\">", "n_new_tokens": 15, "latency_ms": 91.94}
+{"id": "pb-0559", "query": "Point to the tool that people use to open locks.", "raw": "<point x=\"501\" y=\"511\">", "n_new_tokens": 15, "latency_ms": 84.44}
+{"id": "pb-0560", "query": "Point to the spot where the glue drop will fall.", "raw": "<point x=\"585\" y=\"345\">", "n_new_tokens": 15, "latency_ms": 243.94}
+{"id": "pb-0561", "query": "Point to the word closest above the current point in the image.", "raw": "<point x=\"438\" y=\"32\">", "n_new_tokens": 14, "latency_ms": 225.97}
+{"id": "pb-0562", "query": "Point to the boat with people in it.", "raw": "<point x=\"837\" y=\"820\">", "n_new_tokens": 15, "latency_ms": 1217.97, "resized_to": "3503x2335"}
+{"id": "pb-0563", "query": "Point to all the apples in the image.", "raw": "<point x=\"211\" y=\"426\"> <point x=\"527\" y=\"470\"> <point x=\"838\" y=\"470\">", "n_new_tokens": 43, "latency_ms": 272.09}
+{"id": "pb-0564", "query": "Point to the person's eye closer to the point on the image.", "raw": "<point x=\"500\" y=\"560\">", "n_new_tokens": 15, "latency_ms": 96.1}
+{"id": "pb-0565", "query": "Point to the structure that cars use to travel over the river.", "raw": "<point x=\"690\" y=\"777\">", "n_new_tokens": 15, "latency_ms": 1227.4, "resized_to": "3618x2261"}
+{"id": "pb-0566", "query": "Point to the object to the left of the sink.", "raw": "<point x=\"511\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 87.1}
+{"id": "pb-0567", "query": "Point to the object that people can use to drink.", "raw": "<point x=\"630\" y=\"141\">", "n_new_tokens": 15, "latency_ms": 118.61}
+{"id": "pb-0568", "query": "Point to the object that people can use to write.", "raw": "<point x=\"298\" y=\"545\">", "n_new_tokens": 15, "latency_ms": 94.16}
+{"id": "pb-0569", "query": "Point to the finger below the existing point.", "raw": "<point x=\"478\" y=\"900\">", "n_new_tokens": 15, "latency_ms": 82.65}
+{"id": "pb-0570", "query": "Point to all the blue bowls.", "raw": "<point x=\"250\" y=\"670\"> <point x=\"540\" y=\"227\">", "n_new_tokens": 29, "latency_ms": 204.64}
+{"id": "pb-0571", "query": "Point to the object people can use to grip, twist, bend, and cut wire or metalwork components.", "raw": "<point x=\"550\" y=\"260\">", "n_new_tokens": 15, "latency_ms": 113.87}
+{"id": "pb-0572", "query": "Point to the object people can use to brush their teeth.", "raw": "<point x=\"590\" y=\"605\">", "n_new_tokens": 15, "latency_ms": 136.57}
+{"id": "pb-0573", "query": "Point to the object to the right of the picture on the wall.", "raw": "<point x=\"560\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 1218.15, "resized_to": "3503x2335"}
+{"id": "pb-0574", "query": "Point to the object that holds wires together.", "raw": "<point x=\"695\" y=\"840\">", "n_new_tokens": 15, "latency_ms": 117.58}
+{"id": "pb-0575", "query": "Point to the letter 'i'.", "raw": "<point x=\"760\" y=\"105\">", "n_new_tokens": 15, "latency_ms": 120.49}
+{"id": "pb-0576", "query": "Point to moving the current point to the next nearest insertion port on the phone.", "raw": "<point x=\"861\" y=\"760\">", "n_new_tokens": 15, "latency_ms": 96.65}
+{"id": "pb-0577", "query": "Point to how to approach the house.", "raw": "<point x=\"460\" y=\"785\">", "n_new_tokens": 15, "latency_ms": 168.49}
+{"id": "pb-0578", "query": "Point to Jeep vehicles.", "raw": "<point x=\"448\" y=\"655\">", "n_new_tokens": 15, "latency_ms": 262.63}
+{"id": "pb-0579", "query": "Point to the item to strike the guitar.", "raw": "<point x=\"502\" y=\"420\">", "n_new_tokens": 15, "latency_ms": 111.89}
+{"id": "pb-0580", "query": "Point to the place where a water bottle could be placed.", "raw": "<point x=\"523\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 113.46}
+{"id": "pb-0581", "query": "Point to the main head of this tool.", "raw": "<point x=\"140\" y=\"510\">", "n_new_tokens": 15, "latency_ms": 127.9}
+{"id": "pb-0582", "query": "Point to all cars that display their license plates.", "raw": "<point x=\"835\" y=\"718\">", "n_new_tokens": 15, "latency_ms": 87.34}
+{"id": "pb-0583", "query": "Point to the position of the motor lamp in the next frame.", "raw": "<point x=\"148\" y=\"810\">", "n_new_tokens": 15, "latency_ms": 99.79}
+{"id": "pb-0584", "query": "Point to a helpful tool for visually impaired individuals.", "raw": "<point x=\"154\" y=\"460\">", "n_new_tokens": 15, "latency_ms": 122.66}
+{"id": "pb-0585", "query": "Point to a device that can be used to measure health.", "raw": "<point x=\"551\" y=\"350\">", "n_new_tokens": 15, "latency_ms": 228.45}
+{"id": "pb-0586", "query": "Point to the object to the right of the glass door.", "raw": "<point x=\"841\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 85.09}
+{"id": "pb-0587", "query": "Point to the animal that can be ridden.", "raw": "<point x=\"170\" y=\"501\">", "n_new_tokens": 15, "latency_ms": 96.38}
+{"id": "pb-0588", "query": "Point to the tool that can be used to saw thick meat.", "raw": "<point x=\"390\" y=\"647\">", "n_new_tokens": 15, "latency_ms": 135.04}
+{"id": "pb-0589", "query": "Point to the closest star from the previous point.", "raw": "<point x=\"909\" y=\"597\">", "n_new_tokens": 15, "latency_ms": 155.43}
+{"id": "pb-0590", "query": "Point to the object that can be used to hold trash.", "raw": "<point x=\"800\" y=\"687\">", "n_new_tokens": 15, "latency_ms": 190.84}
+{"id": "pb-0591", "query": "Point to what the biker could drink from.", "raw": "<point x=\"543\" y=\"951\">", "n_new_tokens": 15, "latency_ms": 119.51}
+{"id": "pb-0592", "query": "Point to the tool that helps with eating.", "raw": "<point x=\"323\" y=\"497\">", "n_new_tokens": 15, "latency_ms": 116.7}
+{"id": "pb-0593", "query": "Point to the pavement in front of the door.", "raw": "<point x=\"711\" y=\"701\">", "n_new_tokens": 15, "latency_ms": 1199.68, "resized_to": "3303x2477"}
+{"id": "pb-0594", "query": "Point to moving right, then upwards until on top of the pasta.", "raw": "<point x=\"590\" y=\"120\">", "n_new_tokens": 15, "latency_ms": 112.18}
+{"id": "pb-0595", "query": "Point to the tool that can play music.", "raw": "<point x=\"780\" y=\"670\">", "n_new_tokens": 15, "latency_ms": 119.96}
+{"id": "pb-0596", "query": "Point to the object used for hammering.", "raw": "<point x=\"501\" y=\"480\">", "n_new_tokens": 15, "latency_ms": 86.5}
+{"id": "pb-0597", "query": "Point to the object used for listening to music or other sounds.", "raw": "<point x=\"508\" y=\"538\">", "n_new_tokens": 15, "latency_ms": 190.73}
+{"id": "pb-0598", "query": "Point to the tool used for opening the door by turning it.", "raw": "<point x=\"547\" y=\"548\">", "n_new_tokens": 15, "latency_ms": 120.14}
+{"id": "pb-0599", "query": "Point to the birds.", "raw": "<point x=\"526\" y=\"430\">", "n_new_tokens": 15, "latency_ms": 91.26}
+{"id": "pb-0600", "query": "Point to the window at the very center of the image.", "raw": "<point x=\"516\" y=\"516\">", "n_new_tokens": 15, "latency_ms": 88.03}
+{"id": "pb-0601", "query": "Point to the tool used for vacuuming in small areas.", "raw": "<point x=\"558\" y=\"400\">", "n_new_tokens": 15, "latency_ms": 107.89}
+{"id": "pb-0602", "query": "Point to \"cups.\"", "raw": "<point x=\"486\" y=\"630\">", "n_new_tokens": 15, "latency_ms": 132.36}
+{"id": "pb-0603", "query": "Point to the tree on the left.", "raw": "<point x=\"171\" y=\"108\">", "n_new_tokens": 15, "latency_ms": 99.38}
+{"id": "pb-0604", "query": "Point to the tool that people use for writing.", "raw": "<point x=\"370\" y=\"508\">", "n_new_tokens": 15, "latency_ms": 92.18}
+{"id": "pb-0605", "query": "Point to the car closest to the bottom of the page.", "raw": "<point x=\"555\" y=\"926\">", "n_new_tokens": 15, "latency_ms": 90.8}
+{"id": "pb-0606", "query": "Point to the tool used to cover tables to protect them from stains.", "raw": "<point x=\"120\" y=\"697\">", "n_new_tokens": 15, "latency_ms": 126.41}
+{"id": "pb-0607", "query": "Point to moving right until reaching the wall.", "raw": "<point x=\"841\" y=\"200\">", "n_new_tokens": 15, "latency_ms": 325.54}
+{"id": "pb-0608", "query": "Point to moving up on the wall, but not touching the chair.", "raw": "<point x=\"150\" y=\"111\">", "n_new_tokens": 15, "latency_ms": 224.68}
+{"id": "pb-0609", "query": "Point to the most suitable chair.", "raw": "<point x=\"850\" y=\"629\">", "n_new_tokens": 15, "latency_ms": 83.24}
+{"id": "pb-0610", "query": "Point to where people might stay inside.", "raw": "<point x=\"641\" y=\"816\">", "n_new_tokens": 15, "latency_ms": 135.37}
+{"id": "pb-0611", "query": "Point to where fish might live.", "raw": "<point x=\"675\" y=\"425\">", "n_new_tokens": 15, "latency_ms": 109.34}
+{"id": "pb-0612", "query": "Point to moving left until you are on the ground.", "raw": "<point x=\"150\" y=\"840\">", "n_new_tokens": 15, "latency_ms": 218.2}
+{"id": "pb-0613", "query": "Point to moving down until reaching the chopping board.", "raw": "<point x=\"490\" y=\"705\">", "n_new_tokens": 15, "latency_ms": 173.63}
+{"id": "pb-0614", "query": "Point to the tool used to inject fluids.", "raw": "<point x=\"526\" y=\"728\">", "n_new_tokens": 15, "latency_ms": 94.44}
+{"id": "pb-0615", "query": "Point to the tool used for cooking.", "raw": "<point x=\"360\" y=\"270\">", "n_new_tokens": 15, "latency_ms": 110.42}
+{"id": "pb-0616", "query": "Point to the tallest tower.", "raw": "<point x=\"502\" y=\"508\">", "n_new_tokens": 15, "latency_ms": 185.62}
+{"id": "pb-0617", "query": "Point to where people might sit.", "raw": "<point x=\"670\" y=\"300\">", "n_new_tokens": 15, "latency_ms": 87.78}
+{"id": "pb-0618", "query": "Point to the tool that people can use to write.", "raw": "<point x=\"648\" y=\"340\">", "n_new_tokens": 15, "latency_ms": 156.35}
+{"id": "pb-0619", "query": "Point to the broken tool used for transportation.", "raw": "<point x=\"148\" y=\"599\">", "n_new_tokens": 15, "latency_ms": 115.02}
+{"id": "pb-0620", "query": "Point to the track the train is moving on.", "raw": "<point x=\"101\" y=\"931\">", "n_new_tokens": 15, "latency_ms": 87.72}
+{"id": "pb-0621", "query": "Point to all the birds.", "raw": "<point x=\"438\" y=\"473\"> <point x=\"557\" y=\"470\">", "n_new_tokens": 29, "latency_ms": 1304.38, "resized_to": "2335x3503"}
+{"id": "pb-0622", "query": "Point to the object on the grass.", "raw": "<point x=\"560\" y=\"780\">", "n_new_tokens": 15, "latency_ms": 108.57}
+{"id": "pb-0623", "query": "Point to the object above the headboard.", "raw": "<point x=\"695\" y=\"195\">", "n_new_tokens": 15, "latency_ms": 91.79}
+{"id": "pb-0624", "query": "Point to the object above the monitor.", "raw": "<point x=\"500\" y=\"100\">", "n_new_tokens": 15, "latency_ms": 114.04}
+{"id": "pb-0625", "query": "Point to the object that people can use for transportation.", "raw": "<point x=\"570\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 106.65}
+{"id": "pb-0626", "query": "Point to the person to the left of the existing point.", "raw": "<point x=\"170\" y=\"545\">", "n_new_tokens": 15, "latency_ms": 82.87}
+{"id": "pb-0627", "query": "Point to the person to the right of the existing point.", "raw": "<point x=\"708\" y=\"340\">", "n_new_tokens": 15, "latency_ms": 123.3}
+{"id": "pb-0628", "query": "Point to the model to the left of the existing point.", "raw": "<point x=\"498\" y=\"501\">", "n_new_tokens": 15, "latency_ms": 85.24}
+{"id": "pb-0629", "query": "Point to all the plates.", "raw": "<point x=\"500\" y=\"358\">", "n_new_tokens": 15, "latency_ms": 84.61}
+{"id": "pb-0630", "query": "Point to the light above the existing point.", "raw": "<point x=\"411\" y=\"283\">", "n_new_tokens": 15, "latency_ms": 1084.17}
+{"id": "pb-0631", "query": "Point to the screen indicating the speed.", "raw": "<point x=\"680\" y=\"508\">", "n_new_tokens": 15, "latency_ms": 113.63}
+{"id": "pb-0632", "query": "Point to the object to the left of the existing point.", "raw": "<point x=\"67\" y=\"340\">", "n_new_tokens": 14, "latency_ms": 80.99}
+{"id": "pb-0633", "query": "Point to the object that people can use to open beer bottles.", "raw": "<point x=\"418\" y=\"430\">", "n_new_tokens": 15, "latency_ms": 113.48}
+{"id": "pb-0634", "query": "Point to the object that people can walk on to cross the river.", "raw": "<point x=\"590\" y=\"543\">", "n_new_tokens": 15, "latency_ms": 1197.02, "resized_to": "2476x3304"}
+{"id": "pb-0635", "query": "Point to the object people can use to play music.", "raw": "<point x=\"148\" y=\"315\">", "n_new_tokens": 15, "latency_ms": 127.76}
+{"id": "pb-0636", "query": "Point to the object to the left of the red car and to the right of the black car.", "raw": "<point x=\"811\" y=\"657\">", "n_new_tokens": 15, "latency_ms": 1221.67, "resized_to": "3942x2075"}
+{"id": "pb-0637", "query": "Point to the object on which the cars are driving.", "raw": "<point x=\"440\" y=\"505\">", "n_new_tokens": 15, "latency_ms": 147.74}
+{"id": "pb-0638", "query": "Point to the object in which people can place pencils.", "raw": "<point x=\"597\" y=\"941\">", "n_new_tokens": 15, "latency_ms": 144.96}
+{"id": "pb-0639", "query": "Point to the direction in which cars are moving.", "raw": "<point x=\"641\" y=\"720\">", "n_new_tokens": 15, "latency_ms": 90.69}
+{"id": "pb-0640", "query": "Point to the object that most likely contains policies.", "raw": "<point x=\"680\" y=\"580\">", "n_new_tokens": 15, "latency_ms": 110.28}
+{"id": "pb-0641", "query": "Point to the door to the right of the existing point.", "raw": "<point x=\"891\" y=\"411\">", "n_new_tokens": 15, "latency_ms": 89.5}
+{"id": "pb-0642", "query": "Point to the object that people can use to call others.", "raw": "<point x=\"701\" y=\"945\">", "n_new_tokens": 15, "latency_ms": 224.03}
+{"id": "pb-0643", "query": "Point to the object that indicates the speed limit.", "raw": "<point x=\"871\" y=\"371\">", "n_new_tokens": 15, "latency_ms": 1227.86, "resized_to": "3814x2145"}
+{"id": "pb-0644", "query": "Point to the object on which the bike is riding.", "raw": "<point x=\"580\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 114.35}
+{"id": "pb-0645", "query": "Point to the object below the existing point.", "raw": "<point x=\"144\" y=\"970\">", "n_new_tokens": 15, "latency_ms": 89.97}
+{"id": "pb-0646", "query": "Point to the first set of numbers below the previous point.", "raw": "<point x=\"701\" y=\"490\">", "n_new_tokens": 15, "latency_ms": 118.77}
+{"id": "pb-0647", "query": "Point to the space between the two people in the middle of the image.", "raw": "<point x=\"441\" y=\"677\">", "n_new_tokens": 15, "latency_ms": 135.05}
+{"id": "pb-0648", "query": "Point to the object at the bottom center of the image.", "raw": "<point x=\"718\" y=\"687\">", "n_new_tokens": 15, "latency_ms": 113.99}
+{"id": "pb-0649", "query": "Point to the pig facing the camera.", "raw": "<point x=\"150\" y=\"815\">", "n_new_tokens": 15, "latency_ms": 144.64}
+{"id": "pb-0650", "query": "Point to all the canned Pepsi drinks.", "raw": "<point x=\"980\" y=\"136\">", "n_new_tokens": 15, "latency_ms": 91.82}
+{"id": "pb-0651", "query": "Point to the space between the climber's legs.", "raw": "<point x=\"741\" y=\"669\">", "n_new_tokens": 15, "latency_ms": 89.22}
+{"id": "pb-0652", "query": "Point to a tool capable of taking pictures.", "raw": "<point x=\"138\" y=\"835\">", "n_new_tokens": 15, "latency_ms": 136.06}
+{"id": "pb-0653", "query": "Point to all the bottles labeled with words.", "raw": "<point x=\"57\" y=\"411\"> <point x=\"161\" y=\"428\"> <point x=\"330\" y=\"461\"> <point x=\"497\" y=\"470\"> <point x=\"673\" y", "n_new_tokens": 64, "latency_ms": 374.71}
+{"id": "pb-0654", "query": "Point to the nearest icon on the map from the previous point.", "raw": "<point x=\"699\" y=\"557\">", "n_new_tokens": 15, "latency_ms": 366.02}
+{"id": "pb-0655", "query": "Point to the space at the crossroads.", "raw": "<point x=\"617\" y=\"549\">", "n_new_tokens": 15, "latency_ms": 118.84}
+{"id": "pb-0656", "query": "Point to the tool that is clean and safe for drinking soup.", "raw": "<point x=\"111\" y=\"695\">", "n_new_tokens": 15, "latency_ms": 1129.51}
+{"id": "pb-0657", "query": "Point to the tool that can be used for styling hair.", "raw": "<point x=\"318\" y=\"725\">", "n_new_tokens": 15, "latency_ms": 1221.13, "resized_to": "2554x3203"}
+{"id": "pb-0658", "query": "Point to the object to the left of the mirror.", "raw": "<point x=\"160\" y=\"380\">", "n_new_tokens": 15, "latency_ms": 92.43}
+{"id": "pb-0659", "query": "Point to the displayed date and time.", "raw": "<point x=\"500\" y=\"865\">", "n_new_tokens": 15, "latency_ms": 83.66}
+{"id": "pb-0660", "query": "Point to \"the zoom-in lens.\"", "raw": "<point x=\"699\" y=\"561\">", "n_new_tokens": 15, "latency_ms": 100.0}
+{"id": "pb-0661", "query": "Point to the object on which the cars are driving.", "raw": "<point x=\"520\" y=\"528\">", "n_new_tokens": 15, "latency_ms": 113.36}
+{"id": "pb-0662", "query": "Point to the building on the far right.", "raw": "<point x=\"953\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 1202.37, "resized_to": "3303x2477"}
+{"id": "pb-0663", "query": "Point to the object on which the car is parked.", "raw": "<point x=\"114\" y=\"679\">", "n_new_tokens": 15, "latency_ms": 84.66}
+{"id": "pb-0664", "query": "Point to the object on which people can write music notation.", "raw": "<point x=\"951\" y=\"416\">", "n_new_tokens": 15, "latency_ms": 109.65}
+{"id": "pb-0665", "query": "Point to \"the brand name.\"", "raw": "<point x=\"428\" y=\"650\">", "n_new_tokens": 15, "latency_ms": 950.49}
+{"id": "pb-0666", "query": "Point to the flower to the left of the existing point.", "raw": "<point x=\"129\" y=\"314\">", "n_new_tokens": 15, "latency_ms": 96.73}
+{"id": "pb-0667", "query": "Point to the eyes directly below the previous point.", "raw": "<point x=\"598\" y=\"514\">", "n_new_tokens": 15, "latency_ms": 108.35}
+{"id": "pb-0668", "query": "Point to the object in which people can plant plants.", "raw": "<point x=\"108\" y=\"490\">", "n_new_tokens": 15, "latency_ms": 227.39}
+{"id": "pb-0669", "query": "Point to the object to the right of the person holding a microphone.", "raw": "<point x=\"963\" y=\"547\">", "n_new_tokens": 15, "latency_ms": 148.29}
+{"id": "pb-0670", "query": "Point to the space between the two tracks.", "raw": "<point x=\"570\" y=\"770\">", "n_new_tokens": 15, "latency_ms": 1233.01, "resized_to": "3385x2417"}
+{"id": "pb-0671", "query": "Point to the person riding a bike.", "raw": "<point x=\"207\" y=\"843\">", "n_new_tokens": 15, "latency_ms": 194.99}
+{"id": "pb-0672", "query": "Point to the tables outside the building on the left.", "raw": "<point x=\"270\" y=\"370\">", "n_new_tokens": 15, "latency_ms": 1217.25, "resized_to": "3503x2335"}
+{"id": "pb-0673", "query": "Point to where the light comes from.", "raw": "<point x=\"662\" y=\"161\">", "n_new_tokens": 15, "latency_ms": 326.17}
+{"id": "pb-0674", "query": "Point to the plate or bowl that is in focus.", "raw": "<point x=\"538\" y=\"148\">", "n_new_tokens": 15, "latency_ms": 135.14}
+{"id": "pb-0675", "query": "Point to the lamp to the right from the bed's perspective.", "raw": "<point x=\"856\" y=\"476\">", "n_new_tokens": 15, "latency_ms": 92.71}
+{"id": "pb-0676", "query": "Point to all the plates.", "raw": "<point x=\"19\" y=\"928\"> <point x=\"19\" y=\"461\"> <point x=\"21\" y=\"265\"> <point x=\"80\" y=\"710\"> <point x=\"91\" y=\"455", "n_new_tokens": 64, "latency_ms": 520.83}
+{"id": "pb-0677", "query": "Point to the tool that can be used to eat the cake.", "raw": "<point x=\"600\" y=\"755\">", "n_new_tokens": 15, "latency_ms": 238.44}
+{"id": "pb-0678", "query": "Point to all the four-seater cars.", "raw": "<point x=\"654\" y=\"561\">", "n_new_tokens": 15, "latency_ms": 145.77}
+{"id": "pb-0679", "query": "Point to the highest point of the man-made structure in this image.", "raw": "<point x=\"617\" y=\"65\">", "n_new_tokens": 14, "latency_ms": 1213.39, "resized_to": "3546x2307"}
+{"id": "pb-0680", "query": "Point to the object by which we can identify the car below.", "raw": "<point x=\"598\" y=\"952\">", "n_new_tokens": 15, "latency_ms": 233.21}
+{"id": "pb-0681", "query": "Point to the object that people can use to erase writing.", "raw": "<point x=\"170\" y=\"607\">", "n_new_tokens": 15, "latency_ms": 135.63}
+{"id": "pb-0682", "query": "Point to the right taillight of the car.", "raw": "<point x=\"655\" y=\"674\">", "n_new_tokens": 15, "latency_ms": 92.1}
+{"id": "pb-0683", "query": "Point to the man's head.", "raw": "<point x=\"401\" y=\"485\">", "n_new_tokens": 15, "latency_ms": 116.15}
+{"id": "pb-0684", "query": "Point to the input bar.", "raw": "<point x=\"500\" y=\"412\">", "n_new_tokens": 15, "latency_ms": 102.69}
+{"id": "pb-0685", "query": "Point to the car's left headlight.", "raw": "<point x=\"940\" y=\"941\">", "n_new_tokens": 15, "latency_ms": 183.93}
+{"id": "pb-0686", "query": "Point to the vegetable on the plate.", "raw": "<point x=\"548\" y=\"311\">", "n_new_tokens": 15, "latency_ms": 1187.28}
+{"id": "pb-0687", "query": "Point to the left of the existing point, the cursor.", "raw": "<point x=\"330\" y=\"291\">", "n_new_tokens": 15, "latency_ms": 84.81}
+{"id": "pb-0688", "query": "Point to the object in front of the bowl.", "raw": "<point x=\"261\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 128.41}
+{"id": "pb-0689", "query": "Point to the object in front of the mug.", "raw": "<point x=\"591\" y=\"560\">", "n_new_tokens": 15, "latency_ms": 202.36}
+{"id": "pb-0690", "query": "Point to all the sushi.", "raw": "<point x=\"223\" y=\"511\"> <point x=\"250\" y=\"270\"> <point x=\"301\" y=\"491\"> <point x=\"361\" y=\"501\"> <point x=\"394\"", "n_new_tokens": 64, "latency_ms": 1505.06, "resized_to": "3814x2145"}
+{"id": "pb-0691", "query": "Point to the women to the right of the existing point.", "raw": "<point x=\"980\" y=\"210\">", "n_new_tokens": 15, "latency_ms": 508.42}
+{"id": "pb-0692", "query": "Point to the person positioned to the left of the firefighter on the right and to the right of the firefighter on the left.", "raw": "<point x=\"499\" y=\"600\">", "n_new_tokens": 15, "latency_ms": 185.65}
+{"id": "pb-0693", "query": "Point to all the shoes.", "raw": "<point x=\"100\" y=\"911\"> <point x=\"110\" y=\"697\"> <point x=\"120\" y=\"484\"> <point x=\"122\" y=\"65\"> <point x=\"140\" y", "n_new_tokens": 64, "latency_ms": 429.11}
+{"id": "pb-0694", "query": "Point to all the eating utensils.", "raw": "<point x=\"855\" y=\"725\"> <point x=\"962\" y=\"711\">", "n_new_tokens": 29, "latency_ms": 260.33}
+{"id": "pb-0695", "query": "Point to the object in which people can place food.", "raw": "<point x=\"700\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 144.86}
+{"id": "pb-0696", "query": "Point to moving to the inner pan.", "raw": "<point x=\"320\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 95.22}
+{"id": "pb-0697", "query": "Point to the tool for eating sushi.", "raw": "<point x=\"960\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 127.69}
+{"id": "pb-0698", "query": "Point to \"the marriage marker on the hand.\"", "raw": "<point x=\"387\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 1194.46, "resized_to": "2477x3303"}
+{"id": "pb-0699", "query": "Point to \"bookmarks.\"", "raw": "<point x=\"510\" y=\"181\">", "n_new_tokens": 15, "latency_ms": 88.65}
+{"id": "pb-0700", "query": "Point to all halved eggs.", "raw": "<point x=\"711\" y=\"400\"> <point x=\"712\" y=\"641\"> <point x=\"713\" y=\"870\">", "n_new_tokens": 43, "latency_ms": 264.03}
+{"id": "pb-0701", "query": "Point to the place where people can put their hands.", "raw": "<point x=\"875\" y=\"977\">", "n_new_tokens": 15, "latency_ms": 128.07}
+{"id": "pb-0702", "query": "Point to the tool used for cutting.", "raw": "<point x=\"461\" y=\"520\">", "n_new_tokens": 15, "latency_ms": 90.82}
+{"id": "pb-0703", "query": "Point to the tool used to save pencils.", "raw": "<point x=\"541\" y=\"555\">", "n_new_tokens": 15, "latency_ms": 85.36}
+{"id": "pb-0704", "query": "Point to the item that people can drink.", "raw": "<point x=\"97\" y=\"387\">", "n_new_tokens": 14, "latency_ms": 1209.66, "resized_to": "3503x2335"}
+{"id": "pb-0705", "query": "Point to what in this image can tell you the country where the image was taken.", "raw": "<point x=\"60\" y=\"164\">", "n_new_tokens": 14, "latency_ms": 163.93}
+{"id": "pb-0706", "query": "Point to the items on top of the truck's boot.", "raw": "<point x=\"470\" y=\"660\">", "n_new_tokens": 15, "latency_ms": 127.93}
+{"id": "pb-0707", "query": "Point to the birds.", "raw": "<point x=\"253\" y=\"427\"> <point x=\"370\" y=\"400\"> <point x=\"440\" y=\"388\"> <point x=\"525\" y=\"368\"> <point x=\"672\"", "n_new_tokens": 64, "latency_ms": 349.35}
+{"id": "pb-0708", "query": "Point to the vehicle that can transport many people.", "raw": "<point x=\"570\" y=\"520\">", "n_new_tokens": 15, "latency_ms": 97.81}
+{"id": "pb-0709", "query": "Point to identifying the car as the objective.", "raw": "<point x=\"530\" y=\"511\">", "n_new_tokens": 15, "latency_ms": 102.0}
+{"id": "pb-0710", "query": "Point to the photo-taking tool of the top phone.", "raw": "<point x=\"527\" y=\"217\">", "n_new_tokens": 15, "latency_ms": 224.35}
+{"id": "pb-0711", "query": "Point to the object people throw in a basketball game.", "raw": "<point x=\"260\" y=\"711\">", "n_new_tokens": 15, "latency_ms": 111.31}
+{"id": "pb-0712", "query": "Point to the object the bicycle relies on to climb stairs.", "raw": "<point x=\"570\" y=\"691\">", "n_new_tokens": 15, "latency_ms": 124.23}
+{"id": "pb-0713", "query": "Point to moving the button to the right until it reaches the wooden tool.", "raw": "<point x=\"900\" y=\"117\">", "n_new_tokens": 15, "latency_ms": 326.31}
+{"id": "pb-0714", "query": "Point to moving the point downwards to the paper roll.", "raw": "<point x=\"590\" y=\"768\">", "n_new_tokens": 15, "latency_ms": 96.31}
+{"id": "pb-0715", "query": "Point to the car moving in this image.", "raw": "<point x=\"385\" y=\"373\">", "n_new_tokens": 15, "latency_ms": 90.79}
+{"id": "pb-0716", "query": "Point to the white, circular pill.", "raw": "<point x=\"430\" y=\"448\">", "n_new_tokens": 15, "latency_ms": 86.38}
+{"id": "pb-0717", "query": "Point to the people next to the white car.", "raw": "<point x=\"719\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 119.78}
+{"id": "pb-0718", "query": "Point to the leg directly below the existing point in the image.", "raw": "<point x=\"540\" y=\"627\">", "n_new_tokens": 15, "latency_ms": 107.43}
+{"id": "pb-0719", "query": "Point to the object that is a replica of the original.", "raw": "<point x=\"670\" y=\"297\">", "n_new_tokens": 15, "latency_ms": 145.45}
+{"id": "pb-0720", "query": "Point to the tool used to turn the valve.", "raw": "<point x=\"300\" y=\"816\">", "n_new_tokens": 15, "latency_ms": 253.85}
+{"id": "pb-0721", "query": "Point to the chair on the left side of the table.", "raw": "<point x=\"581\" y=\"701\">", "n_new_tokens": 15, "latency_ms": 135.68}
+{"id": "pb-0722", "query": "Point to the handle to the left of the existing point.", "raw": "<point x=\"502\" y=\"640\">", "n_new_tokens": 15, "latency_ms": 149.2}
+{"id": "pb-0723", "query": "Point to the object used to cut pizza.", "raw": "<point x=\"505\" y=\"857\">", "n_new_tokens": 15, "latency_ms": 168.08}
+{"id": "pb-0724", "query": "Point to the biker in the white jersey.", "raw": "<point x=\"574\" y=\"250\">", "n_new_tokens": 15, "latency_ms": 95.67}
+{"id": "pb-0725", "query": "Point to all knives.", "raw": "<point x=\"411\" y=\"670\">", "n_new_tokens": 15, "latency_ms": 84.7}
+{"id": "pb-0726", "query": "Point to the car tire between two green bars.", "raw": "<point x=\"611\" y=\"627\">", "n_new_tokens": 15, "latency_ms": 119.44}
+{"id": "pb-0727", "query": "Point to the chimney to the right of the left chimney.", "raw": "<point x=\"805\" y=\"365\">", "n_new_tokens": 15, "latency_ms": 113.06}
+{"id": "pb-0728", "query": "Point to the object on which people can draw things.", "raw": "<point x=\"760\" y=\"405\">", "n_new_tokens": 15, "latency_ms": 131.74}
+{"id": "pb-0729", "query": "Point to the object below the existing point.", "raw": "<point x=\"516\" y=\"825\">", "n_new_tokens": 15, "latency_ms": 123.89}
+{"id": "pb-0730", "query": "Point to the bicycle's direction of movement.", "raw": "<point x=\"698\" y=\"794\">", "n_new_tokens": 15, "latency_ms": 96.56}
+{"id": "pb-0731", "query": "Point to the name of the food.", "raw": "<point x=\"597\" y=\"770\">", "n_new_tokens": 15, "latency_ms": 137.95}
+{"id": "pb-0732", "query": "Point to all the people cycling close to one another.", "raw": "<point x=\"627\" y=\"575\">", "n_new_tokens": 15, "latency_ms": 113.57}
+{"id": "pb-0733", "query": "Point to the object on which the ducks are standing.", "raw": "<point x=\"562\" y=\"627\">", "n_new_tokens": 15, "latency_ms": 138.21}
+{"id": "pb-0734", "query": "Point to the valley to the left of the existing point.", "raw": "<point x=\"80\" y=\"514\">", "n_new_tokens": 14, "latency_ms": 99.88}
+{"id": "pb-0735", "query": "Point to the leaf below the existing point.", "raw": "<point x=\"138\" y=\"649\">", "n_new_tokens": 15, "latency_ms": 126.18}
+{"id": "pb-0736", "query": "Point to the toilet on the right of the location in the existing image.", "raw": "<point x=\"530\" y=\"280\">", "n_new_tokens": 15, "latency_ms": 107.4}
+{"id": "pb-0737", "query": "Point to the tail of the object at which the blue point is currently directed.", "raw": "<point x=\"241\" y=\"595\">", "n_new_tokens": 15, "latency_ms": 89.11}
+{"id": "pb-0738", "query": "Point to the dish with the fewest food items on the plate.", "raw": "<point x=\"57\" y=\"920\">", "n_new_tokens": 14, "latency_ms": 131.49}
+{"id": "pb-0739", "query": "Point to the table to the right of the existing point.", "raw": "<point x=\"770\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 151.0}
+{"id": "pb-0740", "query": "Point to the car at the back of all the other cars.", "raw": "<point x=\"363\" y=\"424\">", "n_new_tokens": 15, "latency_ms": 91.99}
+{"id": "pb-0741", "query": "Point to the object that people can use to eat.", "raw": "<point x=\"800\" y=\"360\">", "n_new_tokens": 15, "latency_ms": 1215.97, "resized_to": "3501x2337"}
+{"id": "pb-0742", "query": "Point to the tool that allows people to drink soup.", "raw": "<point x=\"950\" y=\"580\">", "n_new_tokens": 15, "latency_ms": 1191.86, "resized_to": "3303x2477"}
+{"id": "pb-0743", "query": "Point to the waffle closest to the strawberry.", "raw": "<point x=\"458\" y=\"355\">", "n_new_tokens": 15, "latency_ms": 150.05}
+{"id": "pb-0744", "query": "Point to the car to the right of the black car.", "raw": "<point x=\"880\" y=\"370\">", "n_new_tokens": 15, "latency_ms": 1191.48, "resized_to": "2477x3303"}
+{"id": "pb-0745", "query": "Point to the tool that is used for farming.", "raw": "<point x=\"145\" y=\"780\">", "n_new_tokens": 15, "latency_ms": 137.01}
+{"id": "pb-0746", "query": "Point to the tool used for drinking.", "raw": "<point x=\"680\" y=\"680\">", "n_new_tokens": 15, "latency_ms": 115.89}
+{"id": "pb-0747", "query": "Point to the object that people can use for exercise.", "raw": "<point x=\"700\" y=\"407\">", "n_new_tokens": 15, "latency_ms": 243.97}
+{"id": "pb-0748", "query": "Point to the blue button below the previous point.", "raw": "<point x=\"460\" y=\"855\">", "n_new_tokens": 15, "latency_ms": 86.13}
+{"id": "pb-0749", "query": "Point to the tool used to watch a 3D movie.", "raw": "<point x=\"472\" y=\"805\">", "n_new_tokens": 15, "latency_ms": 331.97}
+{"id": "pb-0750", "query": "Point to the tool used to eat the cake that is farthest away.", "raw": "<point x=\"705\" y=\"99\">", "n_new_tokens": 14, "latency_ms": 131.73}
+{"id": "pb-0751", "query": "Point to the object used at night.", "raw": "<point x=\"662\" y=\"160\">", "n_new_tokens": 15, "latency_ms": 142.59}
+{"id": "pb-0752", "query": "Point to the rightmost piece of yellow equipment.", "raw": "<point x=\"773\" y=\"541\">", "n_new_tokens": 15, "latency_ms": 91.79}
+{"id": "pb-0753", "query": "Point to the tool used for collecting charcoal.", "raw": "<point x=\"650\" y=\"645\">", "n_new_tokens": 15, "latency_ms": 1110.83}
+{"id": "pb-0754", "query": "Point to the food in the upper right corner.", "raw": "<point x=\"970\" y=\"70\">", "n_new_tokens": 14, "latency_ms": 229.66}
+{"id": "pb-0755", "query": "Point to the tool used for cutting food.", "raw": "<point x=\"447\" y=\"247\">", "n_new_tokens": 15, "latency_ms": 272.74}
+{"id": "pb-0756", "query": "Point to the area where individuals stand to do weightlifting.", "raw": "<point x=\"592\" y=\"100\">", "n_new_tokens": 15, "latency_ms": 333.36}
+{"id": "pb-0757", "query": "Point to the place where people sit when driving the car.", "raw": "<point x=\"427\" y=\"597\">", "n_new_tokens": 15, "latency_ms": 114.33}
+{"id": "pb-0758", "query": "Point to the place where people sit when riding this bicycle.", "raw": "<point x=\"600\" y=\"295\">", "n_new_tokens": 15, "latency_ms": 1218.82, "resized_to": "3503x2335"}
+{"id": "pb-0759", "query": "Point to the object used for BBQs.", "raw": "<point x=\"66\" y=\"360\">", "n_new_tokens": 14, "latency_ms": 80.7}
+{"id": "pb-0760", "query": "Point to all the hats on the cards in the second row.", "raw": "<point x=\"234\" y=\"791\"> <point x=\"270\" y=\"271\"> <point x=\"365\" y=\"266\"> <point x=\"400\" y=\"570\"> <point x=\"481\"", "n_new_tokens": 64, "latency_ms": 358.96}
+{"id": "pb-0761", "query": "Point to the LinkedIn icon directly at the bottom of the existing point.", "raw": "<point x=\"870\" y=\"916\">", "n_new_tokens": 15, "latency_ms": 164.95}
+{"id": "pb-0762", "query": "Point to the couch on the left.", "raw": "<point x=\"116\" y=\"610\">", "n_new_tokens": 15, "latency_ms": 1226.5, "resized_to": "3503x2335"}
+{"id": "pb-0763", "query": "Point to all the bulbs on the nearest candle.", "raw": "<point x=\"518\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 115.32}
+{"id": "pb-0764", "query": "Point to the object between the two windows on the third floor.", "raw": "<point x=\"500\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 1228.1, "resized_to": "3577x2287"}
+{"id": "pb-0765", "query": "Point to the window closest to the sink.", "raw": "<point x=\"652\" y=\"416\">", "n_new_tokens": 15, "latency_ms": 93.77}
+{"id": "pb-0766", "query": "Point to the tool that people can use to play music.", "raw": "<point x=\"601\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 87.42}
+{"id": "pb-0767", "query": "Point to the tool used to eat the food.", "raw": "<point x=\"750\" y=\"630\">", "n_new_tokens": 15, "latency_ms": 1199.13, "resized_to": "2477x3303"}
+{"id": "pb-0768", "query": "Point to all the birds.", "raw": "<point x=\"383\" y=\"707\"> <point x=\"577\" y=\"560\">", "n_new_tokens": 29, "latency_ms": 221.68}
+{"id": "pb-0769", "query": "Point to the car in the direction in which the smaller blue car is moving.", "raw": "<point x=\"845\" y=\"520\">", "n_new_tokens": 15, "latency_ms": 1202.45, "resized_to": "3303x2477"}
+{"id": "pb-0770", "query": "Point to the object between the two chairs.", "raw": "<point x=\"590\" y=\"841\">", "n_new_tokens": 15, "latency_ms": 128.92}
+{"id": "pb-0771", "query": "Point to the object used to drink water.", "raw": "<point x=\"977\" y=\"428\">", "n_new_tokens": 15, "latency_ms": 119.16}
+{"id": "pb-0772", "query": "Point to the red body part below the blue point.", "raw": "<point x=\"470\" y=\"900\">", "n_new_tokens": 15, "latency_ms": 83.84}
+{"id": "pb-0773", "query": "Point to the white house under the largest tree in the image.", "raw": "<point x=\"845\" y=\"504\">", "n_new_tokens": 15, "latency_ms": 147.12}
+{"id": "pb-0774", "query": "Point to the plate on top of the car.", "raw": "<point x=\"520\" y=\"349\">", "n_new_tokens": 15, "latency_ms": 173.84}
+{"id": "pb-0775", "query": "Point to all the wings on the statues.", "raw": "<point x=\"145\" y=\"307\"> <point x=\"336\" y=\"380\">", "n_new_tokens": 29, "latency_ms": 214.22}
+{"id": "pb-0776", "query": "Point to the staircase below the cat.", "raw": "<point x=\"570\" y=\"860\">", "n_new_tokens": 15, "latency_ms": 1209.5, "resized_to": "3303x2477"}
+{"id": "pb-0777", "query": "Point to a book about traveling.", "raw": "<point x=\"425\" y=\"265\">", "n_new_tokens": 15, "latency_ms": 292.08}
+{"id": "pb-0778", "query": "Point to the yellow drink on the far left.", "raw": "<point x=\"130\" y=\"470\">", "n_new_tokens": 15, "latency_ms": 308.13}
+{"id": "pb-0779", "query": "Point to moving left until reaching the headphones.", "raw": "<point x=\"295\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 116.48}
+{"id": "pb-0780", "query": "Point to all the cars.", "raw": "<point x=\"158\" y=\"723\"> <point x=\"298\" y=\"730\"> <point x=\"428\" y=\"738\"> <point x=\"552\" y=\"765\"> <point x=\"957\"", "n_new_tokens": 64, "latency_ms": 476.36}
+{"id": "pb-0781", "query": "Point to the person on the right half of the picture.", "raw": "<point x=\"758\" y=\"775\">", "n_new_tokens": 15, "latency_ms": 130.3}
+{"id": "pb-0782", "query": "Point to what could be plugged in.", "raw": "<point x=\"730\" y=\"518\">", "n_new_tokens": 15, "latency_ms": 98.65}
+{"id": "pb-0783", "query": "Point to all the people.", "raw": "<point x=\"105\" y=\"370\"> <point x=\"261\" y=\"420\">", "n_new_tokens": 29, "latency_ms": 199.31}
+{"id": "pb-0784", "query": "Point to the lamp post on the left.", "raw": "<point x=\"88\" y=\"400\">", "n_new_tokens": 14, "latency_ms": 1220.89, "resized_to": "3814x2145"}
+{"id": "pb-0785", "query": "Point to Sonic the Hedgehog above the blue point.", "raw": "<point x=\"542\" y=\"190\">", "n_new_tokens": 15, "latency_ms": 114.44}
+{"id": "pb-0786", "query": "Point to the lamp post on the left.", "raw": "<point x=\"91\" y=\"390\">", "n_new_tokens": 14, "latency_ms": 123.63}
+{"id": "pb-0787", "query": "Point to the boat below the house.", "raw": "<point x=\"545\" y=\"825\">", "n_new_tokens": 15, "latency_ms": 111.12}
+{"id": "pb-0788", "query": "Point to a person's foot closer to the table.", "raw": "<point x=\"825\" y=\"805\">", "n_new_tokens": 15, "latency_ms": 126.88}
+{"id": "pb-0789", "query": "Point to the door in front of the bike.", "raw": "<point x=\"784\" y=\"590\">", "n_new_tokens": 15, "latency_ms": 120.78}
+{"id": "pb-0790", "query": "Point to the leaves on the right side of the current point in the image.", "raw": "<point x=\"920\" y=\"730\">", "n_new_tokens": 15, "latency_ms": 98.16}
+{"id": "pb-0791", "query": "Point to the nearest word on the left side of the current point in the image.", "raw": "<point x=\"530\" y=\"614\">", "n_new_tokens": 15, "latency_ms": 92.34}
+{"id": "pb-0792", "query": "Point to the plate closest to the camera.", "raw": "<point x=\"297\" y=\"745\">", "n_new_tokens": 15, "latency_ms": 119.08}
+{"id": "pb-0793", "query": "Point to where items could be placed on the bike.", "raw": "<point x=\"155\" y=\"570\">", "n_new_tokens": 15, "latency_ms": 97.28}
+{"id": "pb-0794", "query": "Point to moving down until you are on the fish.", "raw": "<point x=\"590\" y=\"708\">", "n_new_tokens": 15, "latency_ms": 455.79}
+{"id": "pb-0795", "query": "Point to all the cars.", "raw": "<point x=\"311\" y=\"600\"> <point x=\"680\" y=\"626\">", "n_new_tokens": 29, "latency_ms": 215.1}
+{"id": "pb-0796", "query": "Point to moving left until you are on the other side of the road.", "raw": "<point x=\"411\" y=\"580\">", "n_new_tokens": 15, "latency_ms": 97.65}
+{"id": "pb-0797", "query": "Point to the orange box below the existing point.", "raw": "<point x=\"920\" y=\"845\">", "n_new_tokens": 15, "latency_ms": 173.53}
+{"id": "pb-0798", "query": "Point to the closest button in the top left corner of the image.", "raw": "<point x=\"491\" y=\"139\">", "n_new_tokens": 15, "latency_ms": 226.12}
+{"id": "pb-0799", "query": "Point to all the model cars.", "raw": "<point x=\"228\" y=\"729\"> <point x=\"527\" y=\"691\">", "n_new_tokens": 29, "latency_ms": 1302.29, "resized_to": "3503x2335"}
+{"id": "pb-0800", "query": "Point to the object on which plants are placed.", "raw": "<point x=\"555\" y=\"925\">", "n_new_tokens": 15, "latency_ms": 126.5}
+{"id": "pb-0801", "query": "Point to where the sauce is poured onto the plate.", "raw": "<point x=\"500\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 125.92}
+{"id": "pb-0802", "query": "Point to three cloves of garlic.", "raw": "<point x=\"440\" y=\"931\"> <point x=\"491\" y=\"967\"> <point x=\"495\" y=\"977\">", "n_new_tokens": 43, "latency_ms": 357.55}
+{"id": "pb-0803", "query": "Point to the object indicating the speed limit.", "raw": "<point x=\"975\" y=\"348\">", "n_new_tokens": 15, "latency_ms": 136.65}
+{"id": "pb-0804", "query": "Point to the hand below the existing point.", "raw": "<point x=\"150\" y=\"905\">", "n_new_tokens": 15, "latency_ms": 185.79}
+{"id": "pb-0805", "query": "Point to the pink drink.", "raw": "<point x=\"670\" y=\"645\">", "n_new_tokens": 15, "latency_ms": 119.11}
+{"id": "pb-0806", "query": "Point to the lighthouse above the existing point.", "raw": "<point x=\"466\" y=\"170\">", "n_new_tokens": 15, "latency_ms": 111.63}
+{"id": "pb-0807", "query": "Point to the five BMC logos.", "raw": "<point x=\"61\" y=\"385\"> <point x=\"9\" y=\"465\"> <point x=\"161\" y=\"337\"> <point x=\"20\" y=\"650\"> <point x=\"70\" y=\"670", "n_new_tokens": 64, "latency_ms": 378.27}
+{"id": "pb-0808", "query": "Point to the object parked on the road.", "raw": "<point x=\"491\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 87.76}
+{"id": "pb-0809", "query": "Point to the sky above the existing point.", "raw": "<point x=\"500\" y=\"100\">", "n_new_tokens": 15, "latency_ms": 1201.24, "resized_to": "3851x2124"}
+{"id": "pb-0810", "query": "Point to the account balance above the existing point.", "raw": "<point x=\"155\" y=\"445\">", "n_new_tokens": 15, "latency_ms": 122.15}
+{"id": "pb-0811", "query": "Point to the white jacket to the left of the existing point.", "raw": "<point x=\"229\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 123.88}
+{"id": "pb-0812", "query": "Point to all the people.", "raw": "<point x=\"370\" y=\"630\"> <point x=\"452\" y=\"607\"> <point x=\"532\" y=\"620\"> <point x=\"725\" y=\"597\">", "n_new_tokens": 57, "latency_ms": 323.06}
+{"id": "pb-0813", "query": "Point to the microphone above the fan.", "raw": "<point x=\"966\" y=\"471\">", "n_new_tokens": 15, "latency_ms": 135.94}
+{"id": "pb-0814", "query": "Point to the \"1 mug.\"", "raw": "<point x=\"260\" y=\"400\">", "n_new_tokens": 15, "latency_ms": 96.08}
+{"id": "pb-0815", "query": "Point to the yellow building.", "raw": "<point x=\"337\" y=\"627\">", "n_new_tokens": 15, "latency_ms": 1225.62, "resized_to": "3496x2340"}
+{"id": "pb-0816", "query": "Point to two yellow hats.", "raw": "<point x=\"151\" y=\"391\"> <point x=\"155\" y=\"391\">", "n_new_tokens": 29, "latency_ms": 1302.58, "resized_to": "3503x2335"}
+{"id": "pb-0817", "query": "Point to the \"1 yellow rim.\"", "raw": "<point x=\"855\" y=\"847\">", "n_new_tokens": 15, "latency_ms": 136.78}
+{"id": "pb-0818", "query": "Point to the three plums.", "raw": "<point x=\"786\" y=\"740\"> <point x=\"802\" y=\"780\"> <point x=\"820\" y=\"738\">", "n_new_tokens": 43, "latency_ms": 283.16}
+{"id": "pb-0819", "query": "Point to the search bar above the existing point.", "raw": "<point x=\"491\" y=\"91\">", "n_new_tokens": 14, "latency_ms": 88.91}
+{"id": "pb-0820", "query": "Point to the arrow above the existing point.", "raw": "<point x=\"730\" y=\"109\">", "n_new_tokens": 15, "latency_ms": 88.82}
+{"id": "pb-0821", "query": "Point to all the plates.", "raw": "<point x=\"500\" y=\"530\"> <point x=\"501\" y=\"729\"> <point x=\"501\" y=\"777\"> <point x=\"501\" y=\"827\">", "n_new_tokens": 57, "latency_ms": 384.25}
+{"id": "pb-0822", "query": "Point to the road on which no car is parked.", "raw": "<point x=\"428\" y=\"850\">", "n_new_tokens": 15, "latency_ms": 85.24}
+{"id": "pb-0823", "query": "Point to the object to the left of the shrimp.", "raw": "<point x=\"380\" y=\"491\">", "n_new_tokens": 15, "latency_ms": 132.03}
+{"id": "pb-0824", "query": "Point to the person to the right of the existing point.", "raw": "<point x=\"923\" y=\"208\">", "n_new_tokens": 15, "latency_ms": 83.85}
+{"id": "pb-0825", "query": "Point to the flag of Argentina.", "raw": "<point x=\"55\" y=\"511\">", "n_new_tokens": 14, "latency_ms": 81.51}
+{"id": "pb-0826", "query": "Point to the name of the hotel.", "raw": "<point x=\"170\" y=\"208\">", "n_new_tokens": 15, "latency_ms": 87.62}
+{"id": "pb-0827", "query": "Point to the paintings on the left wall.", "raw": "<point x=\"95\" y=\"398\">", "n_new_tokens": 14, "latency_ms": 88.18}
+{"id": "pb-0828", "query": "Point to the yellow fish to the left of the blue point.", "raw": "<point x=\"470\" y=\"273\">", "n_new_tokens": 15, "latency_ms": 192.24}
+{"id": "pb-0829", "query": "Point to the red strip under the blue point.", "raw": "<point x=\"808\" y=\"628\">", "n_new_tokens": 15, "latency_ms": 114.44}
+{"id": "pb-0830", "query": "Point to all the cars.", "raw": "<point x=\"145\" y=\"455\"> <point x=\"370\" y=\"470\"> <point x=\"590\" y=\"470\"> <point x=\"820\" y=\"461\">", "n_new_tokens": 57, "latency_ms": 335.73}
+{"id": "pb-0831", "query": "Point to the building to the right of the existing point.", "raw": "<point x=\"830\" y=\"360\">", "n_new_tokens": 15, "latency_ms": 630.34}
+{"id": "pb-0832", "query": "Point to the fountain below the existing point.", "raw": "<point x=\"490\" y=\"855\">", "n_new_tokens": 15, "latency_ms": 108.13}
+{"id": "pb-0833", "query": "Point to the three statues.", "raw": "<point x=\"155\" y=\"450\"> <point x=\"470\" y=\"320\"> <point x=\"700\" y=\"460\">", "n_new_tokens": 43, "latency_ms": 283.5}
+{"id": "pb-0834", "query": "Point to the button below the existing point.", "raw": "<point x=\"500\" y=\"952\">", "n_new_tokens": 15, "latency_ms": 98.91}
+{"id": "pb-0835", "query": "Point to the green field below the existing point.", "raw": "<point x=\"500\" y=\"435\">", "n_new_tokens": 15, "latency_ms": 98.42}
+{"id": "pb-0836", "query": "Point to the hand below the existing point.", "raw": "<point x=\"830\" y=\"800\">", "n_new_tokens": 15, "latency_ms": 296.53}
+{"id": "pb-0837", "query": "Point to the right hand.", "raw": "<point x=\"731\" y=\"438\">", "n_new_tokens": 15, "latency_ms": 127.93}
+{"id": "pb-0838", "query": "Point to the object above the existing point.", "raw": "<point x=\"500\" y=\"45\">", "n_new_tokens": 14, "latency_ms": 86.6}
+{"id": "pb-0839", "query": "Point to the object to the left of the existing point.", "raw": "<point x=\"102\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 95.09}
+{"id": "pb-0840", "query": "Point to the blue car in the upper left.", "raw": "<point x=\"52\" y=\"71\">", "n_new_tokens": 13, "latency_ms": 218.14}
+{"id": "pb-0841", "query": "Point to the book above the existing point.", "raw": "<point x=\"491\" y=\"510\">", "n_new_tokens": 15, "latency_ms": 152.6}
+{"id": "pb-0842", "query": "Point to the sword to the left of the existing point.", "raw": "<point x=\"161\" y=\"700\">", "n_new_tokens": 15, "latency_ms": 91.74}
+{"id": "pb-0843", "query": "Point to all the plates.", "raw": "<point x=\"492\" y=\"793\"> <point x=\"502\" y=\"417\">", "n_new_tokens": 29, "latency_ms": 217.36}
+{"id": "pb-0844", "query": "Point to the pink backpack.", "raw": "<point x=\"414\" y=\"725\">", "n_new_tokens": 15, "latency_ms": 1217.57, "resized_to": "2336x3503"}
+{"id": "pb-0845", "query": "Point to the six red wax seals.", "raw": "<point x=\"38\" y=\"518\"> <point x=\"109\" y=\"500\"> <point x=\"202\" y=\"455\"> <point x=\"299\" y=\"400\"> <point x=\"419\" y", "n_new_tokens": 64, "latency_ms": 356.84}
+{"id": "pb-0846", "query": "Point to the short pole.", "raw": "<point x=\"117\" y=\"811\">", "n_new_tokens": 15, "latency_ms": 1221.51, "resized_to": "3503x2335"}
+{"id": "pb-0847", "query": "Point to the tallest item.", "raw": "<point x=\"863\" y=\"355\">", "n_new_tokens": 15, "latency_ms": 115.31}
+{"id": "pb-0848", "query": "Point to the dark wooden block under the blue point.", "raw": "<point x=\"580\" y=\"305\">", "n_new_tokens": 15, "latency_ms": 114.31}
+{"id": "pb-0849", "query": "Point to the green square below the existing point.", "raw": "<point x=\"934\" y=\"504\">", "n_new_tokens": 15, "latency_ms": 125.46}
+{"id": "pb-0850", "query": "Point to the second car from the left.", "raw": "<point x=\"621\" y=\"793\">", "n_new_tokens": 15, "latency_ms": 1207.88, "resized_to": "3303x2477"}
+{"id": "pb-0851", "query": "Point to the fork.", "raw": "<point x=\"584\" y=\"577\">", "n_new_tokens": 15, "latency_ms": 179.65}
+{"id": "pb-0852", "query": "Point to the largest fish.", "raw": "<point x=\"860\" y=\"50\">", "n_new_tokens": 14, "latency_ms": 114.47}
+{"id": "pb-0853", "query": "Point to the cart the color of grass.", "raw": "<point x=\"41\" y=\"720\">", "n_new_tokens": 14, "latency_ms": 1165.18}
+{"id": "pb-0854", "query": "Point to all plates.", "raw": "<point x=\"241\" y=\"497\"> <point x=\"500\" y=\"641\"> <point x=\"510\" y=\"290\"> <point x=\"760\" y=\"500\">", "n_new_tokens": 57, "latency_ms": 352.87}
+{"id": "pb-0855", "query": "Point to \"spoon.\"", "raw": "<point x=\"735\" y=\"385\">", "n_new_tokens": 15, "latency_ms": 132.44}
+{"id": "pb-0856", "query": "Point to all the orange houses.", "raw": "<point x=\"434\" y=\"500\"> <point x=\"468\" y=\"498\"> <point x=\"511\" y=\"498\"> <point x=\"570\" y=\"481\">", "n_new_tokens": 57, "latency_ms": 334.99}
+{"id": "pb-0857", "query": "Point to all the glasses.", "raw": "<point x=\"410\" y=\"490\"> <point x=\"491\" y=\"711\">", "n_new_tokens": 29, "latency_ms": 230.11}
+{"id": "pb-0858", "query": "Point to the white cars.", "raw": "<point x=\"460\" y=\"630\">", "n_new_tokens": 15, "latency_ms": 261.9}
+{"id": "pb-0859", "query": "Point to the object below the existing point.", "raw": "<point x=\"691\" y=\"677\">", "n_new_tokens": 15, "latency_ms": 113.99}
+{"id": "pb-0860", "query": "Point to the left eye above the blue point.", "raw": "<point x=\"608\" y=\"445\">", "n_new_tokens": 15, "latency_ms": 101.89}
+{"id": "pb-0861", "query": "Point to the object above the existing point.", "raw": "<point x=\"537\" y=\"119\">", "n_new_tokens": 15, "latency_ms": 226.18}
+{"id": "pb-0862", "query": "Point to the tip of the shoes.", "raw": "<point x=\"924\" y=\"577\">", "n_new_tokens": 15, "latency_ms": 93.35}
+{"id": "pb-0863", "query": "Point to the profile picture above the existing point.", "raw": "<point x=\"150\" y=\"170\">", "n_new_tokens": 15, "latency_ms": 92.65}
+{"id": "pb-0864", "query": "Point to all the cookies.", "raw": "<point x=\"270\" y=\"641\"> <point x=\"300\" y=\"425\"> <point x=\"498\" y=\"460\"> <point x=\"500\" y=\"811\"> <point x=\"570\"", "n_new_tokens": 64, "latency_ms": 377.7}
+{"id": "pb-0865", "query": "Point to the person below the blue point.", "raw": "<point x=\"618\" y=\"430\">", "n_new_tokens": 15, "latency_ms": 577.33}
+{"id": "pb-0866", "query": "Point to the icon to the left of the existing point.", "raw": "<point x=\"249\" y=\"749\">", "n_new_tokens": 15, "latency_ms": 194.74}
+{"id": "pb-0867", "query": "Point to all the cars to the left of the center line.", "raw": "<point x=\"390\" y=\"69\">", "n_new_tokens": 14, "latency_ms": 81.59}
+{"id": "pb-0868", "query": "Point to the bowl below the existing point.", "raw": "<point x=\"840\" y=\"819\">", "n_new_tokens": 15, "latency_ms": 195.97}
+{"id": "pb-0869", "query": "Point to the person to the left of the existing point.", "raw": "<point x=\"270\" y=\"574\">", "n_new_tokens": 15, "latency_ms": 96.16}
+{"id": "pb-0870", "query": "Point to all snacks.", "raw": "<point x=\"230\" y=\"320\"> <point x=\"320\" y=\"580\"> <point x=\"411\" y=\"217\"> <point x=\"504\" y=\"410\"> <point x=\"610\"", "n_new_tokens": 64, "latency_ms": 1333.55}
+{"id": "pb-0871", "query": "Point to the orange bucket where the blue point is.", "raw": "<point x=\"282\" y=\"462\">", "n_new_tokens": 15, "latency_ms": 117.81}
+{"id": "pb-0872", "query": "Point to the green box below the blue point.", "raw": "<point x=\"175\" y=\"955\">", "n_new_tokens": 15, "latency_ms": 102.21}
+{"id": "pb-0873", "query": "Point to all the apples.", "raw": "<point x=\"188\" y=\"450\"> <point x=\"498\" y=\"490\"> <point x=\"830\" y=\"518\">", "n_new_tokens": 43, "latency_ms": 270.5}
+{"id": "pb-0874", "query": "Point to the spider where the blue point is.", "raw": "<point x=\"548\" y=\"456\">", "n_new_tokens": 15, "latency_ms": 88.15}
+{"id": "pb-0875", "query": "Point to all the plates.", "raw": "<point x=\"570\" y=\"510\"> <point x=\"572\" y=\"700\"> <point x=\"573\" y=\"743\">", "n_new_tokens": 43, "latency_ms": 290.44}
+{"id": "pb-0876", "query": "Point to all umbrellas.", "raw": "<point x=\"31\" y=\"475\"> <point x=\"805\" y=\"483\">", "n_new_tokens": 28, "latency_ms": 249.39}
+{"id": "pb-0877", "query": "Point to all the cars on the left side of the image.", "raw": "<point x=\"170\" y=\"246\">", "n_new_tokens": 15, "latency_ms": 110.23}
+{"id": "pb-0878", "query": "Point to all the red cans.", "raw": "<point x=\"820\" y=\"330\">", "n_new_tokens": 15, "latency_ms": 1224.36, "resized_to": "3814x2145"}
+{"id": "pb-0879", "query": "Point to the cars at the bottom of the image.", "raw": "<point x=\"780\" y=\"730\">", "n_new_tokens": 15, "latency_ms": 127.52}
+{"id": "pb-0880", "query": "Point to where the blue point is located.", "raw": "<point x=\"943\" y=\"805\">", "n_new_tokens": 15, "latency_ms": 113.61}
+{"id": "pb-0881", "query": "Point to all the statues.", "raw": "<point x=\"185\" y=\"420\"> <point x=\"365\" y=\"420\"> <point x=\"561\" y=\"420\"> <point x=\"790\" y=\"417\">", "n_new_tokens": 57, "latency_ms": 325.34}
+{"id": "pb-0882", "query": "Point to all paper currency.", "raw": "<point x=\"311\" y=\"620\">", "n_new_tokens": 15, "latency_ms": 87.87}
+{"id": "pb-0883", "query": "Point to the title near the blue point.", "raw": "<point x=\"227\" y=\"499\">", "n_new_tokens": 15, "latency_ms": 95.15}
+{"id": "pb-0884", "query": "Point to the ice cream where the blue point is.", "raw": "<point x=\"390\" y=\"324\">", "n_new_tokens": 15, "latency_ms": 91.6}
+{"id": "pb-0885", "query": "Point to all birds.", "raw": "<point x=\"388\" y=\"577\"> <point x=\"670\" y=\"375\">", "n_new_tokens": 29, "latency_ms": 170.75}
+{"id": "pb-0886", "query": "Point to all the boats.", "raw": "<point x=\"126\" y=\"695\"> <point x=\"355\" y=\"619\"> <point x=\"490\" y=\"638\"> <point x=\"599\" y=\"619\"> <point x=\"770\"", "n_new_tokens": 64, "latency_ms": 373.43}
+{"id": "pb-0887", "query": "Point to the nearest black horse next to the blue point.", "raw": "<point x=\"470\" y=\"540\">", "n_new_tokens": 15, "latency_ms": 296.68}
+{"id": "pb-0888", "query": "Point to all the ducks.", "raw": "<point x=\"138\" y=\"516\"> <point x=\"416\" y=\"327\"> <point x=\"541\" y=\"360\"> <point x=\"656\" y=\"327\"> <point x=\"888\"", "n_new_tokens": 64, "latency_ms": 1475.31, "resized_to": "3344x2446"}
+{"id": "pb-0889", "query": "Point to all stripes.", "raw": "<point x=\"465\" y=\"687\">", "n_new_tokens": 15, "latency_ms": 128.26}
+{"id": "pb-0890", "query": "Point to the orange rectangle to the right of the blue point.", "raw": "<point x=\"938\" y=\"350\">", "n_new_tokens": 15, "latency_ms": 148.47}
+{"id": "pb-0891", "query": "Point to the blue tie to the right of the blue point.", "raw": "<point x=\"315\" y=\"509\">", "n_new_tokens": 15, "latency_ms": 90.14}
+{"id": "pb-0892", "query": "Point to all fish.", "raw": "<point x=\"34\" y=\"330\"> <point x=\"34\" y=\"500\"> <point x=\"60\" y=\"805\"> <point x=\"80\" y=\"635\"> <point x=\"161\" y=\"43", "n_new_tokens": 64, "latency_ms": 341.45}
+{"id": "pb-0893", "query": "Point to the bottle nearest to the current location.", "raw": "<point x=\"819\" y=\"347\">", "n_new_tokens": 15, "latency_ms": 113.94}
+{"id": "pb-0894", "query": "Point to all the signboards with \"E.\"", "raw": "<point x=\"270\" y=\"124\"> <point x=\"529\" y=\"248\">", "n_new_tokens": 29, "latency_ms": 170.62}
+{"id": "pb-0895", "query": "Point to all the gold objects.", "raw": "<point x=\"148\" y=\"510\"> <point x=\"491\" y=\"521\"> <point x=\"820\" y=\"510\">", "n_new_tokens": 43, "latency_ms": 220.06}
+{"id": "pb-0896", "query": "Point to all the coins.", "raw": "<point x=\"118\" y=\"230\"> <point x=\"218\" y=\"290\"> <point x=\"370\" y=\"400\"> <point x=\"420\" y=\"126\"> <point x=\"573\"", "n_new_tokens": 64, "latency_ms": 363.55}
+{"id": "pb-0897", "query": "Point to somewhere above the existing point on the image.", "raw": "<point x=\"500\" y=\"52\">", "n_new_tokens": 14, "latency_ms": 153.51}
+{"id": "pb-0898", "query": "Point to all the vaccine vials.", "raw": "<point x=\"275\" y=\"300\"> <point x=\"371\" y=\"350\"> <point x=\"477\" y=\"390\"> <point x=\"580\" y=\"435\"> <point x=\"691\"", "n_new_tokens": 64, "latency_ms": 1081.56}
+{"id": "pb-0899", "query": "Point to all the letter R blocks.", "raw": "<point x=\"690\" y=\"711\">", "n_new_tokens": 15, "latency_ms": 136.09}
+{"id": "pb-0900", "query": "Point to the right of the existing point on the image.", "raw": "<point x=\"992\" y=\"499\">", "n_new_tokens": 15, "latency_ms": 100.7}
+{"id": "pb-0901", "query": "Point to the left of the existing point on the image.", "raw": "<point x=\"17\" y=\"599\">", "n_new_tokens": 14, "latency_ms": 159.29}
+{"id": "pb-0902", "query": "Point to all the police cars.", "raw": "<point x=\"499\" y=\"827\">", "n_new_tokens": 15, "latency_ms": 185.37}
+{"id": "pb-0903", "query": "Point to somewhere below the existing point on the image.", "raw": "<point x=\"495\" y=\"995\">", "n_new_tokens": 15, "latency_ms": 292.28}
+{"id": "pb-0904", "query": "Point to the left of the existing point on the image.", "raw": "<point x=\"19\" y=\"599\">", "n_new_tokens": 14, "latency_ms": 124.54}
+{"id": "pb-0905", "query": "Point to all the coins.", "raw": "<point x=\"328\" y=\"560\"> <point x=\"444\" y=\"560\"> <point x=\"466\" y=\"471\"> <point x=\"550\" y=\"327\"> <point x=\"590\"", "n_new_tokens": 64, "latency_ms": 331.68}
+{"id": "pb-0906", "query": "Point to all the apples in the person's hand.", "raw": "<point x=\"497\" y=\"716\">", "n_new_tokens": 15, "latency_ms": 337.29}
+{"id": "pb-0907", "query": "Point to all the coins.", "raw": "<point x=\"290\" y=\"647\"> <point x=\"370\" y=\"710\"> <point x=\"508\" y=\"453\"> <point x=\"687\" y=\"470\"> <point x=\"733\"", "n_new_tokens": 64, "latency_ms": 521.79}
+{"id": "pb-0908", "query": "Point to all the birds.", "raw": "<point x=\"161\" y=\"218\"> <point x=\"638\" y=\"635\">", "n_new_tokens": 29, "latency_ms": 165.68}
+{"id": "pb-0909", "query": "Point to all the flowers.", "raw": "<point x=\"164\" y=\"241\"> <point x=\"256\" y=\"704\"> <point x=\"367\" y=\"455\"> <point x=\"720\" y=\"270\"> <point x=\"843\"", "n_new_tokens": 64, "latency_ms": 341.73}
+{"id": "pb-0910", "query": "Point to all the purple conditioner bottles.", "raw": "<point x=\"458\" y=\"405\">", "n_new_tokens": 15, "latency_ms": 156.64}
+{"id": "pb-0911", "query": "Point to \"Swanson\" cans.", "raw": "<point x=\"224\" y=\"790\"> <point x=\"320\" y=\"748\"> <point x=\"383\" y=\"800\">", "n_new_tokens": 43, "latency_ms": 250.7}
+{"id": "pb-0912", "query": "Point to all the status bases.", "raw": "<point x=\"45\" y=\"914\"> <point x=\"136\" y=\"818\"> <point x=\"303\" y=\"805\"> <point x=\"464\" y=\"848\"> <point x=\"601\" y", "n_new_tokens": 64, "latency_ms": 346.77}
+{"id": "pb-0913", "query": "Point to all the moai.", "raw": "<point x=\"260\" y=\"610\"> <point x=\"311\" y=\"614\"> <point x=\"358\" y=\"611\"> <point x=\"407\" y=\"609\"> <point x=\"466\"", "n_new_tokens": 64, "latency_ms": 395.49}
+{"id": "pb-0914", "query": "Point to all the cups.", "raw": "<point x=\"287\" y=\"807\">", "n_new_tokens": 15, "latency_ms": 108.49}
+{"id": "pb-0915", "query": "Point to all the green fruit.", "raw": "<point x=\"543\" y=\"651\">", "n_new_tokens": 15, "latency_ms": 128.82}
+{"id": "pb-0916", "query": "Point to all the cars driving in the opposite direction.", "raw": "<point x=\"348\" y=\"440\">", "n_new_tokens": 15, "latency_ms": 1217.29, "resized_to": "3503x2335"}
+{"id": "pb-0917", "query": "Point to empty beer cans.", "raw": "<point x=\"500\" y=\"455\">", "n_new_tokens": 15, "latency_ms": 107.74}
+{"id": "pb-0918", "query": "Point to all the jars.", "raw": "<point x=\"350\" y=\"214\"> <point x=\"730\" y=\"214\">", "n_new_tokens": 29, "latency_ms": 233.68}
+{"id": "pb-0919", "query": "Point to 1 black plate.", "raw": "<point x=\"783\" y=\"690\">", "n_new_tokens": 15, "latency_ms": 185.11}
+{"id": "pb-0920", "query": "Point to one yellow book.", "raw": "<point x=\"910\" y=\"577\">", "n_new_tokens": 15, "latency_ms": 120.27}
+{"id": "pb-0921", "query": "Point to all the flags.", "raw": "<point x=\"328\" y=\"601\">", "n_new_tokens": 15, "latency_ms": 89.56}
+{"id": "pb-0922", "query": "Point to all the windows on the orange house.", "raw": "<point x=\"552\" y=\"843\">", "n_new_tokens": 15, "latency_ms": 797.82}
+{"id": "pb-0923", "query": "Point to one lemon.", "raw": "<point x=\"404\" y=\"767\">", "n_new_tokens": 15, "latency_ms": 226.11}
+{"id": "pb-0924", "query": "Point to one \"B.\"", "raw": "<point x=\"500\" y=\"438\">", "n_new_tokens": 15, "latency_ms": 1204.45, "resized_to": "3303x2477"}
+{"id": "pb-0925", "query": "Point to one red hat.", "raw": "<point x=\"640\" y=\"462\">", "n_new_tokens": 15, "latency_ms": 1222.97, "resized_to": "3501x2337"}
+{"id": "pb-0926", "query": "Point to all the plates.", "raw": "<point x=\"160\" y=\"500\"> <point x=\"257\" y=\"301\"> <point x=\"340\" y=\"170\"> <point x=\"427\" y=\"450\"> <point x=\"492\"", "n_new_tokens": 64, "latency_ms": 387.04}
+{"id": "pb-0927", "query": "Point to the cars below the green bar.", "raw": "<point x=\"270\" y=\"780\"> <point x=\"780\" y=\"800\">", "n_new_tokens": 29, "latency_ms": 193.02}
+{"id": "pb-0928", "query": "Point to all the spoons and forks.", "raw": "<point x=\"458\" y=\"514\"> <point x=\"570\" y=\"220\"> <point x=\"972\" y=\"780\">", "n_new_tokens": 43, "latency_ms": 354.21}
+{"id": "pb-0929", "query": "Point to the upright coin.", "raw": "<point x=\"480\" y=\"350\">", "n_new_tokens": 15, "latency_ms": 621.34}
+{"id": "pb-0930", "query": "Point to all the houses.", "raw": "<point x=\"73\" y=\"330\"> <point x=\"80\" y=\"673\"> <point x=\"202\" y=\"325\"> <point x=\"388\" y=\"325\"> <point x=\"411\" y=\"", "n_new_tokens": 64, "latency_ms": 339.96}
+{"id": "pb-0931", "query": "Point to all the books on the top shelf.", "raw": "<point x=\"468\" y=\"180\"> <point x=\"530\" y=\"190\"> <point x=\"775\" y=\"190\"> <point x=\"845\" y=\"208\">", "n_new_tokens": 57, "latency_ms": 1477.44, "resized_to": "2337x3501"}
+{"id": "pb-0932", "query": "Point to all the dogs.", "raw": "<point x=\"149\" y=\"530\"> <point x=\"691\" y=\"380\">", "n_new_tokens": 29, "latency_ms": 151.22}
+{"id": "pb-0933", "query": "Point to \"candles.\"", "raw": "<point x=\"45\" y=\"300\"> <point x=\"119\" y=\"390\">", "n_new_tokens": 28, "latency_ms": 239.1}
+{"id": "pb-0934", "query": "Point to all speakers.", "raw": "<point x=\"325\" y=\"620\">", "n_new_tokens": 15, "latency_ms": 112.21}
+{"id": "pb-0935", "query": "Point to all the yellow foods.", "raw": "<point x=\"530\" y=\"523\">", "n_new_tokens": 15, "latency_ms": 241.54}
+{"id": "pb-0936", "query": "Point to all the pottery objects that are pink.", "raw": "<point x=\"510\" y=\"297\">", "n_new_tokens": 15, "latency_ms": 125.29}
+{"id": "pb-0937", "query": "Point to the white king.", "raw": "<point x=\"543\" y=\"670\">", "n_new_tokens": 15, "latency_ms": 1225.39, "resized_to": "3503x2335"}
+{"id": "pb-0938", "query": "Point to all the lids of the red sauce jars.", "raw": "<point x=\"647\" y=\"426\">", "n_new_tokens": 15, "latency_ms": 105.19}
+{"id": "pb-0939", "query": "Point to all the horses.", "raw": "<point x=\"320\" y=\"460\"> <point x=\"716\" y=\"460\">", "n_new_tokens": 29, "latency_ms": 1309.25, "resized_to": "3503x2335"}
+{"id": "pb-0940", "query": "Point to \"all caps.\"", "raw": "<point x=\"570\" y=\"311\">", "n_new_tokens": 15, "latency_ms": 1225.56, "resized_to": "3814x2145"}
+{"id": "pb-0941", "query": "Point to all the oranges.", "raw": "<point x=\"199\" y=\"810\"> <point x=\"416\" y=\"448\"> <point x=\"418\" y=\"591\"> <point x=\"499\" y=\"427\"> <point x=\"507\"", "n_new_tokens": 64, "latency_ms": 419.16}
+{"id": "pb-0942", "query": "Point to all the white cars.", "raw": "<point x=\"725\" y=\"660\">", "n_new_tokens": 15, "latency_ms": 1242.13, "resized_to": "3503x2335"}
+{"id": "pb-0943", "query": "Point to all the apples.", "raw": "<point x=\"161\" y=\"460\"> <point x=\"492\" y=\"490\"> <point x=\"840\" y=\"490\">", "n_new_tokens": 43, "latency_ms": 270.75}
+{"id": "pb-0944", "query": "Point to all the gold bars.", "raw": "<point x=\"102\" y=\"118\"> <point x=\"130\" y=\"500\"> <point x=\"348\" y=\"86\"> <point x=\"598\" y=\"105\"> <point x=\"680\" y", "n_new_tokens": 64, "latency_ms": 333.81}
+{"id": "pb-0945", "query": "Point to all the can labels.", "raw": "<point x=\"155\" y=\"750\"> <point x=\"410\" y=\"620\"> <point x=\"610\" y=\"620\"> <point x=\"841\" y=\"617\">", "n_new_tokens": 57, "latency_ms": 364.22}
+{"id": "pb-0946", "query": "Point to all the black Go equipment on the board.", "raw": "<point x=\"130\" y=\"148\"> <point x=\"140\" y=\"290\"> <point x=\"150\" y=\"360\"> <point x=\"170\" y=\"150\"> <point x=\"197\"", "n_new_tokens": 64, "latency_ms": 376.63}
+{"id": "pb-0947", "query": "Point to all the sugar packets.", "raw": "<point x=\"437\" y=\"61\"> <point x=\"548\" y=\"31\">", "n_new_tokens": 27, "latency_ms": 186.35}
+{"id": "pb-0948", "query": "Point to all the sails.", "raw": "<point x=\"158\" y=\"690\"> <point x=\"264\" y=\"660\"> <point x=\"488\" y=\"660\"> <point x=\"751\" y=\"470\">", "n_new_tokens": 57, "latency_ms": 325.24}
+{"id": "pb-0949", "query": "Point to all the bowls.", "raw": "<point x=\"580\" y=\"90\"> <point x=\"583\" y=\"500\"> <point x=\"585\" y=\"727\"> <point x=\"586\" y=\"295\">", "n_new_tokens": 56, "latency_ms": 316.81}
+{"id": "pb-0950", "query": "Point to all the gold cans.", "raw": "<point x=\"126\" y=\"160\">", "n_new_tokens": 15, "latency_ms": 156.79}
+{"id": "pb-0951", "query": "Point to all the pickles in the image.", "raw": "<point", "n_new_tokens": 2, "latency_ms": 1168.47}
+{"id": "pb-0952", "query": "Point to all the cars in the image.", "raw": "<point x=\"350\" y=\"594\"> <point x=\"544\" y=\"360\"> <point x=\"666\" y=\"240\">", "n_new_tokens": 43, "latency_ms": 262.22}
+{"id": "pb-0953", "query": "Point to all the porcelain objects.", "raw": "<point x=\"300\" y=\"490\"> <point x=\"710\" y=\"500\">", "n_new_tokens": 29, "latency_ms": 162.85}
+{"id": "pb-0954", "query": "Point to all the vases.", "raw": "<point x=\"281\" y=\"500\"> <point x=\"719\" y=\"500\">", "n_new_tokens": 29, "latency_ms": 153.95}
+{"id": "pb-0955", "query": "Point to all the plates.", "raw": "<point x=\"341\" y=\"500\"> <point x=\"720\" y=\"500\">", "n_new_tokens": 29, "latency_ms": 153.1}
+{"id": "pb-0956", "query": "Point to all the art pieces.", "raw": "<point x=\"141\" y=\"616\"> <point x=\"466\" y=\"526\"> <point x=\"870\" y=\"608\">", "n_new_tokens": 43, "latency_ms": 220.32}
+{"id": "pb-0957", "query": "Point to all the art pieces.", "raw": "<point x=\"328\" y=\"500\">", "n_new_tokens": 15, "latency_ms": 84.81}
+{"id": "pb-0958", "query": "Point to all the vases.", "raw": "<point x=\"280\" y=\"680\"> <point x=\"800\" y=\"690\">", "n_new_tokens": 29, "latency_ms": 312.39}
+{"id": "pb-0959", "query": "Point to all the plates.", "raw": "<point x=\"770\" y=\"530\">", "n_new_tokens": 15, "latency_ms": 86.91}
+{"id": "pb-0960", "query": "Point to all the porcelain objects.", "raw": "<point x=\"120\" y=\"497\"> <point x=\"320\" y=\"500\"> <point x=\"570\" y=\"600\"> <point x=\"825\" y=\"500\">", "n_new_tokens": 57, "latency_ms": 365.59}
+{"id": "pb-0961", "query": "Point to all the sandals.", "raw": "<point x=\"329\" y=\"420\"> <point x=\"455\" y=\"415\"> <point x=\"600\" y=\"420\"> <point x=\"716\" y=\"420\">", "n_new_tokens": 57, "latency_ms": 352.68}
+{"id": "pb-0962", "query": "Point to all the vases.", "raw": "<point x=\"248\" y=\"500\"> <point x=\"748\" y=\"500\">", "n_new_tokens": 29, "latency_ms": 151.35}
+{"id": "pb-0963", "query": "Point to all the blue vases.", "raw": "<point x=\"233\" y=\"761\">", "n_new_tokens": 15, "latency_ms": 83.7}
+{"id": "pb-0964", "query": "Point to all the bowls.", "raw": "<point x=\"300\" y=\"647\"> <point x=\"718\" y=\"666\">", "n_new_tokens": 29, "latency_ms": 1309.08, "resized_to": "3503x2335"}
+{"id": "pb-0965", "query": "Point to all the vases.", "raw": "<point x=\"341\" y=\"520\"> <point x=\"750\" y=\"520\">", "n_new_tokens": 29, "latency_ms": 150.0}
+{"id": "pb-0966", "query": "Point to all the bowls.", "raw": "<point x=\"238\" y=\"641\"> <point x=\"820\" y=\"641\">", "n_new_tokens": 29, "latency_ms": 149.88}
+{"id": "pb-0967", "query": "Point to all the bowls.", "raw": "<point x=\"500\" y=\"401\"> <point x=\"666\" y=\"761\"> <point x=\"845\" y=\"607\">", "n_new_tokens": 43, "latency_ms": 237.88}
+{"id": "pb-0968", "query": "Point to all the plates.", "raw": "<point x=\"344\" y=\"471\"> <point x=\"675\" y=\"500\">", "n_new_tokens": 29, "latency_ms": 150.71}
+{"id": "pb-0969", "query": "Point to the object that enables the bicycle to remain stationary while cycling.", "raw": "<point x=\"730\" y=\"851\">", "n_new_tokens": 15, "latency_ms": 1071.5}
+{"id": "pb-0970", "query": "Point to the \"fragrant Chinese vase.\"", "raw": "<point x=\"370\" y=\"390\">", "n_new_tokens": 15, "latency_ms": 152.27}
+{"id": "pb-0971", "query": "Point to the stone that contains information about the person buried here.", "raw": "<point x=\"441\" y=\"677\">", "n_new_tokens": 15, "latency_ms": 136.63}
+{"id": "pb-0972", "query": "Point to all the side dishes.", "raw": "<point x=\"605\" y=\"241\"> <point x=\"719\" y=\"301\"> <point x=\"874\" y=\"370\">", "n_new_tokens": 43, "latency_ms": 244.13}
+{"id": "pb-0973", "query": "Point to \"lipstick covers.\"", "raw": "<point x=\"123\" y=\"510\"> <point x=\"550\" y=\"510\">", "n_new_tokens": 29, "latency_ms": 160.58}
+{"id": "pb-0974", "query": "Point to blue plates.", "raw": "<point x=\"460\" y=\"580\">", "n_new_tokens": 15, "latency_ms": 94.56}
+{"id": "pb-0975", "query": "Point to the cup.", "raw": "<point x=\"208\" y=\"630\">", "n_new_tokens": 15, "latency_ms": 110.04}
+{"id": "pb-0976", "query": "Point to the item the woman is holding, which indicates she is a traffic officer.", "raw": "<point x=\"481\" y=\"641\">", "n_new_tokens": 15, "latency_ms": 98.75}
+{"id": "pb-0977", "query": "Point to the nearest car.", "raw": "<point x=\"438\" y=\"693\">", "n_new_tokens": 15, "latency_ms": 123.56}
+{"id": "pb-0978", "query": "Point to the high lamp above the license plate of the first car.", "raw": "<point x=\"341\" y=\"271\">", "n_new_tokens": 15, "latency_ms": 114.41}

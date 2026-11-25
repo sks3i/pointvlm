@@ -1,7 +1,20 @@
 # pointvlm
 
 Teach a small VLM to point (`<point x="512" y="340">`, 0-1000 normalized): frozen evals, then SFT, GRPO and quantization.
-Training uses [localtrainer](https://github.com/sks3i/localtrainer) (`train_utils`); this repo holds everything project specific.
+Training uses [localtrainer](https://github.com/sks3i/localtrainer) (`train_utils`, branch `vlm-grpo`); this repo holds everything project specific.
+
+* Blog post: [Teaching a 2B VLM to Point, Part 1](https://sabarishks.com/posts/teaching-2b-vlm-to-point-part-1/)
+* Released model: [Sks3i/qwen3-vl-2b-pointer](https://huggingface.co/Sks3i/qwen3-vl-2b-pointer) (Qwen3-VL-2B after SFT + four GRPO runs; the blog's "run 4")
+
+| Frozen harness | RefCOCO val | Where2Place | Point-Bench |
+| --- | --- | --- | --- |
+| Qwen3-VL-2B-Instruct (same prompt) | 80.6% | 40% | 48.9% |
+| After SFT | 91.1% | 51% | 58.6% |
+| After GRPO v4 (released) | 92.1% | 57% | 60.9% |
+
+These come from this repo's own frozen protocol (prompt, 64-token cap, strict parser), not each benchmark's official one, so they are not directly comparable to published numbers. Per-item predictions for every run are in `results/`; compare two runs with `scripts/compare_runs.py` (paired exact McNemar).
+
+Pipeline scripts: `scripts/run_sft_qwen_lfm2.sh` (SFT), `scripts/run_grpo.sh` … `scripts/run_grpo_v3.sh` (GRPO runs 1-3), `scripts/run_count_sft.sh` + `scripts/run_grpo_v4.sh` (counting SFT + GRPO run 4), `scripts/eval_vllm.py` (vLLM eval and latency). Configs in `configs/sft/` and `configs/grpo/`.
 
 ## Evals (frozen in week 1)
 
@@ -33,8 +46,7 @@ Molmo's remote code may need an older `transformers`. If it fails, use a separat
 
 ## SFT (week 2)
 
-Code in `pointtrain/`, configs in `configs/sft/`. Training runs on localtrainer's `vlm_sft` trainer (the `vlm-sft` branch; `pip install -e ../localtrainer`).
-Notes on the math and design choices: [Pointing SFT: the math and intuition](https://claude.ai/artifact/FxTMmNKLHwsnMbHyCkTDVP).
+Code in `pointtrain/`, configs in `configs/sft/`. Training runs on localtrainer's `vlm_sft` trainer (the `vlm-grpo` branch, which also contains `vlm_grpo`; `pip install -e ../localtrainer`).
 
 ```bash
 # data (images under ~/data: coco/train2014, pixmo/images, robopoint/images)
@@ -58,3 +70,8 @@ python -m pointtrain.export outputs/sft-qwen3vl-2b-v1/checkpoint-2000   # interm
 * Leakage: a COCO image is dropped if any of RefCOCO / RefCOCO+ / RefCOCOg holds it out or the eval manifest uses it (RefCOCOg train alone touches 729 of the 1,210 eval images).
 * Model selection uses `dev.jsonl` (held-out RefCOCO-family train images); `dev_metrics.jsonl` in each run logs greedy dev accuracy every 500 steps.
 * `pointeval/adapters.py::load_local` dispatches Molmo checkpoints to the Molmo wrapper (loading only; prompts, decoding and scoring unchanged).
+
+
+## License
+
+Apache-2.0 (see `LICENSE`). Datasets and base models keep their own licenses.

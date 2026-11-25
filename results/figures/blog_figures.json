@@ -1,0 +1,67 @@
+{
+  "blog_sft": {
+    "title": "SFT vs base Qwen3-VL-2B (canonical prompt): 2 wins, 2 phrase misreadings",
+    "panels": [
+      {"bench": "pointbench", "id": "pb-0197", "run": "sft-qwen3vl-2b-v1-e2", "prev": "qwen3vl-2b-canonical", "verdict": "win",
+       "caption": "Win: base points at the flame; SFT points at the lighter, the thing that ignites."},
+      {"bench": "where2place", "id": "w2p-011", "run": "sft-qwen3vl-2b-v1-e2", "prev": "qwen3vl-2b-canonical", "verdict": "win",
+       "caption": "Win: base lands on the floor; SFT lands on the free cooktop zone at the front of the stove."},
+      {"bench": "refcoco", "id": "refcoco-val-0342", "run": "sft-qwen3vl-2b-v1-e2", "prev": "qwen3vl-2b-canonical", "verdict": "failure (ordinal)",
+       "caption": "Failure: SFT points at the leftmost person in the dugout, not the 2nd from the left; base got it."},
+      {"bench": "pointbench", "id": "pb-0439", "run": "sft-qwen3vl-2b-v1-e2", "prev": "qwen3vl-2b-canonical", "verdict": "failure (relation)",
+       "caption": "Failure: SFT points at the anchor (rightmost building) instead of the one to its left; base got it."}
+    ]
+  },
+  "blog_grpo_v1": {
+    "title": "GRPO v1 vs SFT: free-space wins on Where2Place, relational breaks on Point-Bench",
+    "panels": [
+      {"bench": "where2place", "id": "w2p-052", "run": "grpo-v1", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "win",
+       "caption": "Win: SFT sits on the dresser edge; v1 moves into the free region underneath."},
+      {"bench": "where2place", "id": "w2p-079", "run": "grpo-v1", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "win",
+       "caption": "Win: SFT lands off the table edge; v1 lands in the empty tabletop right of the toy tower."},
+      {"bench": "pointbench", "id": "pb-0566", "run": "grpo-v1", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "failure (broke)",
+       "caption": "Broke: SFT found the object left of the sink; v1 lands on the bare counter between it and the sink."},
+      {"bench": "pointbench", "id": "pb-0390", "run": "grpo-v1", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "failure (broke)",
+       "caption": "Broke: SFT found the vase left of the pink vase; v1 drifts onto the pink vase (the anchor)."}
+    ]
+  },
+  "blog_grpo_v2": {
+    "title": "GRPO v2 vs SFT: ordinal/relation fixes (RefCOCO, Point-Bench spatial) vs the reasoning transfer gap",
+    "panels": [
+      {"bench": "refcoco", "id": "refcoco-val-0596", "run": "grpo-v2", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "win (ordinal)",
+       "caption": "Ordinal fixed: SFT picks the 1st sink; v2 picks the 2nd from the left."},
+      {"bench": "pointbench", "id": "pb-0265", "run": "grpo-v2", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "win (relation)",
+       "caption": "Relation fixed: SFT picks the window above the door; v2 picks the window right of the red door."},
+      {"bench": "pointbench", "id": "pb-0126", "run": "grpo-v2", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "failure (reasoning)",
+       "caption": "Transfer gap: both point at a parked bicycle; the answer is the traffic light the car stops for."},
+      {"bench": "pointbench", "id": "pb-0204", "run": "grpo-v2", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "failure (affordance)",
+       "caption": "Transfer gap: both point at the strap on the player's shoulder, not the drum that makes the music."}
+    ]
+  },
+  "blog_grpo_v3": {
+    "title": "GRPO v3 vs SFT: function-style wins, and the counting drift (several points despite 'exactly one point')",
+    "panels": [
+      {"bench": "pointbench", "id": "pb-0467", "run": "grpo-v3", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "win (function)",
+       "caption": "Function win: SFT picks the sponge stick; v3 picks a paintbrush (the GT objects)."},
+      {"bench": "pointbench", "id": "pb-0703", "run": "grpo-v3", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "win (near-miss fixed)",
+       "caption": "Near miss fixed: SFT lands just above the pencil case; v3 lands on it."},
+      {"bench": "pointbench", "id": "pb-0387", "run": "grpo-v3", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "counting drift (scored hit)",
+       "caption": "Drift: prompt asks for exactly one point; v3 emits three, one per apple, and the counting item is scored a hit."},
+      {"bench": "pointbench", "id": "pb-0222", "run": "grpo-v3", "prev": "sft-qwen3vl-2b-v1-e2", "verdict": "failure (broke)",
+       "caption": "Broke: SFT found the bus in front; v3 points at the black bus itself (the anchor)."}
+    ]
+  },
+  "blog_grpo_v4": {
+    "title": "GRPO v4 vs GRPO v3: counting with several correct points, plus one non-counting win and one loss",
+    "panels": [
+      {"bench": "pointbench", "id": "pb-0511", "run": "grpo-v4", "prev": "grpo-v3", "verdict": "win (counting)",
+       "caption": "Counting win: v3 gives one point; v4 gives one point per glass, all three inside."},
+      {"bench": "pointbench", "id": "pb-0795", "run": "grpo-v4", "prev": "grpo-v3", "verdict": "win (counting)",
+       "caption": "Counting win: v3 gives one point; v4 gives one per car."},
+      {"bench": "pointbench", "id": "pb-0704", "run": "grpo-v4", "prev": "grpo-v3", "verdict": "win (non-counting)",
+       "caption": "Non-counting win: v3 picks a dish on the table; v4 picks the glass of drink."},
+      {"bench": "where2place", "id": "w2p-046", "run": "grpo-v4", "prev": "grpo-v3", "verdict": "failure (lost)",
+       "caption": "Lost: v3 hit the free counter space above the drawers; v4 jumps to the top-right corner."}
+    ]
+  }
+}
