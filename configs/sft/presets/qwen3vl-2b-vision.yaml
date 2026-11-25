@@ -1,0 +1,35 @@
+# Qwen3-VL-2B with the vision encoder and projector trained too (SFT v1 froze both).
+# Same LoRA on the language model as qwen3vl-2b.yaml; additionally the whole vision tower
+# (model.visual: ViT blocks, patch/pos embeddings, the merger and the 3 DeepStack mergers, 407M params)
+# is fully fine-tuned as a peft modules_to_save copy, so it is saved with the adapter and merged at export.
+# Why: the miss analysis puts part of Point-Bench's errors on small targets and object parts, i.e.
+# perception, which LoRA on the language model cannot change.
+# Learning rates: the encoder is pretrained and easy to damage, so it gets 10x less than the LoRA; the
+# mergers (projection into the LM) get an intermediate rate. Trainable weights are kept in fp32
+# (upcast_trainable) because bf16 rounds updates this small to zero.
+# Memory: +407M fp32 params (1.6 GB) + grads (1.6 GB) + 8-bit Adam (0.8 GB) on top of the ~14 GB LoRA run.
+model:
+  model_id: Qwen/Qwen3-VL-2B-Instruct
+  vlm_adapter: hf_chat
+  use_unsloth: false
+  attn_implementation: sdpa
+  dtype: bfloat16
+  quantization: {load_in_4bit: false, load_in_8bit: false}
+  upcast_trainable: true
+  lora:
+    use_lora: true
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules_regex: '^model\.language_model\.layers\.\d+\.(self_attn\.(q|k|v|o)_proj|mlp\.(gate|up|down)_proj)$'
+    modules_to_save: [visual]
+vlm_sft:
+  lr_overrides:
+    merger: 2.0e-5      # merger + deepstack_merger_list (substring match, checked first)
+    visual: 5.0e-6      # the rest of the vision tower
+training:
+  learning_rate: 5.0e-5
+  extra_training_args:
+    optim: adamw_bnb_8bit
+    dataloader_persistent_workers: false
+    dataloader_pin_memory: false
