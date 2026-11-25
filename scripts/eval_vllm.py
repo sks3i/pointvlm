@@ -39,7 +39,7 @@ PROMPT_TEXT_TOKENS = 200  # headroom for template + query + answer
 
 
 class VLLMQwen:
-	def __init__(self, model: str, revision: str, max_model_len: int, gpu_mem: float, enforce_eager: bool, kv_cache_dtype: str, max_batched: int | None, profile_side: int | None, kv_cache_gib: float | None):
+	def __init__(self, model: str, revision: str, max_model_len: int, gpu_mem: float, enforce_eager: bool, kv_cache_dtype: str, max_batched: int | None, profile_side: int | None, kv_cache_gib: float | None, max_new_tokens: int = MAX_NEW_TOKENS):
 		import torch
 		from vllm import LLM, SamplingParams
 
@@ -60,7 +60,7 @@ class VLLMQwen:
 			compilation_config={"cudagraph_capture_sizes": [1]},
 			**({"max_num_batched_tokens": max_batched} if max_batched else {}),
 		)
-		self.params = SamplingParams(temperature=0.0, max_tokens=MAX_NEW_TOKENS)
+		self.params = SamplingParams(temperature=0.0, max_tokens=max_new_tokens)
 		self.max_model_len = max_model_len
 		import vllm
 
@@ -78,7 +78,7 @@ class VLLMQwen:
 			"profile_image_side": profile_side,
 			"cudagraph_capture_sizes": [1],
 			"kv_cache_memory_gib": kv_cache_gib,
-			"max_new_tokens": MAX_NEW_TOKENS,
+			"max_new_tokens": max_new_tokens,
 			"temperature": 0.0,
 			"torch": torch.__version__,
 		}
@@ -121,10 +121,12 @@ def gpu_used_gb() -> float:
 		return -1.0
 
 
-def run_bench(model: VLLMQwen, bench: str, mode: str, run_name: str, peak: list[float]) -> None:
+def run_bench(model: VLLMQwen, bench: str, mode: str, run_name: str, peak: list[float], ids: set[str] | None = None) -> None:
 	parser_name = "canonical" if mode == "canonical" else "qwen_json"
 	template = CANONICAL_PROMPT if mode == "canonical" else NATIVE_PROMPTS["qwen_json"]
 	items, meta = load_manifest(bench)
+	if ids is not None:  # rerun a subset; the summary then covers only these items
+		items = [it for it in items if it["id"] in ids]
 	src = ImageSource(bench, meta["revision"])
 	out_dir = ROOT / "results" / bench / run_name
 	out_dir.mkdir(parents=True, exist_ok=True)
@@ -202,6 +204,7 @@ def run_bench(model: VLLMQwen, bench: str, mode: str, run_name: str, peak: list[
 		"gpu_memory_used_gb_peak_sampled": {"value": peak[0], "note": "nvidia-smi memory.used, whole GPU incl. desktop (~1 GB), sampled every 50 items; vLLM preallocates gpu_memory_utilization"},
 		"hardware": hardware_info(),
 		"runner": "scripts/eval_vllm.py",
+		**({"subset": {"n": len(items), "note": "only the items listed in --ids-file"}} if ids is not None else {}),
 	}
 	(out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
 	print(json.dumps({k: summary[k] for k in ("point_in_mask", "parse_status", "latency", "resized_to_fit_max_model_len")}, indent=2), flush=True)
@@ -221,9 +224,12 @@ def main() -> None:
 	ap.add_argument("--enforce-eager", action="store_true")
 	ap.add_argument("--profile-image-side", type=int, default=None, help="size of the dummy image used for memory profiling")
 	ap.add_argument("--max-num-batched-tokens", type=int, default=None, help="prefill chunk size; smaller = lower activation peak, same outputs")
+	ap.add_argument("--max-new-tokens", type=int, default=MAX_NEW_TOKENS, help="frozen spec is 64; raise only for secondary runs")
+	ap.add_argument("--ids-file", default=None, help="run only the manifest ids listed in this file (one per line)")
+	ap.add_argument("--suffix", default="", help="appended to the run name: results/<bench>/<tag>-<mode><suffix>")
 	ap.add_argument("--smoke", type=int, default=0, help="run N items of the first bench (plus its largest image), write nothing")
 	a = ap.parse_args()
-	model = VLLMQwen(a.model, a.revision, a.max_model_len, a.gpu_mem, a.enforce_eager, a.kv_cache_dtype, a.max_num_batched_tokens, a.profile_image_side, a.kv_cache_gib)
+	model = VLLMQwen(a.model, a.revision, a.max_model_len, a.gpu_mem, a.enforce_eager, a.kv_cache_dtype, a.max_num_batched_tokens, a.profile_image_side, a.kv_cache_gib, a.max_new_tokens)
 	print("loaded", model.config, "gpu", gpu_used_gb(), "GB", flush=True)
 	if a.smoke:
 		items, meta = load_manifest(a.bench[0])
@@ -235,9 +241,10 @@ def main() -> None:
 			print(it["id"], (it["width"], it["height"]), repr(text[:120]), n, f"{ms:.0f} ms", r, "gpu", gpu_used_gb(), flush=True)
 		return
 	peak = [gpu_used_gb()]
+	ids = set(Path(a.ids_file).read_text().split()) if a.ids_file else None
 	for mode in a.mode:
 		for bench in a.bench:
-			run_bench(model, bench, mode, f"{a.tag}-{mode}", peak)
+			run_bench(model, bench, mode, f"{a.tag}-{mode}{a.suffix}", peak, ids)
 	print("=== all done", flush=True)
 
 

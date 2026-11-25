@@ -1,0 +1,87 @@
+{
+  "bench": "pointbench",
+  "model": "QuantTrio/Qwen3-VL-32B-Instruct-AWQ@c2d44b1376c7",
+  "mode": "native",
+  "parser": "qwen_json",
+  "prompt_template": "Locate {query} in the image and output its point coordinates in JSON format like [{{\"point_2d\": [x, y], \"label\": \"...\"}}].",
+  "prompt_sha256": "8d49532482f95cdb",
+  "manifest_sha256": "6104713c2b84d09f88306c5eafb449782bc5b5ba9bee289aa89796a522d8232e",
+  "dataset_revision": "77ec5dca697b25025e655e2ec34fd2207856924c",
+  "partial": false,
+  "merged_from": {
+    "base": "qwen3vl-32b-awq-vllm-native",
+    "rerun": "qwen3vl-32b-awq-vllm-native-cap512",
+    "n_swapped": 62,
+    "base_max_new_tokens": 64,
+    "rerun_max_new_tokens": 512
+  },
+  "note": "secondary result, not frozen-spec: swapped items were decoded with a higher token cap",
+  "scoring_version": "v1",
+  "parser_sha256": "af5a37222d02c46a",
+  "point_in_mask": {
+    "n": 979,
+    "hits": 589,
+    "acc": 0.6016343207354443,
+    "ci95": [
+      0.5706280063054026,
+      0.6318461549153793
+    ]
+  },
+  "parse_status": {
+    "ok": 884,
+    "unparseable": 95,
+    "invalid": 0
+  },
+  "by_category": {
+    "affordable": {
+      "n": 198,
+      "acc": 0.8838383838383839,
+      "ci95": [
+        0.8317296678497055,
+        0.9213366290471674
+      ]
+    },
+    "counting": {
+      "n": 195,
+      "acc": 0.19487179487179487,
+      "ci95": [
+        0.14539632957764081,
+        0.25613692878051475
+      ]
+    },
+    "reasoning": {
+      "n": 193,
+      "acc": 0.7150259067357513,
+      "ci95": [
+        0.6476301847050727,
+        0.7740289539322436
+      ]
+    },
+    "spatial": {
+      "n": 195,
+      "acc": 0.7589743589743589,
+      "ci95": [
+        0.6943126685691752,
+        0.8136296919839867
+      ]
+    },
+    "steerable": {
+      "n": 198,
+      "acc": 0.45454545454545453,
+      "ci95": [
+        0.3867123597110598,
+        0.5241087367090475
+      ]
+    }
+  },
+  "latency": {
+    "n": 979,
+    "mean_ms": 1945.6190909090903,
+    "p50_ms": 1281.36,
+    "p90_ms": 4476.318,
+    "p99_ms": 5572.994600000009,
+    "engine": "vllm 0.34.0"
+  },
+  "mean_new_tokens": 39.94790602655771,
+  "runner": "scripts/merge_rerun.py"
+}

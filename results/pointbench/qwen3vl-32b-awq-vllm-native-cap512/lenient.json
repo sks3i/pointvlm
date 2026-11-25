@@ -1,0 +1,745 @@
+{
+ "run": "results/pointbench/qwen3vl-32b-awq-vllm-native-cap512",
+ "bench": "pointbench",
+ "parser": "lenient-v1",
+ "parser_sha256": "3e2c5e2277da6e43",
+ "strict_parser": "qwen_json",
+ "strict_acc": 0.1935483870967742,
+ "point_in_mask": {
+  "n": 62,
+  "hits": 12,
+  "acc": 0.1935483870967742,
+  "ci95": [
+   0.11433808192290243,
+   0.30851796279947685
+  ]
+ },
+ "parse_status": {
+  "ok": 40,
+  "unparseable": 22
+ },
+ "rescued_vs_strict": 0,
+ "lost_vs_strict": 0,
+ "by_category": {
+  "affordable": {
+   "n": 2,
+   "acc": 1.0,
+   "ci95": [
+    0.3423802239546494,
+    1.0
+   ]
+  },
+  "counting": {
+   "n": 37,
+   "acc": 0.21621621621621623,
+   "ci95": [
+    0.11386511935374596,
+    0.37195148526276334
+   ]
+  },
+  "reasoning": {
+   "n": 5,
+   "acc": 0.4,
+   "ci95": [
+    0.11762077314099711,
+    0.7692757205908813
+   ]
+  },
+  "spatial": {
+   "n": 3,
+   "acc": 0.0,
+   "ci95": [
+    0.0,
+    0.5614970356393196
+   ]
+  },
+  "steerable": {
+   "n": 15,
+   "acc": 0.0,
+   "ci95": [
+    0.0,
+    0.20388330359648707
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "pb-0002",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    785.0,
+    434.0
+   ],
+   "n_points": 4,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0017",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    109.0,
+    545.0
+   ],
+   "n_points": 11,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0037",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    208.0,
+    504.0
+   ],
+   "n_points": 3,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0066",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0095",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    174.0,
+    588.0
+   ],
+   "n_points": 5,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0117",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0126",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0136",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    110.0,
+    315.0
+   ],
+   "n_points": 6,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0179",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0198",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    200.0,
+    545.0
+   ],
+   "n_points": 4,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0221",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    518.0,
+    344.0
+   ],
+   "n_points": 2,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0244",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    738.0,
+    500.0
+   ],
+   "n_points": 3,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0318",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    114.0,
+    525.0
+   ],
+   "n_points": 6,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0339",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    364.0,
+    225.0
+   ],
+   "n_points": 15,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0342",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0345",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0374",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    208.0,
+    352.0
+   ],
+   "n_points": 3,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0398",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0407",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0409",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0415",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    625.0,
+    250.0
+   ],
+   "n_points": 12,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0426",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    50.0,
+    325.0
+   ],
+   "n_points": 21,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0435",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    107.0,
+    420.0
+   ],
+   "n_points": 1,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0467",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    64.0,
+    550.0
+   ],
+   "n_points": 4,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0472",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0511",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    174.0,
+    250.0
+   ],
+   "n_points": 3,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0521",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    285.0,
+    588.0
+   ],
+   "n_points": 3,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0563",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    214.0,
+    452.0
+   ],
+   "n_points": 3,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0592",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    244.0,
+    198.0
+   ],
+   "n_points": 8,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0632",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0645",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0678",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0700",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    705.0,
+    388.0
+   ],
+   "n_points": 3,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0715",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0760",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    400.0,
+    575.0
+   ],
+   "n_points": 2,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0772",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0797",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0798",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0807",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    17.0,
+    468.0
+   ],
+   "n_points": 5,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0830",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    158.0,
+    458.0
+   ],
+   "n_points": 4,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0833",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    164.0,
+    458.0
+   ],
+   "n_points": 3,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0838",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0839",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0845",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    41.0,
+    517.0
+   ],
+   "n_points": 6,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0859",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0869",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0870",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    234.0,
+    325.0
+   ],
+   "n_points": 6,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0877",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    205.0,
+    244.0
+   ],
+   "n_points": 2,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0879",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    254.0,
+    750.0
+   ],
+   "n_points": 2,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0881",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    188.0,
+    404.0
+   ],
+   "n_points": 4,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0895",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    144.0,
+    500.0
+   ],
+   "n_points": 3,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0898",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    265.0,
+    285.0
+   ],
+   "n_points": 4,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0900",
+   "status": "unparseable",
+   "note": "lenient: no point",
+   "first": null,
+   "n_points": 0,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0905",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    325.0,
+    558.0
+   ],
+   "n_points": 5,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0909",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    258.0,
+    700.0
+   ],
+   "n_points": 8,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0938",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    467.0,
+    425.0
+   ],
+   "n_points": 3,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0945",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    154.0,
+    757.0
+   ],
+   "n_points": 3,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0948",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    750.0,
+    408.0
+   ],
+   "n_points": 4,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0951",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    398.0,
+    777.0
+   ],
+   "n_points": 3,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0952",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    354.0,
+    588.0
+   ],
+   "n_points": 3,
+   "hit": false,
+   "strict_hit": false
+  },
+  {
+   "id": "pb-0960",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    124.0,
+    500.0
+   ],
+   "n_points": 4,
+   "hit": true,
+   "strict_hit": true
+  },
+  {
+   "id": "pb-0967",
+   "status": "ok",
+   "note": "lenient point_key 0-1000",
+   "first": [
+    528.0,
+    357.0
+   ],
+   "n_points": 4,
+   "hit": false,
+   "strict_hit": false
+  }
+ ]
+}
