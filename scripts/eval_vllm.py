@@ -39,9 +39,17 @@ PROMPT_TEXT_TOKENS = 200  # headroom for template + query + answer
 
 
 class VLLMQwen:
-	def __init__(self, model: str, revision: str, max_model_len: int, gpu_mem: float, enforce_eager: bool, kv_cache_dtype: str, max_batched: int | None, profile_side: int | None, kv_cache_gib: float | None, max_new_tokens: int = MAX_NEW_TOKENS):
+	def __init__(self, model: str, revision: str, max_model_len: int, gpu_mem: float, enforce_eager: bool, kv_cache_dtype: str, max_batched: int | None, profile_side: int | None, kv_cache_gib: float | None, max_new_tokens: int = MAX_NEW_TOKENS, trust_remote_code: bool = False):
 		import torch
 		from vllm import LLM, SamplingParams
+
+		if trust_remote_code:
+			# Molmo's image preprocessing has a lazy `import tensorflow` behind resize_method="tensorflow"
+			# (default is torch-bilinear); transformers' static import check rejects it, so skip that name.
+			import transformers.dynamic_module_utils as dmu
+
+			_get = dmu.get_imports
+			dmu.get_imports = lambda f: [m for m in _get(f) if m != "tensorflow"]
 
 		self.llm = LLM(
 			model=model,
@@ -56,6 +64,7 @@ class VLLMQwen:
 			enforce_eager=enforce_eager,
 			kv_cache_dtype=kv_cache_dtype,
 			seed=0,
+			**({"trust_remote_code": True} if trust_remote_code else {}),
 			# Batch 1 only: capturing graphs for larger batch sizes costs ~1.5 GiB the KV cache needs.
 			compilation_config={"cudagraph_capture_sizes": [1]},
 			**({"max_num_batched_tokens": max_batched} if max_batched else {}),
@@ -81,6 +90,7 @@ class VLLMQwen:
 			"max_new_tokens": max_new_tokens,
 			"temperature": 0.0,
 			"torch": torch.__version__,
+			**({"trust_remote_code": True} if trust_remote_code else {}),
 		}
 
 	def generate(self, image, prompt: str):
@@ -121,9 +131,9 @@ def gpu_used_gb() -> float:
 		return -1.0
 
 
-def run_bench(model: VLLMQwen, bench: str, mode: str, run_name: str, peak: list[float], ids: set[str] | None = None) -> None:
-	parser_name = "canonical" if mode == "canonical" else "qwen_json"
-	template = CANONICAL_PROMPT if mode == "canonical" else NATIVE_PROMPTS["qwen_json"]
+def run_bench(model: VLLMQwen, bench: str, mode: str, run_name: str, peak: list[float], ids: set[str] | None = None, native: str = "qwen_json") -> None:
+	parser_name = "canonical" if mode == "canonical" else native
+	template = CANONICAL_PROMPT if mode == "canonical" else NATIVE_PROMPTS[native]
 	items, meta = load_manifest(bench)
 	if ids is not None:  # rerun a subset; the summary then covers only these items
 		items = [it for it in items if it["id"] in ids]
@@ -225,17 +235,19 @@ def main() -> None:
 	ap.add_argument("--profile-image-side", type=int, default=None, help="size of the dummy image used for memory profiling")
 	ap.add_argument("--max-num-batched-tokens", type=int, default=None, help="prefill chunk size; smaller = lower activation peak, same outputs")
 	ap.add_argument("--max-new-tokens", type=int, default=MAX_NEW_TOKENS, help="frozen spec is 64; raise only for secondary runs")
+	ap.add_argument("--native", default="qwen_json", choices=sorted(NATIVE_PROMPTS), help="native prompt + parser (molmo for Molmo checkpoints)")
+	ap.add_argument("--trust-remote-code", action="store_true", help="needed for Molmo")
 	ap.add_argument("--ids-file", default=None, help="run only the manifest ids listed in this file (one per line)")
 	ap.add_argument("--suffix", default="", help="appended to the run name: results/<bench>/<tag>-<mode><suffix>")
 	ap.add_argument("--smoke", type=int, default=0, help="run N items of the first bench (plus its largest image), write nothing")
 	a = ap.parse_args()
-	model = VLLMQwen(a.model, a.revision, a.max_model_len, a.gpu_mem, a.enforce_eager, a.kv_cache_dtype, a.max_num_batched_tokens, a.profile_image_side, a.kv_cache_gib, a.max_new_tokens)
+	model = VLLMQwen(a.model, a.revision, a.max_model_len, a.gpu_mem, a.enforce_eager, a.kv_cache_dtype, a.max_num_batched_tokens, a.profile_image_side, a.kv_cache_gib, a.max_new_tokens, a.trust_remote_code)
 	print("loaded", model.config, "gpu", gpu_used_gb(), "GB", flush=True)
 	if a.smoke:
 		items, meta = load_manifest(a.bench[0])
 		src = ImageSource(a.bench[0], meta["revision"])
 		big = max(items, key=lambda it: it["width"] * it["height"])
-		tpl = CANONICAL_PROMPT if a.mode[0] == "canonical" else NATIVE_PROMPTS["qwen_json"]
+		tpl = CANONICAL_PROMPT if a.mode[0] == "canonical" else NATIVE_PROMPTS[a.native]
 		for it in items[: a.smoke] + [big]:
 			text, n, ms, r = generate_fit(model, src.get(it), tpl.format(query=it["query"]))
 			print(it["id"], (it["width"], it["height"]), repr(text[:120]), n, f"{ms:.0f} ms", r, "gpu", gpu_used_gb(), flush=True)
@@ -244,7 +256,7 @@ def main() -> None:
 	ids = set(Path(a.ids_file).read_text().split()) if a.ids_file else None
 	for mode in a.mode:
 		for bench in a.bench:
-			run_bench(model, bench, mode, f"{a.tag}-{mode}{a.suffix}", peak, ids)
+			run_bench(model, bench, mode, f"{a.tag}-{mode}{a.suffix}", peak, ids, a.native)
 	print("=== all done", flush=True)
 
 
